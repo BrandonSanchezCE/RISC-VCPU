@@ -1,0 +1,23 @@
+# Vivado project files
+*.jou
+*.log
+*.str
+.Xil/
+*.runs/
+*.sim/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.gen/
+vivado*.backup.jou
+vivado*.backup.log
+.Xil
+
+# Waveform / temp
+*.wdb
+*.vcd
+*.out
+*.vvp
+# OS junk
+.DS_Store
+Thumbs.db
