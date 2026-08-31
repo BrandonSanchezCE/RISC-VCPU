@@ -14,7 +14,7 @@ always @(*) begin
         ALUControl = 4'b0001;
     else if (ALUOp == 2'b10) begin
         if(Funct3 == 3'b000) begin
-            if (!(Opb5 == 1) | !(Funct7b5 == 1))
+            if (!(Opb5 && Funct7b5))
                 ALUControl = 4'b0000; // Add
             else
                 ALUControl = 4'b0001; // Sub
@@ -40,6 +40,8 @@ always @(*) begin
         else
             ALUControl = 4'b1111;
     end
+    else if (ALUOp == 2'b11)
+        ALUControl = 4'b1110;
     else
         ALUControl = 4'b1111;
 end

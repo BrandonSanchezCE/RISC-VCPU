@@ -1,5 +1,6 @@
 module ControlUnit(
-    input Zero,
+    input [31:0]ReadData1,
+    input [31:0]ReadData2,
     input [6:0] Op,
     input [2:0] Funct3,
     input Funct7b5,
@@ -10,9 +11,11 @@ module ControlUnit(
     output [1:0]ResultSrc,
     output [2:0] ImmSrc,
     output [3:0]ALUControl
+    
 );
 wire [1:0] ALUOp;
-wire branch, jump, jumpR;
+wire branch, jump, jumpR, branchCondition;
+
 mainDecoder instance1(
     .Op(Op),
     .Branch(branch),
@@ -34,8 +37,14 @@ ALUDecoder instance2(
     .ALUControl(ALUControl)
 );
 
+BranchingCompare BranchCalc(
+    .Funct3(Funct3),
+    .ReadData1(ReadData1),
+    .ReadData2(ReadData2),
+    .BranchCondition(BranchCondition)
+);
 always @(*) begin
-    PCSrc[0] = jump | (branch & Zero);
+    PCSrc[0] = jump | (branch & BranchCondition);
     PCSrc[1] = jumpR;
 end
 

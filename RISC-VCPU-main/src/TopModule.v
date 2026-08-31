@@ -10,6 +10,7 @@ wire[1:0] ResultSrc, PCSrc;
 wire[2:0] Funct3, ImmSrc;
 wire [3:0] ALUControl;
 wire [6:0] Op;
+wire[31:0] ReadData1, ReadData2;
 
 ClockDivider instance3(
 .CLK100MHZ(CLK100MHZ),
@@ -26,20 +27,22 @@ DataPath instance1(
     .PCSrc(PCSrc),
     .Reset(Reset),
     .RegWrite(RegWrite),
-    .Zero(Zero),
     .Op(Op),
     .Funct3(Funct3),
     .Funct7b5(Funct7b5),
     .Clk(SlowClock),
     .sw(sw),
-    .LED(LED)
+    .LED(LED),
+    .ReadData1(ReadData1),
+    .ReadData2(ReadData2)
 );
 
 ControlUnit instance2(
+    .ReadData1(ReadData1),
+    .ReadData2(ReadData2),
     .Op(Op),
     .Funct3(Funct3),
     .Funct7b5(Funct7b5),
-    .Zero(Zero),
     .RegWrite(RegWrite),
     .ALUSrc(ALUSrc),
     .MemWrite(MemWrite),

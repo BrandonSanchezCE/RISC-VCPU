@@ -10,16 +10,17 @@ module DataPath(
     input [1:0] ResultSrc,
     input [15:0] sw,
     output [15:0] LED,
-    output Zero,
     output [6:0] Op,
     output [2:0]Funct3,
-    output Funct7b5
+    output Funct7b5,
+    output [31:0] ReadData1,
+    output [31:0] ReadData2
 );
-wire [31:0] PC, ReadData,
-ReadData1, ReadData2, ImmExt, ALUResult, ReadDataDataMem
-, PCPlus4, PCTarget;
+wire [31:0] PC, ReadData, ImmExt, ALUResult, ReadDataDataMem
+, PCPlus4, PCTarget, ProcessedLoadData;
 reg [31:0] PCNext;
 reg [31:0] WriteData3;
+wire [3:0] WriteEnable;
 reg [31:0] SrcB;
 PC instance1(
     .PCNext(PCNext),
@@ -61,18 +62,31 @@ ALU instance5(
     .SrcA(ReadData1),
     .SrcB(SrcB),
     .ALUControl(ALUControl),
-    .Zero(Zero),
     .ALUResult(ALUResult)
+);
+
+Store FindBytes(
+    .Funct3(Funct3),
+    .ByteOffset(ALUResult[1:0]),
+    .MemWrite(MemWrite),
+    .WriteEnable(WriteEnable)
 );
 
 DATAM instance6(
     .Address(ALUResult),
     .Clk(Clk),
-    .WriteEnable(MemWrite),
+    .WriteEnable(WriteEnable),
     .ReadData(ReadDataDataMem),
     .WriteData(ReadData2),
     .Leds(LED),
     .Switches(sw)
+);
+
+Load loadedData(
+    .Funct3(Funct3),
+    .ByteOffset(ALUResult[1:0]),
+    .MemReadData(ReadDataDataMem),
+    .LoadData(ProcessedLoadData)
 );
 
 PCPlus4 instance7(
@@ -88,7 +102,7 @@ PCTarget instance8(
 
 always @(*) begin
     if(PCSrc[1])
-        PCNext = (ReadData1 + ImmExt) & ~32'h1;
+        PCNext = ALUResult & ~32'h1;
     else if (PCSrc[0])
         PCNext = PCTarget;
     else 
@@ -98,9 +112,9 @@ end
 always @(*) begin
     case(ResultSrc)
         2'b00 : WriteData3 = ALUResult;
-        2'b01 : WriteData3 = ReadDataDataMem;
+        2'b01 : WriteData3 = ProcessedLoadData;
         2'b10 : WriteData3 = PCPlus4;
-        2'b11 : WriteData3 = ImmExt;
+        2'b11 : WriteData3 = PCTarget; //AUIPC
         default : WriteData3 = 0;
     endcase
 
@@ -108,7 +122,7 @@ end
 
 assign Op = ReadData[6:0];
 assign Funct3 = ReadData[14:12];
-assign Funct7b5 = ReadData[29];
+assign Funct7b5 = ReadData[30];
 
  
 endmodule

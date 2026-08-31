@@ -1,24 +1,24 @@
 
 module BranchingCompare(
-    input [31:0] SrcA,
-    input [31:0] SrcB,
+    input [31:0] ReadData1,
+    input [31:0] ReadData2,
     input [2:0] Funct3,
-    output reg Branch
+    output reg BranchCondition
 );
 wire Eq, Lt, LtU;
-assign Eq = (SrcA == SrcB);
-assign Lt = ($signed(SrcA) < $signed(SrcB));
-assign LtU = (SrcA < SrcB);
+assign Eq = (ReadData1 == ReadData2);
+assign Lt = ($signed(ReadData1) < $signed(ReadData2));
+assign LtU = (ReadData1 < ReadData2);
 
 always @(*) begin
     case (Funct3)
-        3'b000: Branch = Eq;
-        3'b001: Branch = ~Eq;
-        3'b100: Branch = Lt;
-        3'b101: Branch = ~Lt;
-        3'b110: Branch = LtU;
-        3'b111: Branch = ~LtU;
-        default: Branch = 0;
+        3'b000: BranchCondition = Eq;
+        3'b001: BranchCondition = ~Eq;
+        3'b100: BranchCondition = Lt;
+        3'b101: BranchCondition = ~Lt;
+        3'b110: BranchCondition = LtU;
+        3'b111: BranchCondition = ~LtU;
+        default: BranchCondition = 0;
     endcase
 end
 

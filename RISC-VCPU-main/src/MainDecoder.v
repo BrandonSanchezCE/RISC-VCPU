@@ -91,9 +91,9 @@ always @(*) begin
                        ImmSrc = 3'b100;
                        ALUSrc = 1;
                        MemWrite = 0;
-                       ResultSrc = 2'b11;
+                       ResultSrc = 2'b00;
                        Branch = 0;
-                       ALUOp = 2'b00;
+                       ALUOp = 2'b11;
                        Jump = 0;
                        JumpR = 0;
                        Halt = 0;            
@@ -124,7 +124,7 @@ always @(*) begin
         end
         7'b1110011 : begin // ecall Halt
                        RegWrite = 0;
-                       ImmSrc = 3'b00;
+                       ImmSrc = 3'b000;
                        ALUSrc = 0;
                        MemWrite = 0;
                        ResultSrc = 2'b00;
