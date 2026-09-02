@@ -3,6 +3,7 @@ module DataPath(
     input Clk,
     input ALUSrc,
     input MemWrite,
+    input Halt,
     input [1:0]PCSrc,
     input Reset,
     input RegWrite,
@@ -17,15 +18,18 @@ module DataPath(
     output [31:0] ReadData2
 );
 wire [31:0] PC, ReadData, ImmExt, ALUResult, ReadDataDataMem
-, PCPlus4, PCTarget, ProcessedLoadData;
+, PCPlus4, PCTarget, ProcessedLoadData, StoredData;
 reg [31:0] PCNext;
 reg [31:0] WriteData3;
 wire [3:0] WriteEnable;
 reg [31:0] SrcB;
+
+
 PC instance1(
     .PCNext(PCNext),
     .Reset(Reset),
     .Clk(Clk),
+    .Halt(Halt),
     .PC(PC)
 );
 INSTRM instance2(
@@ -69,7 +73,9 @@ Store FindBytes(
     .Funct3(Funct3),
     .ByteOffset(ALUResult[1:0]),
     .MemWrite(MemWrite),
-    .WriteEnable(WriteEnable)
+    .WriteEnable(WriteEnable),
+    .DataIn(ALUResult),
+    .StoreData(StoredData)
 );
 
 DATAM instance6(
@@ -77,7 +83,7 @@ DATAM instance6(
     .Clk(Clk),
     .WriteEnable(WriteEnable),
     .ReadData(ReadDataDataMem),
-    .WriteData(ReadData2),
+    .WriteData(StoredData),
     .Leds(LED),
     .Switches(sw)
 );

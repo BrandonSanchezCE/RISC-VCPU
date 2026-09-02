@@ -5,11 +5,18 @@ module INSTRM(
 
 );
 
-reg [31:0] Instruction [0:255];
+reg [31:0] Instruction [0:327679];
 
 always @(*) begin
-        ReadData = Instruction[Address[9:2]];
+    if (Address < 32'h00140000 )
+        ReadData = Instruction[Address[20:2]];
+    else    
+        ReadData = 32'h00000013;
    end
+
+   /* initial begin
+        $readmemh("test_list.hex", Instruction);
+   end */
 /*
 initial begin
         Instruction[0]  = 32'h40000093; // addi x1, x0, 1024

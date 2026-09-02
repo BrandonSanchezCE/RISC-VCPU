@@ -10,8 +10,8 @@ module ControlUnit(
     output reg [1:0] PCSrc,
     output [1:0]ResultSrc,
     output [2:0] ImmSrc,
-    output [3:0]ALUControl
-    
+    output [3:0]ALUControl,
+    output Halt
 );
 wire [1:0] ALUOp;
 wire branch, jump, jumpR, branchCondition;
@@ -47,5 +47,7 @@ always @(*) begin
     PCSrc[0] = jump | (branch & BranchCondition);
     PCSrc[1] = jumpR;
 end
+
+assign Halt = (Op == 7'b1110011);
 
 endmodule

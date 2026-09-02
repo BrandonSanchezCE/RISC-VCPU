@@ -143,6 +143,7 @@ always @(*) begin
                        Branch = 0;
                        ALUOp = 2'b00;
                        Jump = 0;
+                       JumpR = 0;
                        Halt = 1;
         end
     endcase

@@ -1,0 +1,4148 @@
+
+/mnt/c/Users/wwwbr/Downloads/RISC-VCPU-main/RISC-VCPU-main/riscv-arch-test/work/my_core/elfs/rv32i/I/I-fence-00.elf:     file format elf32-littleriscv
+/mnt/c/Users/wwwbr/Downloads/RISC-VCPU-main/RISC-VCPU-main/riscv-arch-test/work/my_core/elfs/rv32i/I/I-fence-00.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x80000000
+
+Program Header:
+0x70000003 off    0x000156e0 vaddr 0x00000000 paddr 0x00000000 align 2**0
+         filesz 0x00000033 memsz 0x00000000 flags r--
+    LOAD off    0x00001000 vaddr 0x80000000 paddr 0x80000000 align 2**12
+         filesz 0x00002d00 memsz 0x00002d00 flags r-x
+    LOAD off    0x00004000 vaddr 0x80004000 paddr 0x80004000 align 2**12
+         filesz 0x00010cf0 memsz 0x00010cf0 flags rw-
+    LOAD off    0x00015000 vaddr 0x80035000 paddr 0x80035000 align 2**12
+         filesz 0x000006e0 memsz 0x000006e0 flags r-x
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text.init    00000040  80000000  80000000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .text.rvtest  00002cc0  80000040  80000040  00001040  2**6
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00010ce0  80004000  80004000  00004000  2**8
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .tohost       00000010  80014ce0  80014ce0  00014ce0  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  4 .bss          00000000  80014cf0  80014cf0  00014cf0  2**0
+                  ALLOC
+  5 .text.rvmodel 000006e0  80035000  80035000  00015000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .riscv.attributes 00000033  00000000  00000000  000156e0  2**0
+                  CONTENTS, READONLY
+  7 .debug_line   0000006c  00000000  00000000  00015713  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  8 .debug_line_str 000000b1  00000000  00000000  0001577f  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+  9 .debug_info   00000023  00000000  00000000  00015830  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 10 .debug_abbrev 00000012  00000000  00000000  00015853  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 11 .debug_aranges 00000028  00000000  00000000  00015868  2**3
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_str    000000bd  00000000  00000000  00015890  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_rnglists 0000001a  00000000  00000000  0001594d  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+80000000 l    d  .text.init	00000000 .text.init
+80000040 l    d  .text.rvtest	00000000 .text.rvtest
+80004000 l    d  .data	00000000 .data
+80014ce0 l    d  .tohost	00000000 .tohost
+80014cf0 l    d  .bss	00000000 .bss
+80035000 l    d  .text.rvmodel	00000000 .text.rvmodel
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    df *ABS*	00000000 ccAOHEJ6.o
+10000000 l       *ABS*	00000000 UART_BASE_ADDR
+10000000 l       *ABS*	00000000 UART_THR
+10000003 l       *ABS*	00000000 UART_LCR
+10000005 l       *ABS*	00000000 UART_LSR
+00000003 l       *ABS*	00000000 MMODE_SIG
+00000001 l       *ABS*	00000000 SMODE_SIG
+00000001 l       *ABS*	00000000 HMODE_SIG
+00000002 l       *ABS*	00000000 VMODE_SIG
+80035118 l       .text.rvmodel	00000000 rvmodel_boot
+80000040 l       .text.rvtest	00000000 I_fence_cg_cp_custom_fence_fence
+80000044 l       .text.rvtest	00000000 I_fence_cg_cp_custom_fence_fence_rw_rw
+80000048 l       .text.rvtest	00000000 I_fence_cg_cp_custom_fence_fence_tso_rw_rw
+8000004c l       .text.rvtest	00000000 I_fence_cg_cp_custom_fence_reserved_fences
+8000005c l       .text.rvtest	00000000 I_fence_cg_cp_custom_fence_hint_fences
+00000300 l       *ABS*	00000000 CSR_XSTATUS
+00000304 l       *ABS*	00000000 CSR_XIE
+00000344 l       *ABS*	00000000 CSR_XIP
+00000180 l       *ABS*	00000000 CSR_XSATP
+00000343 l       *ABS*	00000000 CSR_XTVAL
+00000302 l       *ABS*	00000000 CSR_XEDELEG
+00000303 l       *ABS*	00000000 CSR_XIDELEG
+0000030a l       *ABS*	00000000 CSR_XENVCFG
+00000306 l       *ABS*	00000000 CSR_XCOUNTEREN
+00000305 l       *ABS*	00000000 CSR_XTVEC
+00000340 l       *ABS*	00000000 CSR_XSCRATCH
+00000341 l       *ABS*	00000000 CSR_XEPC
+00000342 l       *ABS*	00000000 CSR_XCAUSE
+00000312 l       *ABS*	00000000 CSR_XEDELEGH
+6f5ca309 l       *ABS*	00000000 immx
+6f5ca309 l       *ABS*	00000000 absimm
+00000000 l       *ABS*	00000000 cry
+00000309 l       *ABS*	00000000 imm12
+80000084 l       .text.rvtest	00000000 exit_Mcleanup
+80000088 l       .text.rvtest	00000000 resto_Medeleg
+80000090 l       .text.rvtest	00000000 resto_Msatp
+80000094 l       .text.rvtest	00000000 resto_Mscratch
+8000009c l       .text.rvtest	00000000 resto_Mxtvec
+800000b0 l       .text.rvtest	00000000 resto_Mtramp
+800000b4 l       .text.rvtest	00000000 resto_Mloop
+800000cc l       .text.rvtest	00000000 check_trap_sig_overflow
+80000370 l       .text.rvtest	00000000 trap_sig_overflow
+80000210 l       .text.rvtest	00000000 check_trap_sig_offset
+80004b7c l       .data	00000000 failstr
+800355c4 l       .text.rvmodel	00000000 rvmodel_io_write_str
+80004bb3 l       .data	00000000 begin_debugstr
+80004c13 l       .data	00000000 trap_sig_overflowstr
+800057be l       .data	00000000 endstr
+80035634 l       .text.rvmodel	00000000 rvmodel_halt_fail
+80004328 l       .data	00000000 Mtrap_sig
+80006278 l       .data	00000000 trap_sigptr
+80006270 l       .data	00000000 final_trap_sig_offset
+800002d4 l       .text.rvtest	00000000 check_abort_test
+80001190 l       .text.rvtest	00000000 failedtest_trap_x7_x9
+80004d67 l       .data	00000000 trap_sig_offset_mismatch
+800002f0 l       .text.rvtest	00000000 exit_cleanup
+800003a4 l       .text.rvtest	00000000 abort_test
+80004bd5 l       .data	00000000 abortstr
+80004b44 l       .data	00000000 successstr
+80035618 l       .text.rvmodel	00000000 rvmodel_halt_pass
+00000120 l       *ABS*	00000000 value
+80000440 l       .text.rvtest	00000000 trap_Mhandler
+80000560 l       .text.rvtest	00000000 rvtest_Mendtest
+80000584 l       .text.rvtest	00000000 common_Mhandler
+800005f0 l       .text.rvtest	00000000 spcl_M2mmode_test
+800005fc l       .text.rvtest	00000000 spcl_Mchk4alt
+8000060c l       .text.rvtest	00000000 spcl_Mchk4ecall
+80000604 l       .text.rvtest	00000000 spcl_Mparam_chk
+800010b8 l       .text.rvtest	00000000 Mrtn2mmode
+80000b94 l       .text.rvtest	00000000 Mtrapsig_ptr_upd
+80000618 l       .text.rvtest	00000000 Mgoto_mchk
+8000061c l       .text.rvtest	00000000 tsbi_Mdispatch
+80000644 l       .text.rvtest	00000000 tsbi_Mgoto_mode
+80000634 l       .text.rvtest	00000000 tsbi_Mecall_test
+800006b0 l       .text.rvtest	00000000 tsbi_instr_table_dispatch
+80000e24 l       .text.rvtest	00000000 resto_Mrtn
+80000670 l       .text.rvtest	00000000 tsbi_Mgoto_m
+80000680 l       .text.rvtest	00000000 tsbi_Mgoto_s
+8000069c l       .text.rvtest	00000000 tsbi_Mgoto_u
+800006ac l       .text.rvtest	00000000 tsbi_Mhandle_forwarded
+80000830 l       .text.rvtest	00000000 tsbi_instr_table
+800006e0 l       .text.rvtest	00000000 tsbi_instr_table_search_loop
+800006f4 l       .text.rvtest	00000000 found_instr
+80000738 l       .text.rvtest	00000000 tsbi_instr_not_found
+80000724 l       .text.rvtest	00000000 tsbi_instr_rtn
+800061f5 l       .data	00000000 tsbi_instr_not_found_str
+80002c38 l       .text.rvtest	00000000 failedtest_hex_to_str
+80004668 l       .data	00000000 ascii_buffer
+80004c7c l       .data	00000000 newlinestr
+80000bb0 l       .text.rvtest	00000000 Mxcpt_sig_sv
+80000b9c l       .text.rvtest	00000000 Mint_sig_sv
+80000bb0 l       .text.rvtest	00000000 Mtrap_sig_sv
+00000298 l       *ABS*	00000000 sv_area_off
+80004648 l       .data	00000000 saved_xepc
+80014cdc l       .data	00000000 sig_end_canary
+80000c48 l       .text.rvtest	00000000 sv_Mvect
+80004d7e l       .data	00000000 sv_Mvect_str
+80000cec l       .text.rvtest	00000000 sv_Mcause
+80004e80 l       .data	00000000 sv_Mcause_str
+80000e44 l       .text.rvtest	00000000 common_Mint_handler
+80000d14 l       .text.rvtest	00000000 common_Mexcpt_handler
+80000d20 l       .text.rvtest	00000000 vmem_adj_Mepc
+80000d74 l       .text.rvtest	00000000 sv_Mepc
+80000d48 l       .text.rvtest	00000000 code_adj_Mepc
+80000d70 l       .text.rvtest	00000000 adj_Mepc
+80000d5c l       .text.rvtest	00000000 data_adj_Mepc
+80004f7b l       .data	00000000 sv_Mepc_str
+80000d94 l       .text.rvtest	00000000 skpsv_Mepc
+80000dbc l       .text.rvtest	00000000 adj_Mepc_rtn
+80000dec l       .text.rvtest	00000000 skp_adj_Mepc
+80000df0 l       .text.rvtest	00000000 sv_Mtval
+8000506e l       .data	00000000 sv_Mtval_str
+80000e10 l       .text.rvtest	00000000 skp_Mtval
+80000e1c l       .text.rvtest	00000000 dispatch_Mspcl_excpt_handler
+80000e7c l       .text.rvtest	00000000 spcl_Mhandler
+80000e58 l       .text.rvtest	00000000 sv_Mip
+800051e1 l       .data	00000000 sv_Mip_str
+80000e98 l       .text.rvtest	00000000 spcl_Mdispatch_handling
+80000eb0 l       .text.rvtest	00000000 spcl_Mdispatch
+80000eb8 l       .text.rvtest	00000000 clrint_Mtbl
+80035000 l       .text.rvmodel	00000000 Mclr_Msw_int
+80035014 l       .text.rvmodel	00000000 Mclr_Mtmr_int
+80035030 l       .text.rvmodel	00000000 Mclr_Mext_int
+80000fb8 l       .text.rvtest	00000000 excpt_Mhndlr_tbl
+00000018 l       *ABS*	00000000 causeidx
+8003505c l       .text.rvmodel	00000000 Mclr_Ssw_int
+80035078 l       .text.rvmodel	00000000 Mclr_Stmr_int
+80035084 l       .text.rvmodel	00000000 Mclr_Sext_int
+800350d0 l       .text.rvmodel	00000000 Mclr_Vsw_int
+800350e8 l       .text.rvmodel	00000000 Mclr_Vtmr_int
+80035100 l       .text.rvmodel	00000000 Mclr_Vext_int
+80001108 l       .text.rvtest	00000000 rtn_fm_mmode
+800010f4 l       .text.rvtest	00000000 from_hs_u
+800010e4 l       .text.rvtest	00000000 from_vs
+80001128 l       .text.rvtest	00000000 failedtest_x5_x4
+80004500 l       .data	00000000 begin_failure_scratch
+800011c4 l       .text.rvtest	00000000 failedtest_saveregs
+80001140 l       .text.rvtest	00000000 failedtest_x8_x7
+80001168 l       .text.rvtest	00000000 failedtest_x14_x13
+80001234 l       .text.rvtest	00000000 failedtest_saveresults
+80004500 l       .data	00000000 failure_type
+800013cc l       .text.rvtest	00000000 failedtest_saveresults_trap
+80001244 l       .text.rvtest	00000000 failedtest_saveresults_int
+80001354 l       .text.rvtest	00000000 failedtest_saveresults_bad_instr
+8000138c l       .text.rvtest	00000000 failedtest_saveresults_bad_ptr
+800016c0 l       .text.rvtest	00000000 failedtest_saveresults_common
+80004628 l       .data	00000000 failure_diag_type
+80004638 l       .data	00000000 trap_diag_fail_str_ptr
+80001680 l       .text.rvtest	00000000 trap_diag_offset_mismatch
+80004630 l       .data	00000000 trap_diag_subtype
+80001694 l       .text.rvtest	00000000 trap_diag_field_identified
+80005165 l       .data	00000000 sv_Mtval2_str
+800051a3 l       .data	00000000 sv_Mtinst_str
+80004dbe l       .data	00000000 sv_Svect_str
+80004ebe l       .data	00000000 sv_Scause_str
+80004fb7 l       .data	00000000 sv_Sepc_str
+800050ab l       .data	00000000 sv_Stval_str
+8000521c l       .data	00000000 sv_Sip_str
+80004dfe l       .data	00000000 sv_Hvect_str
+80004efc l       .data	00000000 sv_Hcause_str
+80004ff3 l       .data	00000000 sv_Hepc_str
+800050e8 l       .data	00000000 sv_Htval_str
+80005257 l       .data	00000000 sv_Hip_str
+80004e3f l       .data	00000000 sv_Vvect_str
+80004f3b l       .data	00000000 sv_Vcause_str
+80005030 l       .data	00000000 sv_Vepc_str
+80005126 l       .data	00000000 sv_Vtval_str
+80005293 l       .data	00000000 sv_Vip_str
+800052d0 l       .data	00000000 Mclr_Mext_int_str
+8000531f l       .data	00000000 Mclr_Sext_int_str
+8000541a l       .data	00000000 Sclr_Sext_int_str
+80005516 l       .data	00000000 Hclr_Sext_int_str
+800016b0 l       .text.rvtest	00000000 trap_diag_generic_report
+80004634 l       .data	00000000 trap_diag_mode
+800016f0 l       .text.rvtest	00000000 failedtest_report
+800016f0 l       .text.rvtest	00000000 print_failstr
+80001768 l       .text.rvtest	00000000 print_testnamestr
+80004c6a l       .data	00000000 testnamestr
+800017a8 l       .text.rvtest	00000000 print_failure_test_name_str
+80004620 l       .data	00000000 failure_string_ptr
+800017b8 l       .text.rvtest	00000000 print_newline_str
+80001d2c l       .text.rvtest	00000000 failedtest_report_trap_detailed
+80004c7e l       .data	00000000 inststr
+80004600 l       .data	00000000 failing_instruction
+80004c92 l       .data	00000000 addrstr
+80004608 l       .data	00000000 failing_addr
+800056c9 l       .data	00000000 regstr
+80001998 l       .text.rvtest	00000000 failedtest_report_not_intreg
+80004604 l       .data	00000000 failing_reg
+80002cb4 l       .text.rvtest	00000000 failedtest_dec_to_str
+80001aac l       .text.rvtest	00000000 failedtest_report_print_regstr
+800019ec l       .text.rvtest	00000000 failedtest_report_fpreg
+80001a38 l       .text.rvtest	00000000 failedtest_report_vecreg
+80001a78 l       .text.rvtest	00000000 failedtest_report_vxsat
+800057df l       .data	00000000 fflagsstr
+80001ae8 l       .text.rvtest	00000000 failedtest_report_after_reg
+800056c2 l       .data	00000000 vxsatstr
+800056da l       .data	00000000 badvalstr
+80001b4c l       .text.rvtest	00000000 failedtest_report_badval_not_fp
+80004610 l       .data	00000000 failing_value
+80001b5c l       .text.rvtest	00000000 failedtest_report_badval_done
+80001c2c l       .text.rvtest	00000000 failedtest_report_diag
+800056f1 l       .data	00000000 expvalstr
+80001bec l       .text.rvtest	00000000 failedtest_report_expval_not_fp
+80004618 l       .data	00000000 expected_value
+80001bfc l       .text.rvtest	00000000 failedtest_report_expval_done
+800029e4 l       .text.rvtest	00000000 failedtest_report_end
+80001cac l       .text.rvtest	00000000 failedtest_report_bad_pointer_diag
+80001c34 l       .text.rvtest	00000000 failedtest_report_bad_instr_diag
+80005708 l       .data	00000000 failure_diag_bad_instr_str
+80005766 l       .data	00000000 failure_diag_bad_ptr_str
+80001df0 l       .text.rvtest	00000000 trap_report_offset_mismatch
+8000580b l       .data	00000000 trap_diag_header_str
+80005837 l       .data	00000000 trap_diag_origstr_label
+80002870 l       .text.rvtest	00000000 trap_report_generic
+8000212c l       .text.rvtest	00000000 trap_report_field_mismatch
+80005847 l       .data	00000000 trap_diag_expected_offset_str
+80005872 l       .data	00000000 trap_diag_actual_offset_str
+8000200c l       .text.rvtest	00000000 trap_report_missing_traps
+80001efc l       .text.rvtest	00000000 trap_report_extra_traps
+800058a1 l       .data	00000000 trap_diag_extra_traps_str
+80005909 l       .data	00000000 trap_diag_diff_bytes_str
+80005930 l       .data	00000000 trap_diag_extra_next_step_str
+800058cd l       .data	00000000 trap_diag_missing_traps_str
+80005a18 l       .data	00000000 trap_diag_missing_next_step_str
+80005aff l       .data	00000000 trap_diag_handler_mode_str
+800021c4 l       .text.rvtest	00000000 trap_mode_m
+80002204 l       .text.rvtest	00000000 trap_mode_s
+80002244 l       .text.rvtest	00000000 trap_mode_h
+80002284 l       .text.rvtest	00000000 trap_mode_v
+80005b3b l       .data	00000000 trap_diag_mode_unknown_str
+800022c0 l       .text.rvtest	00000000 trap_mode_print
+80005b19 l       .data	00000000 trap_diag_mode_m_str
+80005b21 l       .data	00000000 trap_diag_mode_s_str
+80005b29 l       .data	00000000 trap_diag_mode_hs_str
+80005b32 l       .data	00000000 trap_diag_mode_vs_str
+80005b44 l       .data	00000000 trap_diag_field_str
+80002384 l       .text.rvtest	00000000 trap_field_vect
+800023c4 l       .text.rvtest	00000000 trap_field_cause
+80002404 l       .text.rvtest	00000000 trap_field_epc
+80002444 l       .text.rvtest	00000000 trap_field_tval
+80002484 l       .text.rvtest	00000000 trap_field_ip
+800024c4 l       .text.rvtest	00000000 trap_field_tval2
+80002504 l       .text.rvtest	00000000 trap_field_tinst
+80002544 l       .text.rvtest	00000000 trap_field_intid
+80005c9b l       .data	00000000 trap_diag_field_unknown_str
+80002580 l       .text.rvtest	00000000 trap_field_print
+80005b5e l       .data	00000000 trap_diag_field_vect_str
+80005b8f l       .data	00000000 trap_diag_field_cause_str
+80005baf l       .data	00000000 trap_diag_field_epc_str
+80005bcd l       .data	00000000 trap_diag_field_tval_str
+80005bec l       .data	00000000 trap_diag_field_ip_str
+80005c14 l       .data	00000000 trap_diag_field_tval2_str
+80005c40 l       .data	00000000 trap_diag_field_tinst_str
+80005c6c l       .data	00000000 trap_diag_field_intid_str
+80005caa l       .data	00000000 trap_diag_expected_str
+80005cc1 l       .data	00000000 trap_diag_actual_str
+8000271c l       .text.rvtest	00000000 trap_field_not_cause
+80005cd8 l       .data	00000000 trap_diag_expected_cause_name_str
+80002954 l       .text.rvtest	00000000 trap_cause_to_str
+80005cef l       .data	00000000 trap_diag_actual_cause_name_str
+8000271c l       .text.rvtest	00000000 trap_field_not_epc
+80002a30 l       .text.rvtest	00000000 failedtest_print_csr_context
+80005d65 l       .data	00000000 trap_diag_hint_vect_str
+80005e3b l       .data	00000000 trap_diag_hint_cause_str
+80005f2e l       .data	00000000 trap_diag_hint_epc_str
+80006029 l       .data	00000000 trap_diag_hint_tval_str
+80006110 l       .data	00000000 trap_diag_hint_ip_str
+80005d1d l       .data	00000000 trap_diag_generic_str
+80004d06 l       .data	00000000 xepcinstrstr
+80002978 l       .text.rvtest	00000000 trap_cause_interrupt
+80002958 l       .text.rvtest	00000000 trap_cause_exception
+800029a4 l       .text.rvtest	00000000 trap_cause_unknown
+80004690 l       .data	00000000 trap_excpt_name_tbl
+800046f0 l       .data	00000000 trap_int_name_tbl
+80004b2e l       .data	00000000 trap_cause_unknown_str
+80002a28 l       .text.rvtest	00000000 failedtest_terminate
+80004640 l       .data	00000000 csr_context_ret_addr
+80004d27 l       .data	00000000 mepcstr
+80004d37 l       .data	00000000 mcausestr
+80004650 l       .data	00000000 saved_xcause
+80004d47 l       .data	00000000 mtvalstr
+80004658 l       .data	00000000 saved_xtval
+80004d57 l       .data	00000000 mstatusstr
+80004660 l       .data	00000000 saved_xstatus
+80002c78 l       .text.rvtest	00000000 failedtest_hex_to_str_loop
+80002c94 l       .text.rvtest	00000000 failedtest_hex_to_str_digit
+80002c98 l       .text.rvtest	00000000 failedtest_hex_to_str_write
+80035118 l       .text.rvmodel	00000000 uart_init
+80035128 l       .text.rvmodel	00000000 rvtest_boot_to_mmode
+80035160 l       .text.rvmodel	00000000 init_Mscratch
+80035168 l       .text.rvmodel	00000000 init_Mtimecmp
+8003517c l       .text.rvmodel	00000000 init_Medeleg
+80035184 l       .text.rvmodel	00000000 init_Msatp
+80035184 l       .text.rvmodel	00000000 init_Mtvec
+800352a4 l       .text.rvmodel	00000000 rvtest_Mprolog_done
+80035264 l       .text.rvmodel	00000000 abortMtest
+800351bc l       .text.rvmodel	00000000 init_Mtramp
+8003522c l       .text.rvmodel	00000000 overwt_tt_Mloop
+8003522c l       .text.rvmodel	00000000 ovlpok_Mtramp
+80035254 l       .text.rvmodel	00000000 endcopy_Mtramp
+800352a8 l       .text.rvmodel	00000000 rvtest_boot_to_mmode_csr_init
+80035344 l       .text.rvmodel	00000000 rvtest_boot_to_umode
+80035384 l       .text.rvmodel	00000000 rvtest_init_regs
+80006240 l       .data	00000000 signature_base
+80035520 l       .text.rvmodel	00000000 canary_check
+800057e7 l       .data	00000000 canary_mismatch
+80035624 l       .text.rvmodel	00000000 write_tohost_pass
+8003562c l       .text.rvmodel	00000000 self_loop_pass
+80035640 l       .text.rvmodel	00000000 write_tohost_fail
+80035648 l       .text.rvmodel	00000000 self_loop_fail
+80035650 l       .text.rvmodel	00000000 rvtest_set_msw_int
+80035660 l       .text.rvmodel	00000000 rvtest_clr_msw_int
+8003566c l       .text.rvmodel	00000000 rvtest_set_mext_int
+8003569c l       .text.rvmodel	00000000 rvtest_clr_mext_int
+80004000 l       .data	00000000 scratch
+800042e8 l       .data	00000000 Msave_area
+800042e8 l       .data	00000000 Mcode_bgn_ptr
+800042f0 l       .data	00000000 Mcode_seg_sz
+800042f8 l       .data	00000000 Mdata_bgn_ptr
+80004300 l       .data	00000000 Mdata_seg_sz
+80004308 l       .data	00000000 Msig_bgn_ptr
+80004310 l       .data	00000000 Msig_seg_sz
+80004318 l       .data	00000000 Mvmem_bgn_ptr
+80004320 l       .data	00000000 Mvmem_seg_sz
+80004330 l       .data	00000000 Msatp_sv
+80004338 l       .data	00000000 Msved_misa
+80004338 l       .data	00000000 Msved_hgatp
+80004338 l       .data	00000000 Msved_mpp
+80004338 l       .data	00000000 Munused
+80004340 l       .data	00000000 Mtentry_sv
+80004348 l       .data	00000000 Medeleg_sv
+80004350 l       .data	00000000 Mtvec_new
+80004358 l       .data	00000000 Mtvec_save
+80004360 l       .data	00000000 Mscratch_save
+80004368 l       .data	00000000 Mtrapreg_sv
+80004388 l       .data	00000000 Mrvmodel_sv
+800043a8 l       .data	00000000 Msv_area_end
+800043b0 l       .data	00000000 I_fence_cg_cp_custom_fence_fence_str
+800043eb l       .data	00000000 I_fence_cg_cp_custom_fence_fence_rw_rw_str
+8000442c l       .data	00000000 I_fence_cg_cp_custom_fence_fence_tso_rw_rw_str
+80004471 l       .data	00000000 I_fence_cg_cp_custom_fence_reserved_fences_str
+800044b6 l       .data	00000000 I_fence_cg_cp_custom_fence_hint_fences_str
+80004690 l       .data	00000000 end_failure_scratch
+80004730 l       .data	00000000 trap_excpt_name_0
+80004750 l       .data	00000000 trap_excpt_name_1
+8000476a l       .data	00000000 trap_excpt_name_2
+8000477f l       .data	00000000 trap_excpt_name_3
+8000478b l       .data	00000000 trap_excpt_name_4
+800047a4 l       .data	00000000 trap_excpt_name_5
+800047b7 l       .data	00000000 trap_excpt_name_6
+800047d5 l       .data	00000000 trap_excpt_name_7
+800047ed l       .data	00000000 trap_excpt_name_8
+8000480b l       .data	00000000 trap_excpt_name_9
+80004829 l       .data	00000000 trap_excpt_name_10
+80004848 l       .data	00000000 trap_excpt_name_11
+80004866 l       .data	00000000 trap_excpt_name_12
+8000487e l       .data	00000000 trap_excpt_name_13
+8000488f l       .data	00000000 trap_excpt_name_14
+8000489e l       .data	00000000 trap_excpt_name_15
+800048b4 l       .data	00000000 trap_excpt_name_16
+800048c1 l       .data	00000000 trap_excpt_name_17
+800048d0 l       .data	00000000 trap_excpt_name_18
+800048e0 l       .data	00000000 trap_excpt_name_19
+800048f0 l       .data	00000000 trap_excpt_name_20
+8000490e l       .data	00000000 trap_excpt_name_21
+80004925 l       .data	00000000 trap_excpt_name_22
+8000493a l       .data	00000000 trap_excpt_name_23
+80004956 l       .data	00000000 trap_int_name_0
+8000496e l       .data	00000000 trap_int_name_1
+8000498d l       .data	00000000 trap_int_name_2
+800049b4 l       .data	00000000 trap_int_name_3
+800049d0 l       .data	00000000 trap_int_name_4
+800049e8 l       .data	00000000 trap_int_name_5
+80004a04 l       .data	00000000 trap_int_name_6
+80004a28 l       .data	00000000 trap_int_name_7
+80004a41 l       .data	00000000 trap_int_name_8
+80004a59 l       .data	00000000 trap_int_name_9
+80004a78 l       .data	00000000 trap_int_name_10
+80004a9f l       .data	00000000 trap_int_name_11
+80004abb l       .data	00000000 trap_int_name_12
+80004ae0 l       .data	00000000 trap_int_name_13
+80004afc l       .data	00000000 trap_int_name_14
+80004b15 l       .data	00000000 trap_int_name_15
+80004cd3 l       .data	00000000 xepcstr
+80005371 l       .data	00000000 Mclr_Vext_int_str
+800053cb l       .data	00000000 Sclr_Mext_int_str
+8000546c l       .data	00000000 Sclr_Vext_int_str
+800054c6 l       .data	00000000 Hclr_Mext_int_str
+80005569 l       .data	00000000 Hclr_Vext_int_str
+800055c4 l       .data	00000000 Vclr_Mext_int_str
+80005614 l       .data	00000000 Vclr_Sext_int_str
+80005667 l       .data	00000000 Vclr_Vext_int_str
+80005d06 l       .data	00000000 trap_diag_curr_xepc_str
+00020000 g       *ABS*	00000000 STACK_SIZE
+80014ce0 g       .data	00000000 end_signature
+00020000 g       *ABS*	00000000 __stack_size
+800355f4 g       .text.rvmodel	00000000 rvmodel_io_write_str_c
+80014ce0 g       .data	00000000 rvtest_sig_end
+80000598 g       .text.rvtest	00000000 common_Mentry
+80014cf0 g       .bss	00000000 __bss_end
+00000001 g       *ABS*	00000000 __num_harts
+80000000 g       *ABS*	00000000 TEST_BASE
+800000cc g       .text.rvtest	00000000 rvtest_Mend
+80000000 g       .text.init	00000000 rvtest_entry_point
+80034cf0 g       .text.rvmodel	00000000 __stack_top
+80000000 g       *ABS*	00000000 RAM_ORIGIN
+80006240 g       .data	00000000 begin_signature
+80004108 g       .data	00000000 rvtest_trap_count
+80000074 g       .text.rvtest	00000000 rvtest_code_end
+80000000 g       *ABS*	00000000 RAM_LENGTH
+80000040 g       .text.rvtest	00000000 rvtest_code_begin
+80014cf0 g       .bss	00000000 __bss_start
+80006240 g       .data	00000000 rvtest_sig_begin
+00000001 g       *ABS*	00000000 NUM_HARTS
+80014cf0 g       .text.rvmodel	00000000 __stack_bottom
+800043b0 g       .data	00000000 rvtest_data_begin
+80004110 g       .data	00000000 Mtramptbl_sv
+80006239 g       .data	00000000 rvtest_data_end
+80000074 g       .text.rvtest	00000000 cleanup_epilogs
+80036000 g       .text.rvmodel	00000000 _end
+80014ce8 g       .tohost	00000000 fromhost
+80014ce0 g       .tohost	00000000 tohost
+80000330 g       .text.rvtest	00000000 rvtest_fail_summary
+800003c0 g       .text.rvtest	00000000 Mtrampoline
+
+
+
+Disassembly of section .text.init:
+
+80000000 <rvtest_entry_point>:
+
+// Include framework macros
+#include "riscv_arch_test.h"
+
+// Set up test environment and declare main entry point
+RVTEST_BEGIN
+80000000:	00035097          	auipc	x1,0x35
+80000004:	11808093          	addi	x1,x1,280 # 80035118 <rvmodel_boot>
+80000008:	00000013          	addi	x0,x0,0
+8000000c:	00000013          	addi	x0,x0,0
+80000010:	00000013          	addi	x0,x0,0
+80000014:	00000013          	addi	x0,x0,0
+80000018:	00000013          	addi	x0,x0,0
+8000001c:	00000013          	addi	x0,x0,0
+80000020:	000080e7          	jalr	x1,0(x1)
+80000024:	00000013          	addi	x0,x0,0
+80000028:	00000013          	addi	x0,x0,0
+8000002c:	00000013          	addi	x0,x0,0
+80000030:	00000013          	addi	x0,x0,0
+80000034:	00000013          	addi	x0,x0,0
+80000038:	00000013          	addi	x0,x0,0
+8000003c:	00000013          	addi	x0,x0,0
+
+Disassembly of section .text.rvtest:
+
+80000040 <rvtest_code_begin>:
+// cp_custom_fence
+/////////////////////////////////
+
+# Testcase cp_custom_fence (regular fences)
+I_fence_cg_cp_custom_fence_fence:
+  fence
+80000040:	0ff0000f          	fence	iorw,iorw
+
+80000044 <I_fence_cg_cp_custom_fence_fence_rw_rw>:
+I_fence_cg_cp_custom_fence_fence_rw_rw:
+  fence rw, rw
+80000044:	0330000f          	fence	rw,rw
+
+80000048 <I_fence_cg_cp_custom_fence_fence_tso_rw_rw>:
+
+# Testcase cp_custom_fence (fence.tso)
+I_fence_cg_cp_custom_fence_fence_tso_rw_rw:
+  fence.tso
+80000048:	8330000f          	fence.tso
+
+8000004c <I_fence_cg_cp_custom_fence_reserved_fences>:
+8000004c:	0331000f          	.word	0x0331000f
+80000050:	0330008f          	.word	0x0330008f
+80000054:	1330000f          	.word	0x1330000f
+80000058:	8110000f          	.word	0x8110000f
+
+8000005c <I_fence_cg_cp_custom_fence_hint_fences>:
+8000005c:	0031000f          	.word	0x0031000f
+80000060:	0301000f          	.word	0x0301000f
+80000064:	0030008f          	.word	0x0030008f
+80000068:	0300008f          	.word	0x0300008f
+8000006c:	0020000f          	.word	0x0020000f
+80000070:	0200000f          	.word	0x0200000f
+
+80000074 <cleanup_epilogs>:
+  .word 0x0300008f    # fence with rd != x0, rs1 = x0, fm = 0, succ = 0 is a hint
+  .word 0x0020000f    # fence with rd = x0, rs1 = x0, fm = 0, pred = 0, succ != 0 is a hint
+  .word 0x0200000f    # fence with rd = x0, rs1 = x0, fm = 0, pred != W, succ = 0 is a hint
+
+// Instantiate trap handlers and other epilog code, call RVMODEL_HALT at end of test
+RVTEST_CODE_END
+80000074:	00000513          	addi	x10,x0,0
+80000078:	00000073          	ecall
+8000007c:	fff00513          	addi	x10,x0,-1
+80000080:	1d800413          	addi	x8,x0,472
+
+80000084 <exit_Mcleanup>:
+80000084:	34002373          	csrrs	x6,mscratch,x0
+
+80000088 <resto_Medeleg>:
+80000088:	23832383          	lw	x7,568(x6)
+8000008c:	23c32483          	lw	x9,572(x6)
+
+80000090 <resto_Msatp>:
+80000090:	22032383          	lw	x7,544(x6)
+
+80000094 <resto_Mscratch>:
+80000094:	25032483          	lw	x9,592(x6)
+80000098:	34049073          	csrrw	x0,mscratch,x9
+
+8000009c <resto_Mxtvec>:
+8000009c:	24832483          	lw	x9,584(x6)
+800000a0:	305493f3          	csrrw	x7,mtvec,x9
+800000a4:	ffc4f493          	andi	x9,x9,-4
+800000a8:	ffc3f393          	andi	x7,x7,-4
+800000ac:	00749e63          	bne	x9,x7,800000c8 <resto_Mloop+0x14>
+
+800000b0 <resto_Mtramp>:
+800000b0:	00030493          	addi	x9,x6,0
+
+800000b4 <resto_Mloop>:
+800000b4:	0004a783          	lw	x15,0(x9)
+800000b8:	00f3a023          	sw	x15,0(x7)
+800000bc:	00438393          	addi	x7,x7,4
+800000c0:	00448493          	addi	x9,x9,4
+800000c4:	fe83c8e3          	blt	x7,x8,800000b4 <resto_Mloop>
+800000c8:	00000013          	addi	x0,x0,0
+
+800000cc <rvtest_Mend>:
+800000cc:	00000013          	addi	x0,x0,0
+800000d0:	00000013          	addi	x0,x0,0
+800000d4:	00000013          	addi	x0,x0,0
+800000d8:	00000013          	addi	x0,x0,0
+800000dc:	00000013          	addi	x0,x0,0
+800000e0:	00000497          	auipc	x9,0x0
+800000e4:	29048493          	addi	x9,x9,656 # 80000370 <trap_sig_overflow>
+800000e8:	00000013          	addi	x0,x0,0
+800000ec:	00000013          	addi	x0,x0,0
+800000f0:	00000013          	addi	x0,x0,0
+800000f4:	00000013          	addi	x0,x0,0
+800000f8:	00000013          	addi	x0,x0,0
+800000fc:	00000013          	addi	x0,x0,0
+80000100:	10e49863          	bne	x9,x14,80000210 <check_trap_sig_offset>
+80000104:	00000013          	addi	x0,x0,0
+80000108:	00000013          	addi	x0,x0,0
+8000010c:	00000013          	addi	x0,x0,0
+80000110:	00000013          	addi	x0,x0,0
+80000114:	00000013          	addi	x0,x0,0
+80000118:	00000013          	addi	x0,x0,0
+8000011c:	00000013          	addi	x0,x0,0
+80000120:	00005517          	auipc	x10,0x5
+80000124:	a5c50513          	addi	x10,x10,-1444 # 80004b7c <failstr>
+80000128:	00000013          	addi	x0,x0,0
+8000012c:	00000013          	addi	x0,x0,0
+80000130:	00000013          	addi	x0,x0,0
+80000134:	00000013          	addi	x0,x0,0
+80000138:	00000013          	addi	x0,x0,0
+8000013c:	00000013          	addi	x0,x0,0
+80000140:	00035097          	auipc	x1,0x35
+80000144:	484080e7          	jalr	x1,1156(x1) # 800355c4 <rvmodel_io_write_str>
+80000148:	00000013          	addi	x0,x0,0
+8000014c:	00000013          	addi	x0,x0,0
+80000150:	00000013          	addi	x0,x0,0
+80000154:	00000013          	addi	x0,x0,0
+80000158:	00000013          	addi	x0,x0,0
+8000015c:	00000013          	addi	x0,x0,0
+80000160:	00005517          	auipc	x10,0x5
+80000164:	a5350513          	addi	x10,x10,-1453 # 80004bb3 <begin_debugstr>
+80000168:	00000013          	addi	x0,x0,0
+8000016c:	00000013          	addi	x0,x0,0
+80000170:	00000013          	addi	x0,x0,0
+80000174:	00000013          	addi	x0,x0,0
+80000178:	00000013          	addi	x0,x0,0
+8000017c:	00000013          	addi	x0,x0,0
+80000180:	00035097          	auipc	x1,0x35
+80000184:	444080e7          	jalr	x1,1092(x1) # 800355c4 <rvmodel_io_write_str>
+80000188:	00000013          	addi	x0,x0,0
+8000018c:	00000013          	addi	x0,x0,0
+80000190:	00000013          	addi	x0,x0,0
+80000194:	00000013          	addi	x0,x0,0
+80000198:	00000013          	addi	x0,x0,0
+8000019c:	00000013          	addi	x0,x0,0
+800001a0:	00005517          	auipc	x10,0x5
+800001a4:	a7350513          	addi	x10,x10,-1421 # 80004c13 <trap_sig_overflowstr>
+800001a8:	00000013          	addi	x0,x0,0
+800001ac:	00000013          	addi	x0,x0,0
+800001b0:	00000013          	addi	x0,x0,0
+800001b4:	00000013          	addi	x0,x0,0
+800001b8:	00000013          	addi	x0,x0,0
+800001bc:	00000013          	addi	x0,x0,0
+800001c0:	00035097          	auipc	x1,0x35
+800001c4:	404080e7          	jalr	x1,1028(x1) # 800355c4 <rvmodel_io_write_str>
+800001c8:	00000013          	addi	x0,x0,0
+800001cc:	00000013          	addi	x0,x0,0
+800001d0:	00000013          	addi	x0,x0,0
+800001d4:	00000013          	addi	x0,x0,0
+800001d8:	00000013          	addi	x0,x0,0
+800001dc:	00000013          	addi	x0,x0,0
+800001e0:	00005517          	auipc	x10,0x5
+800001e4:	5de50513          	addi	x10,x10,1502 # 800057be <endstr>
+800001e8:	00000013          	addi	x0,x0,0
+800001ec:	00000013          	addi	x0,x0,0
+800001f0:	00000013          	addi	x0,x0,0
+800001f4:	00000013          	addi	x0,x0,0
+800001f8:	00000013          	addi	x0,x0,0
+800001fc:	00000013          	addi	x0,x0,0
+80000200:	00035097          	auipc	x1,0x35
+80000204:	3c4080e7          	jalr	x1,964(x1) # 800355c4 <rvmodel_io_write_str>
+80000208:	00035097          	auipc	x1,0x35
+8000020c:	42c080e7          	jalr	x1,1068(x1) # 80035634 <rvmodel_halt_fail>
+
+80000210 <check_trap_sig_offset>:
+80000210:	00000013          	addi	x0,x0,0
+80000214:	00000013          	addi	x0,x0,0
+80000218:	00000013          	addi	x0,x0,0
+8000021c:	00000013          	addi	x0,x0,0
+80000220:	00004317          	auipc	x6,0x4
+80000224:	10830313          	addi	x6,x6,264 # 80004328 <Mtrap_sig>
+80000228:	00000013          	addi	x0,x0,0
+8000022c:	00000013          	addi	x0,x0,0
+80000230:	00000013          	addi	x0,x0,0
+80000234:	00000013          	addi	x0,x0,0
+80000238:	00000013          	addi	x0,x0,0
+8000023c:	00000013          	addi	x0,x0,0
+80000240:	00032303          	lw	x6,0(x6)
+80000244:	00000013          	addi	x0,x0,0
+80000248:	00000013          	addi	x0,x0,0
+8000024c:	00000013          	addi	x0,x0,0
+80000250:	00000013          	addi	x0,x0,0
+80000254:	00000013          	addi	x0,x0,0
+80000258:	00000013          	addi	x0,x0,0
+8000025c:	00000013          	addi	x0,x0,0
+80000260:	00006397          	auipc	x7,0x6
+80000264:	01838393          	addi	x7,x7,24 # 80006278 <trap_sigptr>
+80000268:	00000013          	addi	x0,x0,0
+8000026c:	00000013          	addi	x0,x0,0
+80000270:	00000013          	addi	x0,x0,0
+80000274:	00000013          	addi	x0,x0,0
+80000278:	00000013          	addi	x0,x0,0
+8000027c:	00000013          	addi	x0,x0,0
+80000280:	40730333          	sub	x6,x6,x7
+80000284:	00000013          	addi	x0,x0,0
+80000288:	00000013          	addi	x0,x0,0
+8000028c:	00000013          	addi	x0,x0,0
+80000290:	00000013          	addi	x0,x0,0
+80000294:	00000013          	addi	x0,x0,0
+80000298:	00000013          	addi	x0,x0,0
+8000029c:	00000013          	addi	x0,x0,0
+800002a0:	00006417          	auipc	x8,0x6
+800002a4:	fd040413          	addi	x8,x8,-48 # 80006270 <final_trap_sig_offset>
+800002a8:	00000013          	addi	x0,x0,0
+800002ac:	00000013          	addi	x0,x0,0
+800002b0:	00000013          	addi	x0,x0,0
+800002b4:	00000013          	addi	x0,x0,0
+800002b8:	00000013          	addi	x0,x0,0
+800002bc:	00000013          	addi	x0,x0,0
+800002c0:	00042203          	lw	x4,0(x8)
+800002c4:	00620863          	beq	x4,x6,800002d4 <check_abort_test>
+800002c8:	6c9003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+800002cc:	80000210          	.word	0x80000210
+800002d0:	80004d67          	.word	0x80004d67
+
+800002d4 <check_abort_test>:
+800002d4:	bad0e4b7          	lui	x9,0xbad0e
+800002d8:	ead48493          	addi	x9,x9,-339 # bad0dead <_end+0x3acd7ead>
+800002dc:	00e49a63          	bne	x9,x14,800002f0 <exit_cleanup>
+800002e0:	6b1003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+800002e4:	800003a4          	.word	0x800003a4
+800002e8:	80004bd5          	.word	0x80004bd5
+800002ec:	00000341          	.word	0x00000341
+
+800002f0 <exit_cleanup>:
+800002f0:	00000013          	addi	x0,x0,0
+800002f4:	00000013          	addi	x0,x0,0
+800002f8:	00000013          	addi	x0,x0,0
+800002fc:	00000013          	addi	x0,x0,0
+80000300:	00005517          	auipc	x10,0x5
+80000304:	84450513          	addi	x10,x10,-1980 # 80004b44 <successstr>
+80000308:	00000013          	addi	x0,x0,0
+8000030c:	00000013          	addi	x0,x0,0
+80000310:	00000013          	addi	x0,x0,0
+80000314:	00000013          	addi	x0,x0,0
+80000318:	00000013          	addi	x0,x0,0
+8000031c:	00000013          	addi	x0,x0,0
+80000320:	00035097          	auipc	x1,0x35
+80000324:	2a4080e7          	jalr	x1,676(x1) # 800355c4 <rvmodel_io_write_str>
+80000328:	00035097          	auipc	x1,0x35
+8000032c:	2f0080e7          	jalr	x1,752(x1) # 80035618 <rvmodel_halt_pass>
+
+80000330 <rvtest_fail_summary>:
+80000330:	00000013          	addi	x0,x0,0
+80000334:	00000013          	addi	x0,x0,0
+80000338:	00000013          	addi	x0,x0,0
+8000033c:	00000013          	addi	x0,x0,0
+80000340:	00005517          	auipc	x10,0x5
+80000344:	83c50513          	addi	x10,x10,-1988 # 80004b7c <failstr>
+80000348:	00000013          	addi	x0,x0,0
+8000034c:	00000013          	addi	x0,x0,0
+80000350:	00000013          	addi	x0,x0,0
+80000354:	00000013          	addi	x0,x0,0
+80000358:	00000013          	addi	x0,x0,0
+8000035c:	00000013          	addi	x0,x0,0
+80000360:	00035097          	auipc	x1,0x35
+80000364:	264080e7          	jalr	x1,612(x1) # 800355c4 <rvmodel_io_write_str>
+80000368:	00035097          	auipc	x1,0x35
+8000036c:	2cc080e7          	jalr	x1,716(x1) # 80035634 <rvmodel_halt_fail>
+
+80000370 <trap_sig_overflow>:
+80000370:	00000013          	addi	x0,x0,0
+80000374:	00000013          	addi	x0,x0,0
+80000378:	00000013          	addi	x0,x0,0
+8000037c:	00000013          	addi	x0,x0,0
+80000380:	00000717          	auipc	x14,0x0
+80000384:	ff070713          	addi	x14,x14,-16 # 80000370 <trap_sig_overflow>
+80000388:	00000013          	addi	x0,x0,0
+8000038c:	00000013          	addi	x0,x0,0
+80000390:	00000013          	addi	x0,x0,0
+80000394:	00000013          	addi	x0,x0,0
+80000398:	00000013          	addi	x0,x0,0
+8000039c:	00000013          	addi	x0,x0,0
+800003a0:	cd5ff06f          	jal	x0,80000074 <cleanup_epilogs>
+
+800003a4 <abort_test>:
+800003a4:	bad0e737          	lui	x14,0xbad0e
+800003a8:	ead70713          	addi	x14,x14,-339 # bad0dead <_end+0x3acd7ead>
+800003ac:	cc9ff06f          	jal	x0,80000074 <cleanup_epilogs>
+800003b0:	00000013          	addi	x0,x0,0
+800003b4:	00000013          	addi	x0,x0,0
+800003b8:	00000013          	addi	x0,x0,0
+800003bc:	00000013          	addi	x0,x0,0
+
+800003c0 <Mtrampoline>:
+800003c0:	0800006f          	jal	x0,80000440 <trap_Mhandler>
+800003c4:	0880006f          	jal	x0,8000044c <trap_Mhandler+0xc>
+800003c8:	0900006f          	jal	x0,80000458 <trap_Mhandler+0x18>
+800003cc:	0980006f          	jal	x0,80000464 <trap_Mhandler+0x24>
+800003d0:	0a00006f          	jal	x0,80000470 <trap_Mhandler+0x30>
+800003d4:	0a80006f          	jal	x0,8000047c <trap_Mhandler+0x3c>
+800003d8:	0b00006f          	jal	x0,80000488 <trap_Mhandler+0x48>
+800003dc:	0b80006f          	jal	x0,80000494 <trap_Mhandler+0x54>
+800003e0:	0c00006f          	jal	x0,800004a0 <trap_Mhandler+0x60>
+800003e4:	0c80006f          	jal	x0,800004ac <trap_Mhandler+0x6c>
+800003e8:	0d00006f          	jal	x0,800004b8 <trap_Mhandler+0x78>
+800003ec:	0d80006f          	jal	x0,800004c4 <trap_Mhandler+0x84>
+800003f0:	0e00006f          	jal	x0,800004d0 <trap_Mhandler+0x90>
+800003f4:	0e80006f          	jal	x0,800004dc <trap_Mhandler+0x9c>
+800003f8:	0f00006f          	jal	x0,800004e8 <trap_Mhandler+0xa8>
+800003fc:	0f80006f          	jal	x0,800004f4 <trap_Mhandler+0xb4>
+80000400:	1000006f          	jal	x0,80000500 <trap_Mhandler+0xc0>
+80000404:	1080006f          	jal	x0,8000050c <trap_Mhandler+0xcc>
+80000408:	1100006f          	jal	x0,80000518 <trap_Mhandler+0xd8>
+8000040c:	1180006f          	jal	x0,80000524 <trap_Mhandler+0xe4>
+80000410:	1200006f          	jal	x0,80000530 <trap_Mhandler+0xf0>
+80000414:	1280006f          	jal	x0,8000053c <trap_Mhandler+0xfc>
+80000418:	1300006f          	jal	x0,80000548 <trap_Mhandler+0x108>
+8000041c:	1380006f          	jal	x0,80000554 <trap_Mhandler+0x114>
+80000420:	1400006f          	jal	x0,80000560 <rvtest_Mendtest>
+80000424:	13c0006f          	jal	x0,80000560 <rvtest_Mendtest>
+80000428:	1380006f          	jal	x0,80000560 <rvtest_Mendtest>
+8000042c:	1340006f          	jal	x0,80000560 <rvtest_Mendtest>
+80000430:	1300006f          	jal	x0,80000560 <rvtest_Mendtest>
+80000434:	12c0006f          	jal	x0,80000560 <rvtest_Mendtest>
+80000438:	1280006f          	jal	x0,80000560 <rvtest_Mendtest>
+8000043c:	1240006f          	jal	x0,80000560 <rvtest_Mendtest>
+
+80000440 <trap_Mhandler>:
+80000440:	34011173          	csrrw	x2,mscratch,x2
+80000444:	26f12823          	sw	x15,624(x2)
+80000448:	13c007ef          	jal	x15,80000584 <common_Mhandler>
+8000044c:	34011173          	csrrw	x2,mscratch,x2
+80000450:	26f12823          	sw	x15,624(x2)
+80000454:	130007ef          	jal	x15,80000584 <common_Mhandler>
+80000458:	34011173          	csrrw	x2,mscratch,x2
+8000045c:	26f12823          	sw	x15,624(x2)
+80000460:	124007ef          	jal	x15,80000584 <common_Mhandler>
+80000464:	34011173          	csrrw	x2,mscratch,x2
+80000468:	26f12823          	sw	x15,624(x2)
+8000046c:	118007ef          	jal	x15,80000584 <common_Mhandler>
+80000470:	34011173          	csrrw	x2,mscratch,x2
+80000474:	26f12823          	sw	x15,624(x2)
+80000478:	10c007ef          	jal	x15,80000584 <common_Mhandler>
+8000047c:	34011173          	csrrw	x2,mscratch,x2
+80000480:	26f12823          	sw	x15,624(x2)
+80000484:	100007ef          	jal	x15,80000584 <common_Mhandler>
+80000488:	34011173          	csrrw	x2,mscratch,x2
+8000048c:	26f12823          	sw	x15,624(x2)
+80000490:	0f4007ef          	jal	x15,80000584 <common_Mhandler>
+80000494:	34011173          	csrrw	x2,mscratch,x2
+80000498:	26f12823          	sw	x15,624(x2)
+8000049c:	0e8007ef          	jal	x15,80000584 <common_Mhandler>
+800004a0:	34011173          	csrrw	x2,mscratch,x2
+800004a4:	26f12823          	sw	x15,624(x2)
+800004a8:	0dc007ef          	jal	x15,80000584 <common_Mhandler>
+800004ac:	34011173          	csrrw	x2,mscratch,x2
+800004b0:	26f12823          	sw	x15,624(x2)
+800004b4:	0d0007ef          	jal	x15,80000584 <common_Mhandler>
+800004b8:	34011173          	csrrw	x2,mscratch,x2
+800004bc:	26f12823          	sw	x15,624(x2)
+800004c0:	0c4007ef          	jal	x15,80000584 <common_Mhandler>
+800004c4:	34011173          	csrrw	x2,mscratch,x2
+800004c8:	26f12823          	sw	x15,624(x2)
+800004cc:	0b8007ef          	jal	x15,80000584 <common_Mhandler>
+800004d0:	34011173          	csrrw	x2,mscratch,x2
+800004d4:	26f12823          	sw	x15,624(x2)
+800004d8:	0ac007ef          	jal	x15,80000584 <common_Mhandler>
+800004dc:	34011173          	csrrw	x2,mscratch,x2
+800004e0:	26f12823          	sw	x15,624(x2)
+800004e4:	0a0007ef          	jal	x15,80000584 <common_Mhandler>
+800004e8:	34011173          	csrrw	x2,mscratch,x2
+800004ec:	26f12823          	sw	x15,624(x2)
+800004f0:	094007ef          	jal	x15,80000584 <common_Mhandler>
+800004f4:	34011173          	csrrw	x2,mscratch,x2
+800004f8:	26f12823          	sw	x15,624(x2)
+800004fc:	088007ef          	jal	x15,80000584 <common_Mhandler>
+80000500:	34011173          	csrrw	x2,mscratch,x2
+80000504:	26f12823          	sw	x15,624(x2)
+80000508:	07c007ef          	jal	x15,80000584 <common_Mhandler>
+8000050c:	34011173          	csrrw	x2,mscratch,x2
+80000510:	26f12823          	sw	x15,624(x2)
+80000514:	070007ef          	jal	x15,80000584 <common_Mhandler>
+80000518:	34011173          	csrrw	x2,mscratch,x2
+8000051c:	26f12823          	sw	x15,624(x2)
+80000520:	064007ef          	jal	x15,80000584 <common_Mhandler>
+80000524:	34011173          	csrrw	x2,mscratch,x2
+80000528:	26f12823          	sw	x15,624(x2)
+8000052c:	058007ef          	jal	x15,80000584 <common_Mhandler>
+80000530:	34011173          	csrrw	x2,mscratch,x2
+80000534:	26f12823          	sw	x15,624(x2)
+80000538:	04c007ef          	jal	x15,80000584 <common_Mhandler>
+8000053c:	34011173          	csrrw	x2,mscratch,x2
+80000540:	26f12823          	sw	x15,624(x2)
+80000544:	040007ef          	jal	x15,80000584 <common_Mhandler>
+80000548:	34011173          	csrrw	x2,mscratch,x2
+8000054c:	26f12823          	sw	x15,624(x2)
+80000550:	034007ef          	jal	x15,80000584 <common_Mhandler>
+80000554:	34011173          	csrrw	x2,mscratch,x2
+80000558:	26f12823          	sw	x15,624(x2)
+8000055c:	028007ef          	jal	x15,80000584 <common_Mhandler>
+
+80000560 <rvtest_Mendtest>:
+80000560:	00000317          	auipc	x6,0x0
+80000564:	b6c30313          	addi	x6,x6,-1172 # 800000cc <rvtest_Mend>
+80000568:	00000013          	addi	x0,x0,0
+8000056c:	00000013          	addi	x0,x0,0
+80000570:	00000013          	addi	x0,x0,0
+80000574:	00000013          	addi	x0,x0,0
+80000578:	00000013          	addi	x0,x0,0
+8000057c:	00000013          	addi	x0,x0,0
+80000580:	00030067          	jalr	x0,0(x6)
+
+80000584 <common_Mhandler>:
+80000584:	26e12623          	sw	x14,620(x2)
+80000588:	34011773          	csrrw	x14,mscratch,x2
+8000058c:	26e12a23          	sw	x14,628(x2)
+80000590:	23012703          	lw	x14,560(x2)
+80000594:	00070067          	jalr	x0,0(x14)
+
+80000598 <common_Mentry>:
+80000598:	26912423          	sw	x9,616(x2)
+8000059c:	26812223          	sw	x8,612(x2)
+800005a0:	26712023          	sw	x7,608(x2)
+800005a4:	24612e23          	sw	x6,604(x2)
+800005a8:	00000013          	addi	x0,x0,0
+800005ac:	00000013          	addi	x0,x0,0
+800005b0:	00000013          	addi	x0,x0,0
+800005b4:	00000013          	addi	x0,x0,0
+800005b8:	00000013          	addi	x0,x0,0
+800005bc:	00000013          	addi	x0,x0,0
+800005c0:	00004317          	auipc	x6,0x4
+800005c4:	b4830313          	addi	x6,x6,-1208 # 80004108 <rvtest_trap_count>
+800005c8:	00000013          	addi	x0,x0,0
+800005cc:	00000013          	addi	x0,x0,0
+800005d0:	00000013          	addi	x0,x0,0
+800005d4:	00000013          	addi	x0,x0,0
+800005d8:	00000013          	addi	x0,x0,0
+800005dc:	00000013          	addi	x0,x0,0
+800005e0:	00032383          	lw	x7,0(x6)
+800005e4:	00138393          	addi	x7,x7,1
+800005e8:	00732023          	sw	x7,0(x6)
+800005ec:	34202773          	csrrs	x14,mcause,x0
+
+800005f0 <spcl_M2mmode_test>:
+800005f0:	800014b7          	lui	x9,0x80001
+800005f4:	fff48493          	addi	x9,x9,-1 # 80000fff <excpt_Mhndlr_tbl+0x47>
+800005f8:	00e4f4b3          	and	x9,x9,x14
+
+800005fc <spcl_Mchk4alt>:
+800005fc:	ffe48413          	addi	x8,x9,-2
+80000600:	00041663          	bne	x8,x0,8000060c <spcl_Mchk4ecall>
+
+80000604 <spcl_Mparam_chk>:
+80000604:	2a050ae3          	beq	x10,x0,800010b8 <Mrtn2mmode>
+80000608:	58c0006f          	jal	x0,80000b94 <Mtrapsig_ptr_upd>
+
+8000060c <spcl_Mchk4ecall>:
+8000060c:	ff848413          	addi	x8,x9,-8
+80000610:	00245413          	srli	x8,x8,0x2
+80000614:	58041063          	bne	x8,x0,80000b94 <Mtrapsig_ptr_upd>
+
+80000618 <Mgoto_mchk>:
+80000618:	2a0500e3          	beq	x10,x0,800010b8 <Mrtn2mmode>
+
+8000061c <tsbi_Mdispatch>:
+8000061c:	fff50493          	addi	x9,x10,-1
+80000620:	00500393          	addi	x7,x0,5
+80000624:	0274e063          	bltu	x9,x7,80000644 <tsbi_Mgoto_mode>
+80000628:	07300393          	addi	x7,x0,115
+8000062c:	00750463          	beq	x10,x7,80000634 <tsbi_Mecall_test>
+80000630:	0800006f          	jal	x0,800006b0 <tsbi_instr_table_dispatch>
+
+80000634 <tsbi_Mecall_test>:
+80000634:	34102573          	csrrs	x10,mepc,x0
+80000638:	00450413          	addi	x8,x10,4
+8000063c:	34141073          	csrrw	x0,mepc,x8
+80000640:	7e40006f          	jal	x0,80000e24 <resto_Mrtn>
+
+80000644 <tsbi_Mgoto_mode>:
+80000644:	341024f3          	csrrs	x9,mepc,x0
+80000648:	00448493          	addi	x9,x9,4
+8000064c:	34149073          	csrrw	x0,mepc,x9
+80000650:	00100393          	addi	x7,x0,1
+80000654:	00750e63          	beq	x10,x7,80000670 <tsbi_Mgoto_m>
+80000658:	00200393          	addi	x7,x0,2
+8000065c:	02750263          	beq	x10,x7,80000680 <tsbi_Mgoto_s>
+80000660:	00300393          	addi	x7,x0,3
+80000664:	02750c63          	beq	x10,x7,8000069c <tsbi_Mgoto_u>
+80000668:	fff00513          	addi	x10,x0,-1
+8000066c:	7b80006f          	jal	x0,80000e24 <resto_Mrtn>
+
+80000670 <tsbi_Mgoto_m>:
+80000670:	000024b7          	lui	x9,0x2
+80000674:	80048493          	addi	x9,x9,-2048 # 1800 <CSR_XIP+0x14bc>
+80000678:	3004a073          	csrrs	x0,mstatus,x9
+8000067c:	7a80006f          	jal	x0,80000e24 <resto_Mrtn>
+
+80000680 <tsbi_Mgoto_s>:
+80000680:	000024b7          	lui	x9,0x2
+80000684:	80048493          	addi	x9,x9,-2048 # 1800 <CSR_XIP+0x14bc>
+80000688:	3004b073          	csrrc	x0,mstatus,x9
+8000068c:	000014b7          	lui	x9,0x1
+80000690:	80048493          	addi	x9,x9,-2048 # 800 <CSR_XIP+0x4bc>
+80000694:	3004a073          	csrrs	x0,mstatus,x9
+80000698:	78c0006f          	jal	x0,80000e24 <resto_Mrtn>
+
+8000069c <tsbi_Mgoto_u>:
+8000069c:	000024b7          	lui	x9,0x2
+800006a0:	80048493          	addi	x9,x9,-2048 # 1800 <CSR_XIP+0x14bc>
+800006a4:	3004b073          	csrrc	x0,mstatus,x9
+800006a8:	77c0006f          	jal	x0,80000e24 <resto_Mrtn>
+
+800006ac <tsbi_Mhandle_forwarded>:
+800006ac:	00000013          	addi	x0,x0,0
+
+800006b0 <tsbi_instr_table_dispatch>:
+800006b0:	00000013          	addi	x0,x0,0
+800006b4:	00000013          	addi	x0,x0,0
+800006b8:	00000013          	addi	x0,x0,0
+800006bc:	00000013          	addi	x0,x0,0
+800006c0:	00000397          	auipc	x7,0x0
+800006c4:	17038393          	addi	x7,x7,368 # 80000830 <tsbi_instr_table>
+800006c8:	00000013          	addi	x0,x0,0
+800006cc:	00000013          	addi	x0,x0,0
+800006d0:	00000013          	addi	x0,x0,0
+800006d4:	00000013          	addi	x0,x0,0
+800006d8:	00000013          	addi	x0,x0,0
+800006dc:	00000013          	addi	x0,x0,0
+
+800006e0 <tsbi_instr_table_search_loop>:
+800006e0:	0003a403          	lw	x8,0(x7)
+800006e4:	00a40863          	beq	x8,x10,800006f4 <found_instr>
+800006e8:	04040863          	beq	x8,x0,80000738 <tsbi_instr_not_found>
+800006ec:	00838393          	addi	x7,x7,8
+800006f0:	ff1ff06f          	jal	x0,800006e0 <tsbi_instr_table_search_loop>
+
+800006f4 <found_instr>:
+800006f4:	00008493          	addi	x9,x1,0
+800006f8:	00000013          	addi	x0,x0,0
+800006fc:	00000013          	addi	x0,x0,0
+80000700:	00000097          	auipc	x1,0x0
+80000704:	02408093          	addi	x1,x1,36 # 80000724 <tsbi_instr_rtn>
+80000708:	00000013          	addi	x0,x0,0
+8000070c:	00000013          	addi	x0,x0,0
+80000710:	00000013          	addi	x0,x0,0
+80000714:	00000013          	addi	x0,x0,0
+80000718:	00000013          	addi	x0,x0,0
+8000071c:	00000013          	addi	x0,x0,0
+80000720:	00038067          	jalr	x0,0(x7)
+
+80000724 <tsbi_instr_rtn>:
+80000724:	00048093          	addi	x1,x9,0
+80000728:	34102473          	csrrs	x8,mepc,x0
+8000072c:	00440413          	addi	x8,x8,4
+80000730:	34141073          	csrrw	x0,mepc,x8
+80000734:	6f00006f          	jal	x0,80000e24 <resto_Mrtn>
+
+80000738 <tsbi_instr_not_found>:
+80000738:	00050493          	addi	x9,x10,0
+8000073c:	00000013          	addi	x0,x0,0
+80000740:	00006517          	auipc	x10,0x6
+80000744:	ab550513          	addi	x10,x10,-1355 # 800061f5 <tsbi_instr_not_found_str>
+80000748:	00000013          	addi	x0,x0,0
+8000074c:	00000013          	addi	x0,x0,0
+80000750:	00000013          	addi	x0,x0,0
+80000754:	00000013          	addi	x0,x0,0
+80000758:	00000013          	addi	x0,x0,0
+8000075c:	00000013          	addi	x0,x0,0
+80000760:	00035097          	auipc	x1,0x35
+80000764:	e64080e7          	jalr	x1,-412(x1) # 800355c4 <rvmodel_io_write_str>
+80000768:	00048513          	addi	x10,x9,0
+8000076c:	02000593          	addi	x11,x0,32
+80000770:	4c8020ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80000774:	00000013          	addi	x0,x0,0
+80000778:	00000013          	addi	x0,x0,0
+8000077c:	00000013          	addi	x0,x0,0
+80000780:	00004517          	auipc	x10,0x4
+80000784:	ee850513          	addi	x10,x10,-280 # 80004668 <ascii_buffer>
+80000788:	00000013          	addi	x0,x0,0
+8000078c:	00000013          	addi	x0,x0,0
+80000790:	00000013          	addi	x0,x0,0
+80000794:	00000013          	addi	x0,x0,0
+80000798:	00000013          	addi	x0,x0,0
+8000079c:	00000013          	addi	x0,x0,0
+800007a0:	00035097          	auipc	x1,0x35
+800007a4:	e24080e7          	jalr	x1,-476(x1) # 800355c4 <rvmodel_io_write_str>
+800007a8:	00000013          	addi	x0,x0,0
+800007ac:	00000013          	addi	x0,x0,0
+800007b0:	00000013          	addi	x0,x0,0
+800007b4:	00000013          	addi	x0,x0,0
+800007b8:	00000013          	addi	x0,x0,0
+800007bc:	00000013          	addi	x0,x0,0
+800007c0:	00004517          	auipc	x10,0x4
+800007c4:	4bc50513          	addi	x10,x10,1212 # 80004c7c <newlinestr>
+800007c8:	00000013          	addi	x0,x0,0
+800007cc:	00000013          	addi	x0,x0,0
+800007d0:	00000013          	addi	x0,x0,0
+800007d4:	00000013          	addi	x0,x0,0
+800007d8:	00000013          	addi	x0,x0,0
+800007dc:	00000013          	addi	x0,x0,0
+800007e0:	00035097          	auipc	x1,0x35
+800007e4:	de4080e7          	jalr	x1,-540(x1) # 800355c4 <rvmodel_io_write_str>
+800007e8:	00000013          	addi	x0,x0,0
+800007ec:	00000013          	addi	x0,x0,0
+800007f0:	00000013          	addi	x0,x0,0
+800007f4:	00000013          	addi	x0,x0,0
+800007f8:	00000013          	addi	x0,x0,0
+800007fc:	00000013          	addi	x0,x0,0
+80000800:	00004517          	auipc	x10,0x4
+80000804:	37c50513          	addi	x10,x10,892 # 80004b7c <failstr>
+80000808:	00000013          	addi	x0,x0,0
+8000080c:	00000013          	addi	x0,x0,0
+80000810:	00000013          	addi	x0,x0,0
+80000814:	00000013          	addi	x0,x0,0
+80000818:	00000013          	addi	x0,x0,0
+8000081c:	00000013          	addi	x0,x0,0
+80000820:	00035097          	auipc	x1,0x35
+80000824:	da4080e7          	jalr	x1,-604(x1) # 800355c4 <rvmodel_io_write_str>
+80000828:	00035097          	auipc	x1,0x35
+8000082c:	e0c080e7          	jalr	x1,-500(x1) # 80035634 <rvmodel_halt_fail>
+
+80000830 <tsbi_instr_table>:
+80000830:	30002573          	.word	0x30002573
+80000834:	00008067          	jalr	x0,0(x1)
+80000838:	30059073          	.word	0x30059073
+8000083c:	00008067          	jalr	x0,0(x1)
+80000840:	3005a073          	.word	0x3005a073
+80000844:	00008067          	jalr	x0,0(x1)
+80000848:	3005b073          	.word	0x3005b073
+8000084c:	00008067          	jalr	x0,0(x1)
+80000850:	30402573          	.word	0x30402573
+80000854:	00008067          	jalr	x0,0(x1)
+80000858:	30459073          	.word	0x30459073
+8000085c:	00008067          	jalr	x0,0(x1)
+80000860:	3045a073          	.word	0x3045a073
+80000864:	00008067          	jalr	x0,0(x1)
+80000868:	3045b073          	.word	0x3045b073
+8000086c:	00008067          	jalr	x0,0(x1)
+80000870:	30602573          	.word	0x30602573
+80000874:	00008067          	jalr	x0,0(x1)
+80000878:	30659073          	.word	0x30659073
+8000087c:	00008067          	jalr	x0,0(x1)
+80000880:	3065a073          	.word	0x3065a073
+80000884:	00008067          	jalr	x0,0(x1)
+80000888:	3065b073          	.word	0x3065b073
+8000088c:	00008067          	jalr	x0,0(x1)
+80000890:	30a02573          	.word	0x30a02573
+80000894:	00008067          	jalr	x0,0(x1)
+80000898:	30a59073          	.word	0x30a59073
+8000089c:	00008067          	jalr	x0,0(x1)
+800008a0:	30a5a073          	.word	0x30a5a073
+800008a4:	00008067          	jalr	x0,0(x1)
+800008a8:	30a5b073          	.word	0x30a5b073
+800008ac:	00008067          	jalr	x0,0(x1)
+800008b0:	34402573          	.word	0x34402573
+800008b4:	00008067          	jalr	x0,0(x1)
+800008b8:	34459073          	.word	0x34459073
+800008bc:	00008067          	jalr	x0,0(x1)
+800008c0:	3445a073          	.word	0x3445a073
+800008c4:	00008067          	jalr	x0,0(x1)
+800008c8:	3445b073          	.word	0x3445b073
+800008cc:	00008067          	jalr	x0,0(x1)
+800008d0:	74702573          	.word	0x74702573
+800008d4:	00008067          	jalr	x0,0(x1)
+800008d8:	74759073          	.word	0x74759073
+800008dc:	00008067          	jalr	x0,0(x1)
+800008e0:	7475a073          	.word	0x7475a073
+800008e4:	00008067          	jalr	x0,0(x1)
+800008e8:	7475b073          	.word	0x7475b073
+800008ec:	00008067          	jalr	x0,0(x1)
+800008f0:	32002573          	.word	0x32002573
+800008f4:	00008067          	jalr	x0,0(x1)
+800008f8:	32059073          	.word	0x32059073
+800008fc:	00008067          	jalr	x0,0(x1)
+80000900:	3205a073          	.word	0x3205a073
+80000904:	00008067          	jalr	x0,0(x1)
+80000908:	3205b073          	.word	0x3205b073
+8000090c:	00008067          	jalr	x0,0(x1)
+80000910:	b0002573          	.word	0xb0002573
+80000914:	00008067          	jalr	x0,0(x1)
+80000918:	b0059073          	.word	0xb0059073
+8000091c:	00008067          	jalr	x0,0(x1)
+80000920:	b005a073          	.word	0xb005a073
+80000924:	00008067          	jalr	x0,0(x1)
+80000928:	b005b073          	.word	0xb005b073
+8000092c:	00008067          	jalr	x0,0(x1)
+80000930:	b0202573          	.word	0xb0202573
+80000934:	00008067          	jalr	x0,0(x1)
+80000938:	b0259073          	.word	0xb0259073
+8000093c:	00008067          	jalr	x0,0(x1)
+80000940:	b025a073          	.word	0xb025a073
+80000944:	00008067          	jalr	x0,0(x1)
+80000948:	b025b073          	.word	0xb025b073
+8000094c:	00008067          	jalr	x0,0(x1)
+80000950:	10002573          	.word	0x10002573
+80000954:	00008067          	jalr	x0,0(x1)
+80000958:	10059073          	.word	0x10059073
+8000095c:	00008067          	jalr	x0,0(x1)
+80000960:	1005a073          	.word	0x1005a073
+80000964:	00008067          	jalr	x0,0(x1)
+80000968:	1005b073          	.word	0x1005b073
+8000096c:	00008067          	jalr	x0,0(x1)
+80000970:	10402573          	.word	0x10402573
+80000974:	00008067          	jalr	x0,0(x1)
+80000978:	10459073          	.word	0x10459073
+8000097c:	00008067          	jalr	x0,0(x1)
+80000980:	1045a073          	.word	0x1045a073
+80000984:	00008067          	jalr	x0,0(x1)
+80000988:	1045b073          	.word	0x1045b073
+8000098c:	00008067          	jalr	x0,0(x1)
+80000990:	10602573          	.word	0x10602573
+80000994:	00008067          	jalr	x0,0(x1)
+80000998:	10659073          	.word	0x10659073
+8000099c:	00008067          	jalr	x0,0(x1)
+800009a0:	1065a073          	.word	0x1065a073
+800009a4:	00008067          	jalr	x0,0(x1)
+800009a8:	1065b073          	.word	0x1065b073
+800009ac:	00008067          	jalr	x0,0(x1)
+800009b0:	10a02573          	.word	0x10a02573
+800009b4:	00008067          	jalr	x0,0(x1)
+800009b8:	10a59073          	.word	0x10a59073
+800009bc:	00008067          	jalr	x0,0(x1)
+800009c0:	10a5a073          	.word	0x10a5a073
+800009c4:	00008067          	jalr	x0,0(x1)
+800009c8:	10a5b073          	.word	0x10a5b073
+800009cc:	00008067          	jalr	x0,0(x1)
+800009d0:	14402573          	.word	0x14402573
+800009d4:	00008067          	jalr	x0,0(x1)
+800009d8:	14459073          	.word	0x14459073
+800009dc:	00008067          	jalr	x0,0(x1)
+800009e0:	1445a073          	.word	0x1445a073
+800009e4:	00008067          	jalr	x0,0(x1)
+800009e8:	1445b073          	.word	0x1445b073
+800009ec:	00008067          	jalr	x0,0(x1)
+800009f0:	14d02573          	.word	0x14d02573
+800009f4:	00008067          	jalr	x0,0(x1)
+800009f8:	14d59073          	.word	0x14d59073
+800009fc:	00008067          	jalr	x0,0(x1)
+80000a00:	14d5a073          	.word	0x14d5a073
+80000a04:	00008067          	jalr	x0,0(x1)
+80000a08:	14d5b073          	.word	0x14d5b073
+80000a0c:	00008067          	jalr	x0,0(x1)
+80000a10:	18002573          	.word	0x18002573
+80000a14:	00008067          	jalr	x0,0(x1)
+80000a18:	18059073          	.word	0x18059073
+80000a1c:	00008067          	jalr	x0,0(x1)
+80000a20:	1805a073          	.word	0x1805a073
+80000a24:	00008067          	jalr	x0,0(x1)
+80000a28:	1805b073          	.word	0x1805b073
+80000a2c:	00008067          	jalr	x0,0(x1)
+80000a30:	7a002573          	.word	0x7a002573
+80000a34:	00008067          	jalr	x0,0(x1)
+80000a38:	7a059073          	.word	0x7a059073
+80000a3c:	00008067          	jalr	x0,0(x1)
+80000a40:	7a05a073          	.word	0x7a05a073
+80000a44:	00008067          	jalr	x0,0(x1)
+80000a48:	7a05b073          	.word	0x7a05b073
+80000a4c:	00008067          	jalr	x0,0(x1)
+80000a50:	7a102573          	.word	0x7a102573
+80000a54:	00008067          	jalr	x0,0(x1)
+80000a58:	7a159073          	.word	0x7a159073
+80000a5c:	00008067          	jalr	x0,0(x1)
+80000a60:	7a15a073          	.word	0x7a15a073
+80000a64:	00008067          	jalr	x0,0(x1)
+80000a68:	7a15b073          	.word	0x7a15b073
+80000a6c:	00008067          	jalr	x0,0(x1)
+80000a70:	7a202573          	.word	0x7a202573
+80000a74:	00008067          	jalr	x0,0(x1)
+80000a78:	7a259073          	.word	0x7a259073
+80000a7c:	00008067          	jalr	x0,0(x1)
+80000a80:	7a25a073          	.word	0x7a25a073
+80000a84:	00008067          	jalr	x0,0(x1)
+80000a88:	7a25b073          	.word	0x7a25b073
+80000a8c:	00008067          	jalr	x0,0(x1)
+80000a90:	7a302573          	.word	0x7a302573
+80000a94:	00008067          	jalr	x0,0(x1)
+80000a98:	7a359073          	.word	0x7a359073
+80000a9c:	00008067          	jalr	x0,0(x1)
+80000aa0:	7a35a073          	.word	0x7a35a073
+80000aa4:	00008067          	jalr	x0,0(x1)
+80000aa8:	7a35b073          	.word	0x7a35b073
+80000aac:	00008067          	jalr	x0,0(x1)
+80000ab0:	7a402573          	.word	0x7a402573
+80000ab4:	00008067          	jalr	x0,0(x1)
+80000ab8:	7a459073          	.word	0x7a459073
+80000abc:	00008067          	jalr	x0,0(x1)
+80000ac0:	7a45a073          	.word	0x7a45a073
+80000ac4:	00008067          	jalr	x0,0(x1)
+80000ac8:	7a45b073          	.word	0x7a45b073
+80000acc:	00008067          	jalr	x0,0(x1)
+80000ad0:	7a502573          	.word	0x7a502573
+80000ad4:	00008067          	jalr	x0,0(x1)
+80000ad8:	7a559073          	.word	0x7a559073
+80000adc:	00008067          	jalr	x0,0(x1)
+80000ae0:	7a55a073          	.word	0x7a55a073
+80000ae4:	00008067          	jalr	x0,0(x1)
+80000ae8:	7a55b073          	.word	0x7a55b073
+80000aec:	00008067          	jalr	x0,0(x1)
+80000af0:	7a802573          	.word	0x7a802573
+80000af4:	00008067          	jalr	x0,0(x1)
+80000af8:	7a859073          	.word	0x7a859073
+80000afc:	00008067          	jalr	x0,0(x1)
+80000b00:	7a85a073          	.word	0x7a85a073
+80000b04:	00008067          	jalr	x0,0(x1)
+80000b08:	7a85b073          	.word	0x7a85b073
+80000b0c:	00008067          	jalr	x0,0(x1)
+80000b10:	7aa02573          	.word	0x7aa02573
+80000b14:	00008067          	jalr	x0,0(x1)
+80000b18:	7aa59073          	.word	0x7aa59073
+80000b1c:	00008067          	jalr	x0,0(x1)
+80000b20:	7aa5a073          	.word	0x7aa5a073
+80000b24:	00008067          	jalr	x0,0(x1)
+80000b28:	7aa5b073          	.word	0x7aa5b073
+80000b2c:	00008067          	jalr	x0,0(x1)
+80000b30:	5a802573          	.word	0x5a802573
+80000b34:	00008067          	jalr	x0,0(x1)
+80000b38:	5a859073          	.word	0x5a859073
+80000b3c:	00008067          	jalr	x0,0(x1)
+80000b40:	5a85a073          	.word	0x5a85a073
+80000b44:	00008067          	jalr	x0,0(x1)
+80000b48:	5a85b073          	.word	0x5a85b073
+80000b4c:	00008067          	jalr	x0,0(x1)
+80000b50:	6a802573          	.word	0x6a802573
+80000b54:	00008067          	jalr	x0,0(x1)
+80000b58:	6a859073          	.word	0x6a859073
+80000b5c:	00008067          	jalr	x0,0(x1)
+80000b60:	6a85a073          	.word	0x6a85a073
+80000b64:	00008067          	jalr	x0,0(x1)
+80000b68:	6a85b073          	.word	0x6a85b073
+80000b6c:	00008067          	jalr	x0,0(x1)
+80000b70:	0005a503          	lw	x10,0(x11)
+80000b74:	00008067          	jalr	x0,0(x1)
+80000b78:	0045a503          	lw	x10,4(x11)
+80000b7c:	00008067          	jalr	x0,0(x1)
+80000b80:	00c5a023          	sw	x12,0(x11)
+80000b84:	00008067          	jalr	x0,0(x1)
+80000b88:	00c5a223          	sw	x12,4(x11)
+80000b8c:	00008067          	jalr	x0,0(x1)
+80000b90:	00000000          	.word	0x00000000
+
+80000b94 <Mtrapsig_ptr_upd>:
+80000b94:	01000393          	addi	x7,x0,16
+80000b98:	00075c63          	bge	x14,x0,80000bb0 <Mtrap_sig_sv>
+
+80000b9c <Mint_sig_sv>:
+80000b9c:	00171413          	slli	x8,x14,0x1
+80000ba0:	ff240413          	addi	x8,x8,-14
+80000ba4:	00045663          	bge	x8,x0,80000bb0 <Mtrap_sig_sv>
+80000ba8:	00c00393          	addi	x7,x0,12
+80000bac:	0040006f          	jal	x0,80000bb0 <Mtrap_sig_sv>
+
+80000bb0 <Mtrap_sig_sv>:
+80000bb0:	d6810113          	addi	x2,x2,-664
+80000bb4:	4b012303          	lw	x6,1200(x2)
+80000bb8:	007304b3          	add	x9,x6,x7
+80000bbc:	4a912823          	sw	x9,1200(x2)
+80000bc0:	49012403          	lw	x8,1168(x2)
+80000bc4:	40830333          	sub	x6,x6,x8
+80000bc8:	29810113          	addi	x2,x2,664
+80000bcc:	1f812403          	lw	x8,504(x2)
+80000bd0:	00830333          	add	x6,x6,x8
+80000bd4:	34102473          	csrrs	x8,mepc,x0
+80000bd8:	00000013          	addi	x0,x0,0
+80000bdc:	00000013          	addi	x0,x0,0
+80000be0:	00004497          	auipc	x9,0x4
+80000be4:	a6848493          	addi	x9,x9,-1432 # 80004648 <saved_xepc>
+80000be8:	00000013          	addi	x0,x0,0
+80000bec:	00000013          	addi	x0,x0,0
+80000bf0:	00000013          	addi	x0,x0,0
+80000bf4:	00000013          	addi	x0,x0,0
+80000bf8:	00000013          	addi	x0,x0,0
+80000bfc:	00000013          	addi	x0,x0,0
+80000c00:	0084a023          	sw	x8,0(x9)
+80000c04:	00e4a423          	sw	x14,8(x9)
+80000c08:	34302473          	csrrs	x8,mtval,x0
+80000c0c:	0084a823          	sw	x8,16(x9)
+80000c10:	30002473          	csrrs	x8,mstatus,x0
+80000c14:	0084ac23          	sw	x8,24(x9)
+80000c18:	00000013          	addi	x0,x0,0
+80000c1c:	00000013          	addi	x0,x0,0
+80000c20:	00014417          	auipc	x8,0x14
+80000c24:	0bc40413          	addi	x8,x8,188 # 80014cdc <sig_end_canary>
+80000c28:	00000013          	addi	x0,x0,0
+80000c2c:	00000013          	addi	x0,x0,0
+80000c30:	00000013          	addi	x0,x0,0
+80000c34:	00000013          	addi	x0,x0,0
+80000c38:	00000013          	addi	x0,x0,0
+80000c3c:	00000013          	addi	x0,x0,0
+80000c40:	007304b3          	add	x9,x6,x7
+80000c44:	f2946663          	bltu	x8,x9,80000370 <trap_sig_overflow>
+
+80000c48 <sv_Mvect>:
+80000c48:	24012403          	lw	x8,576(x2)
+80000c4c:	408787b3          	sub	x15,x15,x8
+80000c50:	00179493          	slli	x9,x15,0x1
+80000c54:	009787b3          	add	x15,x15,x9
+80000c58:	0057d793          	srli	x15,x15,0x5
+80000c5c:	00679793          	slli	x15,x15,0x6
+80000c60:	0077e7b3          	or	x15,x15,x7
+80000c64:	00378793          	addi	x15,x15,3
+80000c68:	02075a63          	bge	x14,x0,80000c9c <sv_Mvect+0x54>
+80000c6c:	00f00413          	addi	x8,x0,15
+80000c70:	00877433          	and	x8,x14,x8
+80000c74:	304024f3          	csrrs	x9,mie,x0
+80000c78:	0084d4b3          	srl	x9,x9,x8
+80000c7c:	0014f493          	andi	x9,x9,1
+80000c80:	00b49493          	slli	x9,x9,0xb
+80000c84:	0097e7b3          	or	x15,x15,x9
+80000c88:	344024f3          	csrrs	x9,mip,x0
+80000c8c:	0084d4b3          	srl	x9,x9,x8
+80000c90:	0014f493          	andi	x9,x9,1
+80000c94:	00c49493          	slli	x9,x9,0xc
+80000c98:	0097e7b3          	or	x15,x15,x9
+80000c9c:	300023f3          	csrrs	x7,mstatus,x0
+80000ca0:	00f39393          	slli	x7,x7,0xf
+80000ca4:	0023d393          	srli	x7,x7,0x2
+80000ca8:	0021a437          	lui	x8,0x21a
+80000cac:	fe540413          	addi	x8,x8,-27 # 219fe5 <STACK_SIZE+0x1f9fe5>
+80000cb0:	fff44413          	xori	x8,x8,-1
+80000cb4:	0083f433          	and	x8,x7,x8
+80000cb8:	0087e433          	or	x8,x15,x8
+80000cbc:	310024f3          	csrrs	x9,0x310,x0
+80000cc0:	1c04f493          	andi	x9,x9,448
+80000cc4:	00849493          	slli	x9,x9,0x8
+80000cc8:	00946433          	or	x8,x8,x9
+80000ccc:	00032483          	lw	x9,0(x6)
+80000cd0:	00848e63          	beq	x9,x8,80000cec <sv_Mcause>
+80000cd4:	00040313          	addi	x6,x8,0
+80000cd8:	00048213          	addi	x4,x9,0
+80000cdc:	4b4003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+80000ce0:	80000c48          	.word	0x80000c48
+80000ce4:	80004d7e          	.word	0x80004d7e
+80000ce8:	00000341          	.word	0x00000341
+
+80000cec <sv_Mcause>:
+80000cec:	00070413          	addi	x8,x14,0
+80000cf0:	00432483          	lw	x9,4(x6)
+80000cf4:	00848e63          	beq	x9,x8,80000d10 <sv_Mcause+0x24>
+80000cf8:	00040313          	addi	x6,x8,0
+80000cfc:	00048213          	addi	x4,x9,0
+80000d00:	490003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+80000d04:	80000cec          	.word	0x80000cec
+80000d08:	80004e80          	.word	0x80004e80
+80000d0c:	00000341          	.word	0x00000341
+80000d10:	12074a63          	blt	x14,x0,80000e44 <common_Mint_handler>
+
+80000d14 <common_Mexcpt_handler>:
+80000d14:	34102473          	csrrs	x8,mepc,x0
+80000d18:	00010493          	addi	x9,x2,0
+80000d1c:	0040006f          	jal	x0,80000d20 <vmem_adj_Mepc>
+
+80000d20 <vmem_adj_Mepc>:
+80000d20:	00000393          	addi	x7,x0,0
+80000d24:	04740863          	beq	x8,x7,80000d74 <sv_Mepc>
+80000d28:	00238393          	addi	x7,x7,2
+80000d2c:	04740463          	beq	x8,x7,80000d74 <sv_Mepc>
+80000d30:	04040263          	beq	x8,x0,80000d74 <sv_Mepc>
+80000d34:	2084a383          	lw	x7,520(x9)
+80000d38:	2104a783          	lw	x15,528(x9)
+80000d3c:	007787b3          	add	x15,x15,x7
+80000d40:	00f47463          	bgeu	x8,x15,80000d48 <code_adj_Mepc>
+80000d44:	02747663          	bgeu	x8,x7,80000d70 <adj_Mepc>
+
+80000d48 <code_adj_Mepc>:
+80000d48:	1d84a383          	lw	x7,472(x9)
+80000d4c:	1e04a783          	lw	x15,480(x9)
+80000d50:	007787b3          	add	x15,x15,x7
+80000d54:	00f47463          	bgeu	x8,x15,80000d5c <data_adj_Mepc>
+80000d58:	00747c63          	bgeu	x8,x7,80000d70 <adj_Mepc>
+
+80000d5c <data_adj_Mepc>:
+80000d5c:	1e84a383          	lw	x7,488(x9)
+80000d60:	1f04a783          	lw	x15,496(x9)
+80000d64:	007787b3          	add	x15,x15,x7
+80000d68:	e2f47e63          	bgeu	x8,x15,800003a4 <abort_test>
+80000d6c:	e2746c63          	bltu	x8,x7,800003a4 <abort_test>
+
+80000d70 <adj_Mepc>:
+80000d70:	40740433          	sub	x8,x8,x7
+
+80000d74 <sv_Mepc>:
+80000d74:	00832483          	lw	x9,8(x6)
+80000d78:	00848e63          	beq	x9,x8,80000d94 <skpsv_Mepc>
+80000d7c:	00040313          	addi	x6,x8,0
+80000d80:	00048213          	addi	x4,x9,0
+80000d84:	40c003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+80000d88:	80000d74          	.word	0x80000d74
+80000d8c:	80004f7b          	.word	0x80004f7b
+80000d90:	00000341          	.word	0x00000341
+
+80000d94 <skpsv_Mepc>:
+80000d94:	34102473          	csrrs	x8,mepc,x0
+80000d98:	342023f3          	csrrs	x7,mcause,x0
+80000d9c:	00c00793          	addi	x15,x0,12
+80000da0:	00f38a63          	beq	x7,x15,80000db4 <skpsv_Mepc+0x20>
+80000da4:	00100793          	addi	x15,x0,1
+80000da8:	00f38663          	beq	x7,x15,80000db4 <skpsv_Mepc+0x20>
+80000dac:	01400793          	addi	x15,x0,20
+80000db0:	00f39663          	bne	x7,x15,80000dbc <adj_Mepc_rtn>
+80000db4:	34109073          	csrrw	x0,mepc,x1
+80000db8:	0340006f          	jal	x0,80000dec <skp_adj_Mepc>
+
+80000dbc <adj_Mepc_rtn>:
+80000dbc:	300027f3          	csrrs	x15,mstatus,x0
+80000dc0:	000e03b7          	lui	x7,0xe0
+80000dc4:	3003a073          	csrrs	x0,mstatus,x7
+80000dc8:	00045383          	lhu	x7,0(x8)
+80000dcc:	30079073          	csrrw	x0,mstatus,x15
+80000dd0:	0033f393          	andi	x7,x7,3
+80000dd4:	00138393          	addi	x7,x7,1 # e0001 <STACK_SIZE+0xc0001>
+80000dd8:	0023d393          	srli	x7,x7,0x2
+80000ddc:	00138393          	addi	x7,x7,1
+80000de0:	00139393          	slli	x7,x7,0x1
+80000de4:	00740433          	add	x8,x8,x7
+80000de8:	34141073          	csrrw	x0,mepc,x8
+
+80000dec <skp_adj_Mepc>:
+80000dec:	34302473          	csrrs	x8,mtval,x0
+
+80000df0 <sv_Mtval>:
+80000df0:	00c32483          	lw	x9,12(x6)
+80000df4:	00848e63          	beq	x9,x8,80000e10 <skp_Mtval>
+80000df8:	00040313          	addi	x6,x8,0
+80000dfc:	00048213          	addi	x4,x9,0
+80000e00:	390003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+80000e04:	80000df0          	.word	0x80000df0
+80000e08:	8000506e          	.word	0x8000506e
+80000e0c:	00000341          	.word	0x00000341
+
+80000e10 <skp_Mtval>:
+80000e10:	30102473          	csrrs	x8,misa,x0
+80000e14:	01841413          	slli	x8,x8,0x18
+80000e18:	00045263          	bge	x8,x0,80000e1c <dispatch_Mspcl_excpt_handler>
+
+80000e1c <dispatch_Mspcl_excpt_handler>:
+80000e1c:	10000393          	addi	x7,x0,256
+80000e20:	05c0006f          	jal	x0,80000e7c <spcl_Mhandler>
+
+80000e24 <resto_Mrtn>:
+80000e24:	25c12303          	lw	x6,604(x2)
+80000e28:	26012383          	lw	x7,608(x2)
+80000e2c:	26412403          	lw	x8,612(x2)
+80000e30:	26812483          	lw	x9,616(x2)
+80000e34:	26c12703          	lw	x14,620(x2)
+80000e38:	27012783          	lw	x15,624(x2)
+80000e3c:	27412103          	lw	x2,628(x2)
+80000e40:	30200073          	mret
+
+80000e44 <common_Mint_handler>:
+80000e44:	00100413          	addi	x8,x0,1
+80000e48:	01f77393          	andi	x7,x14,31
+80000e4c:	00741433          	sll	x8,x8,x7
+80000e50:	304434f3          	csrrc	x9,mie,x8
+80000e54:	34443473          	csrrc	x8,mip,x8
+
+80000e58 <sv_Mip>:
+80000e58:	00832483          	lw	x9,8(x6)
+80000e5c:	00848e63          	beq	x9,x8,80000e78 <sv_Mip+0x20>
+80000e60:	00040313          	addi	x6,x8,0
+80000e64:	00048213          	addi	x4,x9,0
+80000e68:	328003ef          	jal	x7,80001190 <failedtest_trap_x7_x9>
+80000e6c:	80000e58          	.word	0x80000e58
+80000e70:	800051e1          	.word	0x800051e1
+80000e74:	00000341          	.word	0x00000341
+80000e78:	00000393          	addi	x7,x0,0
+
+80000e7c <spcl_Mhandler>:
+80000e7c:	00000417          	auipc	x8,0x0
+80000e80:	03c40413          	addi	x8,x8,60 # 80000eb8 <clrint_Mtbl>
+80000e84:	00740433          	add	x8,x8,x7
+80000e88:	00371393          	slli	x7,x14,0x3
+80000e8c:	00740433          	add	x8,x8,x7
+80000e90:	ff847413          	andi	x8,x8,-8
+80000e94:	00042403          	lw	x8,0(x8)
+
+80000e98 <spcl_Mdispatch_handling>:
+80000e98:	00040a63          	beq	x8,x0,80000eac <spcl_Mdispatch_handling+0x14>
+80000e9c:	01f41393          	slli	x7,x8,0x1f
+80000ea0:	0003d863          	bge	x7,x0,80000eb0 <spcl_Mdispatch>
+80000ea4:	00145413          	srli	x8,x8,0x1
+80000ea8:	f6870ee3          	beq	x14,x8,80000e24 <resto_Mrtn>
+80000eac:	cf8ff06f          	jal	x0,800003a4 <abort_test>
+
+80000eb0 <spcl_Mdispatch>:
+80000eb0:	00040067          	jalr	x0,0(x8)
+80000eb4:	00000013          	addi	x0,x0,0
+
+80000eb8 <clrint_Mtbl>:
+	...
+80000ec0:	00000001          	.word	0x00000001
+80000ec4:	00000000          	.word	0x00000000
+80000ec8:	00000001          	.word	0x00000001
+80000ecc:	00000000          	.word	0x00000000
+80000ed0:	80035000          	.word	0x80035000
+	...
+80000ee0:	00000001          	.word	0x00000001
+80000ee4:	00000000          	.word	0x00000000
+80000ee8:	00000001          	.word	0x00000001
+80000eec:	00000000          	.word	0x00000000
+80000ef0:	80035014          	.word	0x80035014
+	...
+80000f00:	00000001          	.word	0x00000001
+80000f04:	00000000          	.word	0x00000000
+80000f08:	00000001          	.word	0x00000001
+80000f0c:	00000000          	.word	0x00000000
+80000f10:	80035030          	.word	0x80035030
+80000f14:	00000000          	.word	0x00000000
+80000f18:	00000001          	.word	0x00000001
+80000f1c:	00000000          	.word	0x00000000
+80000f20:	00000001          	.word	0x00000001
+80000f24:	00000000          	.word	0x00000000
+80000f28:	00000001          	.word	0x00000001
+80000f2c:	00000000          	.word	0x00000000
+80000f30:	00000001          	.word	0x00000001
+80000f34:	00000000          	.word	0x00000000
+80000f38:	00000001          	.word	0x00000001
+80000f3c:	00000000          	.word	0x00000000
+80000f40:	00000001          	.word	0x00000001
+80000f44:	00000000          	.word	0x00000000
+80000f48:	00000001          	.word	0x00000001
+80000f4c:	00000000          	.word	0x00000000
+80000f50:	00000001          	.word	0x00000001
+80000f54:	00000000          	.word	0x00000000
+80000f58:	00000001          	.word	0x00000001
+80000f5c:	00000000          	.word	0x00000000
+80000f60:	00000001          	.word	0x00000001
+80000f64:	00000000          	.word	0x00000000
+80000f68:	00000001          	.word	0x00000001
+80000f6c:	00000000          	.word	0x00000000
+80000f70:	00000001          	.word	0x00000001
+	...
+
+80000fb8 <excpt_Mhndlr_tbl>:
+80000fb8:	00000001          	.word	0x00000001
+80000fbc:	00000000          	.word	0x00000000
+80000fc0:	00000003          	.word	0x00000003
+80000fc4:	00000000          	.word	0x00000000
+80000fc8:	00000005          	.word	0x00000005
+80000fcc:	00000000          	.word	0x00000000
+80000fd0:	00000007          	.word	0x00000007
+80000fd4:	00000000          	.word	0x00000000
+80000fd8:	00000009          	.word	0x00000009
+80000fdc:	00000000          	.word	0x00000000
+80000fe0:	0000000b          	.word	0x0000000b
+80000fe4:	00000000          	.word	0x00000000
+80000fe8:	0000000d          	.word	0x0000000d
+80000fec:	00000000          	.word	0x00000000
+80000ff0:	0000000f          	.word	0x0000000f
+80000ff4:	00000000          	.word	0x00000000
+80000ff8:	00000011          	.word	0x00000011
+80000ffc:	00000000          	.word	0x00000000
+80001000:	00000013          	.word	0x00000013
+80001004:	00000000          	.word	0x00000000
+80001008:	00000015          	.word	0x00000015
+8000100c:	00000000          	.word	0x00000000
+80001010:	00000017          	.word	0x00000017
+80001014:	00000000          	.word	0x00000000
+80001018:	00000019          	.word	0x00000019
+8000101c:	00000000          	.word	0x00000000
+80001020:	0000001b          	.word	0x0000001b
+80001024:	00000000          	.word	0x00000000
+80001028:	0000001d          	.word	0x0000001d
+8000102c:	00000000          	.word	0x00000000
+80001030:	0000001f          	.word	0x0000001f
+80001034:	00000000          	.word	0x00000000
+80001038:	00000021          	.word	0x00000021
+8000103c:	00000000          	.word	0x00000000
+80001040:	00000023          	.word	0x00000023
+80001044:	00000000          	.word	0x00000000
+80001048:	00000025          	.word	0x00000025
+8000104c:	00000000          	.word	0x00000000
+80001050:	00000027          	.word	0x00000027
+80001054:	00000000          	.word	0x00000000
+80001058:	00000029          	.word	0x00000029
+8000105c:	00000000          	.word	0x00000000
+80001060:	0000002b          	.word	0x0000002b
+80001064:	00000000          	.word	0x00000000
+80001068:	0000002d          	.word	0x0000002d
+8000106c:	00000000          	.word	0x00000000
+80001070:	0000002f          	.word	0x0000002f
+	...
+
+800010b8 <Mrtn2mmode>:
+800010b8:	300023f3          	csrrs	x7,mstatus,x0
+800010bc:	00b3d493          	srli	x9,x7,0xb
+800010c0:	0034f493          	andi	x9,x9,3
+800010c4:	ffd48413          	addi	x8,x9,-3
+800010c8:	341023f3          	csrrs	x7,mepc,x0
+800010cc:	00000493          	addi	x9,x0,0
+800010d0:	02040c63          	beq	x8,x0,80001108 <rtn_fm_mmode>
+800010d4:	29810113          	addi	x2,x2,664
+800010d8:	310023f3          	csrrs	x7,0x310,x0
+800010dc:	01839393          	slli	x7,x7,0x18
+800010e0:	0003da63          	bge	x7,x0,800010f4 <from_hs_u>
+
+800010e4 <from_vs>:
+800010e4:	29810113          	addi	x2,x2,664
+800010e8:	47012783          	lw	x15,1136(x2)
+800010ec:	d6810113          	addi	x2,x2,-664
+800010f0:	0080006f          	jal	x0,800010f8 <from_hs_u+0x4>
+
+800010f4 <from_hs_u>:
+800010f4:	f4012783          	lw	x15,-192(x2)
+800010f8:	341023f3          	csrrs	x7,mepc,x0
+800010fc:	40f383b3          	sub	x7,x7,x15
+80001100:	d6810113          	addi	x2,x2,-664
+80001104:	1d812483          	lw	x9,472(x2)
+
+80001108 <rtn_fm_mmode>:
+80001108:	007483b3          	add	x7,x9,x7
+8000110c:	25c12303          	lw	x6,604(x2)
+80001110:	26412403          	lw	x8,612(x2)
+80001114:	26812483          	lw	x9,616(x2)
+80001118:	26c12703          	lw	x14,620(x2)
+8000111c:	27012783          	lw	x15,624(x2)
+80001120:	27412103          	lw	x2,628(x2)
+80001124:	00438067          	jalr	x0,4(x7)
+
+80001128 <failedtest_x5_x4>:
+80001128:	00003217          	auipc	x4,0x3
+8000112c:	3d820213          	addi	x4,x4,984 # 80004500 <begin_failure_scratch>
+80001130:	02522423          	sw	x5,40(x4) # 28 <causeidx+0x10>
+80001134:	00122423          	sw	x1,8(x4) # 8 <MMODE_SIG+0x5>
+80001138:	00022023          	sw	x0,0(x4) # 0 <cry>
+8000113c:	0880006f          	jal	x0,800011c4 <failedtest_saveregs>
+
+80001140 <failedtest_x8_x7>:
+80001140:	00003397          	auipc	x7,0x3
+80001144:	3c038393          	addi	x7,x7,960 # 80004500 <begin_failure_scratch>
+80001148:	0483a023          	sw	x8,64(x7)
+8000114c:	0243a023          	sw	x4,32(x7)
+80001150:	0253a423          	sw	x5,40(x7)
+80001154:	0013a423          	sw	x1,8(x7)
+80001158:	0003a023          	sw	x0,0(x7)
+8000115c:	00038213          	addi	x4,x7,0
+80001160:	00040293          	addi	x5,x8,0
+80001164:	0600006f          	jal	x0,800011c4 <failedtest_saveregs>
+
+80001168 <failedtest_x14_x13>:
+80001168:	00003697          	auipc	x13,0x3
+8000116c:	39868693          	addi	x13,x13,920 # 80004500 <begin_failure_scratch>
+80001170:	06e6a823          	sw	x14,112(x13)
+80001174:	0246a023          	sw	x4,32(x13)
+80001178:	0256a423          	sw	x5,40(x13)
+8000117c:	0016a423          	sw	x1,8(x13)
+80001180:	0006a023          	sw	x0,0(x13)
+80001184:	00068213          	addi	x4,x13,0
+80001188:	00070293          	addi	x5,x14,0
+8000118c:	0380006f          	jal	x0,800011c4 <failedtest_saveregs>
+
+80001190 <failedtest_trap_x7_x9>:
+80001190:	00003497          	auipc	x9,0x3
+80001194:	37048493          	addi	x9,x9,880 # 80004500 <begin_failure_scratch>
+80001198:	0674a423          	sw	x7,104(x9)
+8000119c:	0244a023          	sw	x4,32(x9)
+800011a0:	0254a423          	sw	x5,40(x9)
+800011a4:	0014a423          	sw	x1,8(x9)
+800011a8:	00300093          	addi	x1,x0,3
+800011ac:	0014a023          	sw	x1,0(x9)
+800011b0:	1064a823          	sw	x6,272(x9)
+800011b4:	1044ac23          	sw	x4,280(x9)
+800011b8:	00048213          	addi	x4,x9,0
+800011bc:	00038293          	addi	x5,x7,0
+800011c0:	0040006f          	jal	x0,800011c4 <failedtest_saveregs>
+
+800011c4 <failedtest_saveregs>:
+800011c4:	00222823          	sw	x2,16(x4) # 10 <MMODE_SIG+0xd>
+800011c8:	00322c23          	sw	x3,24(x4) # 18 <causeidx>
+800011cc:	02622823          	sw	x6,48(x4) # 30 <causeidx+0x18>
+800011d0:	02722c23          	sw	x7,56(x4) # 38 <causeidx+0x20>
+800011d4:	04822023          	sw	x8,64(x4) # 40 <causeidx+0x28>
+800011d8:	04922423          	sw	x9,72(x4) # 48 <causeidx+0x30>
+800011dc:	04a22823          	sw	x10,80(x4) # 50 <causeidx+0x38>
+800011e0:	04b22c23          	sw	x11,88(x4) # 58 <causeidx+0x40>
+800011e4:	06c22023          	sw	x12,96(x4) # 60 <causeidx+0x48>
+800011e8:	06d22423          	sw	x13,104(x4) # 68 <causeidx+0x50>
+800011ec:	06e22823          	sw	x14,112(x4) # 70 <causeidx+0x58>
+800011f0:	06f22c23          	sw	x15,120(x4) # 78 <causeidx+0x60>
+800011f4:	09022023          	sw	x16,128(x4) # 80 <causeidx+0x68>
+800011f8:	09122423          	sw	x17,136(x4) # 88 <causeidx+0x70>
+800011fc:	09222823          	sw	x18,144(x4) # 90 <causeidx+0x78>
+80001200:	09322c23          	sw	x19,152(x4) # 98 <causeidx+0x80>
+80001204:	0b422023          	sw	x20,160(x4) # a0 <causeidx+0x88>
+80001208:	0b522423          	sw	x21,168(x4) # a8 <causeidx+0x90>
+8000120c:	0b622823          	sw	x22,176(x4) # b0 <causeidx+0x98>
+80001210:	0b722c23          	sw	x23,184(x4) # b8 <causeidx+0xa0>
+80001214:	0d822023          	sw	x24,192(x4) # c0 <causeidx+0xa8>
+80001218:	0d922423          	sw	x25,200(x4) # c8 <causeidx+0xb0>
+8000121c:	0da22823          	sw	x26,208(x4) # d0 <causeidx+0xb8>
+80001220:	0db22c23          	sw	x27,216(x4) # d8 <causeidx+0xc0>
+80001224:	0fc22023          	sw	x28,224(x4) # e0 <causeidx+0xc8>
+80001228:	0fd22423          	sw	x29,232(x4) # e8 <causeidx+0xd0>
+8000122c:	0fe22823          	sw	x30,240(x4) # f0 <causeidx+0xd8>
+80001230:	0ff22c23          	sw	x31,248(x4) # f8 <causeidx+0xe0>
+
+80001234 <failedtest_saveresults>:
+80001234:	00003497          	auipc	x9,0x3
+80001238:	2cc4a483          	lw	x9,716(x9) # 80004500 <begin_failure_scratch>
+8000123c:	00300513          	addi	x10,x0,3
+80001240:	18a48663          	beq	x9,x10,800013cc <failedtest_saveresults_trap>
+
+80001244 <failedtest_saveresults_int>:
+80001244:	ffa2d303          	lhu	x6,-6(x5)
+80001248:	ff82d383          	lhu	x7,-8(x5)
+8000124c:	01031313          	slli	x6,x6,0x10
+80001250:	00736333          	or	x6,x6,x7
+80001254:	00f35393          	srli	x7,x6,0xf
+80001258:	01f3f393          	andi	x7,x7,31
+8000125c:	01435413          	srli	x8,x6,0x14
+80001260:	01f47413          	andi	x8,x8,31
+80001264:	10822223          	sw	x8,260(x4) # 104 <causeidx+0xec>
+80001268:	00341313          	slli	x6,x8,0x3
+8000126c:	00620333          	add	x6,x4,x6
+80001270:	00032303          	lw	x6,0(x6)
+80001274:	10622823          	sw	x6,272(x4) # 110 <causeidx+0xf8>
+80001278:	ff62d303          	lhu	x6,-10(x5)
+8000127c:	ff42d383          	lhu	x7,-12(x5)
+80001280:	01031313          	slli	x6,x6,0x10
+80001284:	00736333          	or	x6,x6,x7
+80001288:	00030513          	addi	x10,x6,0
+8000128c:	07f37413          	andi	x8,x6,127
+80001290:	00300493          	addi	x9,x0,3
+80001294:	0c941063          	bne	x8,x9,80001354 <failedtest_saveresults_bad_instr>
+80001298:	00c35413          	srli	x8,x6,0xc
+8000129c:	00747413          	andi	x8,x8,7
+800012a0:	00200493          	addi	x9,x0,2
+800012a4:	0a941863          	bne	x8,x9,80001354 <failedtest_saveresults_bad_instr>
+800012a8:	41435393          	srai	x7,x6,0x14
+800012ac:	00f35313          	srli	x6,x6,0xf
+800012b0:	01f37313          	andi	x6,x6,31
+800012b4:	00331313          	slli	x6,x6,0x3
+800012b8:	00620333          	add	x6,x4,x6
+800012bc:	00032303          	lw	x6,0(x6)
+800012c0:	00730333          	add	x6,x6,x7
+800012c4:	00337413          	andi	x8,x6,3
+800012c8:	0c041263          	bne	x8,x0,8000138c <failedtest_saveresults_bad_ptr>
+800012cc:	00000013          	addi	x0,x0,0
+800012d0:	00000013          	addi	x0,x0,0
+800012d4:	00000013          	addi	x0,x0,0
+800012d8:	00000013          	addi	x0,x0,0
+800012dc:	00000013          	addi	x0,x0,0
+800012e0:	00005417          	auipc	x8,0x5
+800012e4:	f6040413          	addi	x8,x8,-160 # 80006240 <begin_signature>
+800012e8:	00000013          	addi	x0,x0,0
+800012ec:	00000013          	addi	x0,x0,0
+800012f0:	00000013          	addi	x0,x0,0
+800012f4:	00000013          	addi	x0,x0,0
+800012f8:	00000013          	addi	x0,x0,0
+800012fc:	00000013          	addi	x0,x0,0
+80001300:	08836663          	bltu	x6,x8,8000138c <failedtest_saveresults_bad_ptr>
+80001304:	00000013          	addi	x0,x0,0
+80001308:	00000013          	addi	x0,x0,0
+8000130c:	00000013          	addi	x0,x0,0
+80001310:	00000013          	addi	x0,x0,0
+80001314:	00000013          	addi	x0,x0,0
+80001318:	00000013          	addi	x0,x0,0
+8000131c:	00000013          	addi	x0,x0,0
+80001320:	00014417          	auipc	x8,0x14
+80001324:	9c040413          	addi	x8,x8,-1600 # 80014ce0 <end_signature>
+80001328:	00000013          	addi	x0,x0,0
+8000132c:	00000013          	addi	x0,x0,0
+80001330:	00000013          	addi	x0,x0,0
+80001334:	00000013          	addi	x0,x0,0
+80001338:	00000013          	addi	x0,x0,0
+8000133c:	00000013          	addi	x0,x0,0
+80001340:	ffc40413          	addi	x8,x8,-4
+80001344:	04646463          	bltu	x8,x6,8000138c <failedtest_saveresults_bad_ptr>
+80001348:	00032303          	lw	x6,0(x6)
+8000134c:	10622c23          	sw	x6,280(x4) # 118 <causeidx+0x100>
+80001350:	3700006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+80001354 <failedtest_saveresults_bad_instr>:
+80001354:	00100413          	addi	x8,x0,1
+80001358:	00000013          	addi	x0,x0,0
+8000135c:	00000013          	addi	x0,x0,0
+80001360:	00003497          	auipc	x9,0x3
+80001364:	2c848493          	addi	x9,x9,712 # 80004628 <failure_diag_type>
+80001368:	00000013          	addi	x0,x0,0
+8000136c:	00000013          	addi	x0,x0,0
+80001370:	00000013          	addi	x0,x0,0
+80001374:	00000013          	addi	x0,x0,0
+80001378:	00000013          	addi	x0,x0,0
+8000137c:	00000013          	addi	x0,x0,0
+80001380:	0084a023          	sw	x8,0(x9)
+80001384:	10a22c23          	sw	x10,280(x4) # 118 <causeidx+0x100>
+80001388:	3380006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+8000138c <failedtest_saveresults_bad_ptr>:
+8000138c:	00200413          	addi	x8,x0,2
+80001390:	00000013          	addi	x0,x0,0
+80001394:	00000013          	addi	x0,x0,0
+80001398:	00000013          	addi	x0,x0,0
+8000139c:	00000013          	addi	x0,x0,0
+800013a0:	00003497          	auipc	x9,0x3
+800013a4:	28848493          	addi	x9,x9,648 # 80004628 <failure_diag_type>
+800013a8:	00000013          	addi	x0,x0,0
+800013ac:	00000013          	addi	x0,x0,0
+800013b0:	00000013          	addi	x0,x0,0
+800013b4:	00000013          	addi	x0,x0,0
+800013b8:	00000013          	addi	x0,x0,0
+800013bc:	00000013          	addi	x0,x0,0
+800013c0:	0084a023          	sw	x8,0(x9)
+800013c4:	10622c23          	sw	x6,280(x4) # 118 <causeidx+0x100>
+800013c8:	2f80006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+800013cc <failedtest_saveresults_trap>:
+800013cc:	0042a303          	lw	x6,4(x5)
+800013d0:	00003817          	auipc	x16,0x3
+800013d4:	26880813          	addi	x16,x16,616 # 80004638 <trap_diag_fail_str_ptr>
+800013d8:	00682023          	sw	x6,0(x16)
+800013dc:	0002a303          	lw	x6,0(x5)
+800013e0:	10622423          	sw	x6,264(x4) # 108 <causeidx+0xf0>
+800013e4:	00003817          	auipc	x16,0x3
+800013e8:	25480813          	addi	x16,x16,596 # 80004638 <trap_diag_fail_str_ptr>
+800013ec:	00082303          	lw	x6,0(x16)
+800013f0:	00004397          	auipc	x7,0x4
+800013f4:	97738393          	addi	x7,x7,-1673 # 80004d67 <trap_sig_offset_mismatch>
+800013f8:	28730463          	beq	x6,x7,80001680 <trap_diag_offset_mismatch>
+800013fc:	00000413          	addi	x8,x0,0
+80001400:	00003817          	auipc	x16,0x3
+80001404:	23080813          	addi	x16,x16,560 # 80004630 <trap_diag_subtype>
+80001408:	00882023          	sw	x8,0(x16)
+8000140c:	00004397          	auipc	x7,0x4
+80001410:	97238393          	addi	x7,x7,-1678 # 80004d7e <sv_Mvect_str>
+80001414:	00731863          	bne	x6,x7,80001424 <failedtest_saveresults_trap+0x58>
+80001418:	00100413          	addi	x8,x0,1
+8000141c:	00000493          	addi	x9,x0,0
+80001420:	2740006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001424:	00004397          	auipc	x7,0x4
+80001428:	a5c38393          	addi	x7,x7,-1444 # 80004e80 <sv_Mcause_str>
+8000142c:	00731863          	bne	x6,x7,8000143c <failedtest_saveresults_trap+0x70>
+80001430:	00200413          	addi	x8,x0,2
+80001434:	00000493          	addi	x9,x0,0
+80001438:	25c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000143c:	00004397          	auipc	x7,0x4
+80001440:	b3f38393          	addi	x7,x7,-1217 # 80004f7b <sv_Mepc_str>
+80001444:	00731863          	bne	x6,x7,80001454 <failedtest_saveresults_trap+0x88>
+80001448:	00300413          	addi	x8,x0,3
+8000144c:	00000493          	addi	x9,x0,0
+80001450:	2440006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001454:	00004397          	auipc	x7,0x4
+80001458:	c1a38393          	addi	x7,x7,-998 # 8000506e <sv_Mtval_str>
+8000145c:	00731863          	bne	x6,x7,8000146c <failedtest_saveresults_trap+0xa0>
+80001460:	00400413          	addi	x8,x0,4
+80001464:	00000493          	addi	x9,x0,0
+80001468:	22c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000146c:	00004397          	auipc	x7,0x4
+80001470:	d7538393          	addi	x7,x7,-651 # 800051e1 <sv_Mip_str>
+80001474:	00731863          	bne	x6,x7,80001484 <failedtest_saveresults_trap+0xb8>
+80001478:	00500413          	addi	x8,x0,5
+8000147c:	00000493          	addi	x9,x0,0
+80001480:	2140006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001484:	00004397          	auipc	x7,0x4
+80001488:	ce138393          	addi	x7,x7,-799 # 80005165 <sv_Mtval2_str>
+8000148c:	00731863          	bne	x6,x7,8000149c <failedtest_saveresults_trap+0xd0>
+80001490:	00600413          	addi	x8,x0,6
+80001494:	00000493          	addi	x9,x0,0
+80001498:	1fc0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000149c:	00004397          	auipc	x7,0x4
+800014a0:	d0738393          	addi	x7,x7,-761 # 800051a3 <sv_Mtinst_str>
+800014a4:	00731863          	bne	x6,x7,800014b4 <failedtest_saveresults_trap+0xe8>
+800014a8:	00700413          	addi	x8,x0,7
+800014ac:	00000493          	addi	x9,x0,0
+800014b0:	1e40006f          	jal	x0,80001694 <trap_diag_field_identified>
+800014b4:	00004397          	auipc	x7,0x4
+800014b8:	90a38393          	addi	x7,x7,-1782 # 80004dbe <sv_Svect_str>
+800014bc:	00731863          	bne	x6,x7,800014cc <failedtest_saveresults_trap+0x100>
+800014c0:	00100413          	addi	x8,x0,1
+800014c4:	00100493          	addi	x9,x0,1
+800014c8:	1cc0006f          	jal	x0,80001694 <trap_diag_field_identified>
+800014cc:	00004397          	auipc	x7,0x4
+800014d0:	9f238393          	addi	x7,x7,-1550 # 80004ebe <sv_Scause_str>
+800014d4:	00731863          	bne	x6,x7,800014e4 <failedtest_saveresults_trap+0x118>
+800014d8:	00200413          	addi	x8,x0,2
+800014dc:	00100493          	addi	x9,x0,1
+800014e0:	1b40006f          	jal	x0,80001694 <trap_diag_field_identified>
+800014e4:	00004397          	auipc	x7,0x4
+800014e8:	ad338393          	addi	x7,x7,-1325 # 80004fb7 <sv_Sepc_str>
+800014ec:	00731863          	bne	x6,x7,800014fc <failedtest_saveresults_trap+0x130>
+800014f0:	00300413          	addi	x8,x0,3
+800014f4:	00100493          	addi	x9,x0,1
+800014f8:	19c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+800014fc:	00004397          	auipc	x7,0x4
+80001500:	baf38393          	addi	x7,x7,-1105 # 800050ab <sv_Stval_str>
+80001504:	00731863          	bne	x6,x7,80001514 <failedtest_saveresults_trap+0x148>
+80001508:	00400413          	addi	x8,x0,4
+8000150c:	00100493          	addi	x9,x0,1
+80001510:	1840006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001514:	00004397          	auipc	x7,0x4
+80001518:	d0838393          	addi	x7,x7,-760 # 8000521c <sv_Sip_str>
+8000151c:	00731863          	bne	x6,x7,8000152c <failedtest_saveresults_trap+0x160>
+80001520:	00500413          	addi	x8,x0,5
+80001524:	00100493          	addi	x9,x0,1
+80001528:	16c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000152c:	00004397          	auipc	x7,0x4
+80001530:	8d238393          	addi	x7,x7,-1838 # 80004dfe <sv_Hvect_str>
+80001534:	00731863          	bne	x6,x7,80001544 <failedtest_saveresults_trap+0x178>
+80001538:	00100413          	addi	x8,x0,1
+8000153c:	00200493          	addi	x9,x0,2
+80001540:	1540006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001544:	00004397          	auipc	x7,0x4
+80001548:	9b838393          	addi	x7,x7,-1608 # 80004efc <sv_Hcause_str>
+8000154c:	00731863          	bne	x6,x7,8000155c <failedtest_saveresults_trap+0x190>
+80001550:	00200413          	addi	x8,x0,2
+80001554:	00200493          	addi	x9,x0,2
+80001558:	13c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000155c:	00004397          	auipc	x7,0x4
+80001560:	a9738393          	addi	x7,x7,-1385 # 80004ff3 <sv_Hepc_str>
+80001564:	00731863          	bne	x6,x7,80001574 <failedtest_saveresults_trap+0x1a8>
+80001568:	00300413          	addi	x8,x0,3
+8000156c:	00200493          	addi	x9,x0,2
+80001570:	1240006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001574:	00004397          	auipc	x7,0x4
+80001578:	b7438393          	addi	x7,x7,-1164 # 800050e8 <sv_Htval_str>
+8000157c:	00731863          	bne	x6,x7,8000158c <failedtest_saveresults_trap+0x1c0>
+80001580:	00400413          	addi	x8,x0,4
+80001584:	00200493          	addi	x9,x0,2
+80001588:	10c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000158c:	00004397          	auipc	x7,0x4
+80001590:	ccb38393          	addi	x7,x7,-821 # 80005257 <sv_Hip_str>
+80001594:	00731863          	bne	x6,x7,800015a4 <failedtest_saveresults_trap+0x1d8>
+80001598:	00500413          	addi	x8,x0,5
+8000159c:	00200493          	addi	x9,x0,2
+800015a0:	0f40006f          	jal	x0,80001694 <trap_diag_field_identified>
+800015a4:	00004397          	auipc	x7,0x4
+800015a8:	89b38393          	addi	x7,x7,-1893 # 80004e3f <sv_Vvect_str>
+800015ac:	00731863          	bne	x6,x7,800015bc <failedtest_saveresults_trap+0x1f0>
+800015b0:	00100413          	addi	x8,x0,1
+800015b4:	00300493          	addi	x9,x0,3
+800015b8:	0dc0006f          	jal	x0,80001694 <trap_diag_field_identified>
+800015bc:	00004397          	auipc	x7,0x4
+800015c0:	97f38393          	addi	x7,x7,-1665 # 80004f3b <sv_Vcause_str>
+800015c4:	00731863          	bne	x6,x7,800015d4 <failedtest_saveresults_trap+0x208>
+800015c8:	00200413          	addi	x8,x0,2
+800015cc:	00300493          	addi	x9,x0,3
+800015d0:	0c40006f          	jal	x0,80001694 <trap_diag_field_identified>
+800015d4:	00004397          	auipc	x7,0x4
+800015d8:	a5c38393          	addi	x7,x7,-1444 # 80005030 <sv_Vepc_str>
+800015dc:	00731863          	bne	x6,x7,800015ec <failedtest_saveresults_trap+0x220>
+800015e0:	00300413          	addi	x8,x0,3
+800015e4:	00300493          	addi	x9,x0,3
+800015e8:	0ac0006f          	jal	x0,80001694 <trap_diag_field_identified>
+800015ec:	00004397          	auipc	x7,0x4
+800015f0:	b3a38393          	addi	x7,x7,-1222 # 80005126 <sv_Vtval_str>
+800015f4:	00731863          	bne	x6,x7,80001604 <failedtest_saveresults_trap+0x238>
+800015f8:	00400413          	addi	x8,x0,4
+800015fc:	00300493          	addi	x9,x0,3
+80001600:	0940006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001604:	00004397          	auipc	x7,0x4
+80001608:	c8f38393          	addi	x7,x7,-881 # 80005293 <sv_Vip_str>
+8000160c:	00731863          	bne	x6,x7,8000161c <failedtest_saveresults_trap+0x250>
+80001610:	00500413          	addi	x8,x0,5
+80001614:	00300493          	addi	x9,x0,3
+80001618:	07c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000161c:	00004397          	auipc	x7,0x4
+80001620:	cb438393          	addi	x7,x7,-844 # 800052d0 <Mclr_Mext_int_str>
+80001624:	00731863          	bne	x6,x7,80001634 <failedtest_saveresults_trap+0x268>
+80001628:	00800413          	addi	x8,x0,8
+8000162c:	00000493          	addi	x9,x0,0
+80001630:	0640006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001634:	00004397          	auipc	x7,0x4
+80001638:	ceb38393          	addi	x7,x7,-789 # 8000531f <Mclr_Sext_int_str>
+8000163c:	00731863          	bne	x6,x7,8000164c <failedtest_saveresults_trap+0x280>
+80001640:	00800413          	addi	x8,x0,8
+80001644:	00000493          	addi	x9,x0,0
+80001648:	04c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000164c:	00004397          	auipc	x7,0x4
+80001650:	dce38393          	addi	x7,x7,-562 # 8000541a <Sclr_Sext_int_str>
+80001654:	00731863          	bne	x6,x7,80001664 <failedtest_saveresults_trap+0x298>
+80001658:	00800413          	addi	x8,x0,8
+8000165c:	00100493          	addi	x9,x0,1
+80001660:	0340006f          	jal	x0,80001694 <trap_diag_field_identified>
+80001664:	00004397          	auipc	x7,0x4
+80001668:	eb238393          	addi	x7,x7,-334 # 80005516 <Hclr_Sext_int_str>
+8000166c:	00731863          	bne	x6,x7,8000167c <failedtest_saveresults_trap+0x2b0>
+80001670:	00800413          	addi	x8,x0,8
+80001674:	00200493          	addi	x9,x0,2
+80001678:	01c0006f          	jal	x0,80001694 <trap_diag_field_identified>
+8000167c:	0340006f          	jal	x0,800016b0 <trap_diag_generic_report>
+
+80001680 <trap_diag_offset_mismatch>:
+80001680:	00900413          	addi	x8,x0,9
+80001684:	00003817          	auipc	x16,0x3
+80001688:	fac80813          	addi	x16,x16,-84 # 80004630 <trap_diag_subtype>
+8000168c:	00882023          	sw	x8,0(x16)
+80001690:	0300006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+80001694 <trap_diag_field_identified>:
+80001694:	00003817          	auipc	x16,0x3
+80001698:	f9c80813          	addi	x16,x16,-100 # 80004630 <trap_diag_subtype>
+8000169c:	00882023          	sw	x8,0(x16)
+800016a0:	00003817          	auipc	x16,0x3
+800016a4:	f9480813          	addi	x16,x16,-108 # 80004634 <trap_diag_mode>
+800016a8:	00982023          	sw	x9,0(x16)
+800016ac:	0140006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+800016b0 <trap_diag_generic_report>:
+800016b0:	00003817          	auipc	x16,0x3
+800016b4:	f8080813          	addi	x16,x16,-128 # 80004630 <trap_diag_subtype>
+800016b8:	00082023          	sw	x0,0(x16)
+800016bc:	0040006f          	jal	x0,800016c0 <failedtest_saveresults_common>
+
+800016c0 <failedtest_saveresults_common>:
+800016c0:	0002a303          	lw	x6,0(x5)
+800016c4:	10622423          	sw	x6,264(x4) # 108 <causeidx+0xf0>
+800016c8:	00035383          	lhu	x7,0(x6)
+800016cc:	0033f413          	andi	x8,x7,3
+800016d0:	00300493          	addi	x9,x0,3
+800016d4:	00941863          	bne	x8,x9,800016e4 <failedtest_saveresults_common+0x24>
+800016d8:	00235403          	lhu	x8,2(x6)
+800016dc:	01041413          	slli	x8,x8,0x10
+800016e0:	0083e3b3          	or	x7,x7,x8
+800016e4:	10722023          	sw	x7,256(x4) # 100 <causeidx+0xe8>
+800016e8:	0042a303          	lw	x6,4(x5)
+800016ec:	12622023          	sw	x6,288(x4) # 120 <value>
+
+800016f0 <failedtest_report>:
+800016f0:	00000013          	addi	x0,x0,0
+800016f4:	00000013          	addi	x0,x0,0
+800016f8:	00000013          	addi	x0,x0,0
+800016fc:	00000013          	addi	x0,x0,0
+80001700:	00003517          	auipc	x10,0x3
+80001704:	47c50513          	addi	x10,x10,1148 # 80004b7c <failstr>
+80001708:	00000013          	addi	x0,x0,0
+8000170c:	00000013          	addi	x0,x0,0
+80001710:	00000013          	addi	x0,x0,0
+80001714:	00000013          	addi	x0,x0,0
+80001718:	00000013          	addi	x0,x0,0
+8000171c:	00000013          	addi	x0,x0,0
+80001720:	00034097          	auipc	x1,0x34
+80001724:	ea4080e7          	jalr	x1,-348(x1) # 800355c4 <rvmodel_io_write_str>
+80001728:	00000013          	addi	x0,x0,0
+8000172c:	00000013          	addi	x0,x0,0
+80001730:	00000013          	addi	x0,x0,0
+80001734:	00000013          	addi	x0,x0,0
+80001738:	00000013          	addi	x0,x0,0
+8000173c:	00000013          	addi	x0,x0,0
+80001740:	00003517          	auipc	x10,0x3
+80001744:	47350513          	addi	x10,x10,1139 # 80004bb3 <begin_debugstr>
+80001748:	00000013          	addi	x0,x0,0
+8000174c:	00000013          	addi	x0,x0,0
+80001750:	00000013          	addi	x0,x0,0
+80001754:	00000013          	addi	x0,x0,0
+80001758:	00000013          	addi	x0,x0,0
+8000175c:	00000013          	addi	x0,x0,0
+80001760:	00034097          	auipc	x1,0x34
+80001764:	e64080e7          	jalr	x1,-412(x1) # 800355c4 <rvmodel_io_write_str>
+
+80001768 <print_testnamestr>:
+80001768:	00000013          	addi	x0,x0,0
+8000176c:	00000013          	addi	x0,x0,0
+80001770:	00000013          	addi	x0,x0,0
+80001774:	00000013          	addi	x0,x0,0
+80001778:	00000013          	addi	x0,x0,0
+8000177c:	00000013          	addi	x0,x0,0
+80001780:	00003517          	auipc	x10,0x3
+80001784:	4ea50513          	addi	x10,x10,1258 # 80004c6a <testnamestr>
+80001788:	00000013          	addi	x0,x0,0
+8000178c:	00000013          	addi	x0,x0,0
+80001790:	00000013          	addi	x0,x0,0
+80001794:	00000013          	addi	x0,x0,0
+80001798:	00000013          	addi	x0,x0,0
+8000179c:	00000013          	addi	x0,x0,0
+800017a0:	00034097          	auipc	x1,0x34
+800017a4:	e24080e7          	jalr	x1,-476(x1) # 800355c4 <rvmodel_io_write_str>
+
+800017a8 <print_failure_test_name_str>:
+800017a8:	00003517          	auipc	x10,0x3
+800017ac:	e7852503          	lw	x10,-392(x10) # 80004620 <failure_string_ptr>
+800017b0:	00034097          	auipc	x1,0x34
+800017b4:	e14080e7          	jalr	x1,-492(x1) # 800355c4 <rvmodel_io_write_str>
+
+800017b8 <print_newline_str>:
+800017b8:	00000013          	addi	x0,x0,0
+800017bc:	00000013          	addi	x0,x0,0
+800017c0:	00003517          	auipc	x10,0x3
+800017c4:	4bc50513          	addi	x10,x10,1212 # 80004c7c <newlinestr>
+800017c8:	00000013          	addi	x0,x0,0
+800017cc:	00000013          	addi	x0,x0,0
+800017d0:	00000013          	addi	x0,x0,0
+800017d4:	00000013          	addi	x0,x0,0
+800017d8:	00000013          	addi	x0,x0,0
+800017dc:	00000013          	addi	x0,x0,0
+800017e0:	00034097          	auipc	x1,0x34
+800017e4:	de4080e7          	jalr	x1,-540(x1) # 800355c4 <rvmodel_io_write_str>
+800017e8:	00003517          	auipc	x10,0x3
+800017ec:	d1852503          	lw	x10,-744(x10) # 80004500 <begin_failure_scratch>
+800017f0:	00300593          	addi	x11,x0,3
+800017f4:	52b50c63          	beq	x10,x11,80001d2c <failedtest_report_trap_detailed>
+800017f8:	00000013          	addi	x0,x0,0
+800017fc:	00000013          	addi	x0,x0,0
+80001800:	00003517          	auipc	x10,0x3
+80001804:	47e50513          	addi	x10,x10,1150 # 80004c7e <inststr>
+80001808:	00000013          	addi	x0,x0,0
+8000180c:	00000013          	addi	x0,x0,0
+80001810:	00000013          	addi	x0,x0,0
+80001814:	00000013          	addi	x0,x0,0
+80001818:	00000013          	addi	x0,x0,0
+8000181c:	00000013          	addi	x0,x0,0
+80001820:	00034097          	auipc	x1,0x34
+80001824:	da4080e7          	jalr	x1,-604(x1) # 800355c4 <rvmodel_io_write_str>
+80001828:	00003517          	auipc	x10,0x3
+8000182c:	dd852503          	lw	x10,-552(x10) # 80004600 <failing_instruction>
+80001830:	02000593          	addi	x11,x0,32
+80001834:	00357613          	andi	x12,x10,3
+80001838:	00300693          	addi	x13,x0,3
+8000183c:	00d60463          	beq	x12,x13,80001844 <print_newline_str+0x8c>
+80001840:	01000593          	addi	x11,x0,16
+80001844:	3f4010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001848:	00000013          	addi	x0,x0,0
+8000184c:	00000013          	addi	x0,x0,0
+80001850:	00000013          	addi	x0,x0,0
+80001854:	00000013          	addi	x0,x0,0
+80001858:	00000013          	addi	x0,x0,0
+8000185c:	00000013          	addi	x0,x0,0
+80001860:	00003517          	auipc	x10,0x3
+80001864:	e0850513          	addi	x10,x10,-504 # 80004668 <ascii_buffer>
+80001868:	00000013          	addi	x0,x0,0
+8000186c:	00000013          	addi	x0,x0,0
+80001870:	00000013          	addi	x0,x0,0
+80001874:	00000013          	addi	x0,x0,0
+80001878:	00000013          	addi	x0,x0,0
+8000187c:	00000013          	addi	x0,x0,0
+80001880:	00034097          	auipc	x1,0x34
+80001884:	d44080e7          	jalr	x1,-700(x1) # 800355c4 <rvmodel_io_write_str>
+80001888:	00000013          	addi	x0,x0,0
+8000188c:	00000013          	addi	x0,x0,0
+80001890:	00000013          	addi	x0,x0,0
+80001894:	00000013          	addi	x0,x0,0
+80001898:	00000013          	addi	x0,x0,0
+8000189c:	00000013          	addi	x0,x0,0
+800018a0:	00003517          	auipc	x10,0x3
+800018a4:	3f250513          	addi	x10,x10,1010 # 80004c92 <addrstr>
+800018a8:	00000013          	addi	x0,x0,0
+800018ac:	00000013          	addi	x0,x0,0
+800018b0:	00000013          	addi	x0,x0,0
+800018b4:	00000013          	addi	x0,x0,0
+800018b8:	00000013          	addi	x0,x0,0
+800018bc:	00000013          	addi	x0,x0,0
+800018c0:	00034097          	auipc	x1,0x34
+800018c4:	d04080e7          	jalr	x1,-764(x1) # 800355c4 <rvmodel_io_write_str>
+800018c8:	00003517          	auipc	x10,0x3
+800018cc:	d4052503          	lw	x10,-704(x10) # 80004608 <failing_addr>
+800018d0:	02000593          	addi	x11,x0,32
+800018d4:	364010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+800018d8:	00000013          	addi	x0,x0,0
+800018dc:	00000013          	addi	x0,x0,0
+800018e0:	00003517          	auipc	x10,0x3
+800018e4:	d8850513          	addi	x10,x10,-632 # 80004668 <ascii_buffer>
+800018e8:	00000013          	addi	x0,x0,0
+800018ec:	00000013          	addi	x0,x0,0
+800018f0:	00000013          	addi	x0,x0,0
+800018f4:	00000013          	addi	x0,x0,0
+800018f8:	00000013          	addi	x0,x0,0
+800018fc:	00000013          	addi	x0,x0,0
+80001900:	00034097          	auipc	x1,0x34
+80001904:	cc4080e7          	jalr	x1,-828(x1) # 800355c4 <rvmodel_io_write_str>
+80001908:	00000013          	addi	x0,x0,0
+8000190c:	00000013          	addi	x0,x0,0
+80001910:	00000013          	addi	x0,x0,0
+80001914:	00000013          	addi	x0,x0,0
+80001918:	00000013          	addi	x0,x0,0
+8000191c:	00000013          	addi	x0,x0,0
+80001920:	00004517          	auipc	x10,0x4
+80001924:	da950513          	addi	x10,x10,-599 # 800056c9 <regstr>
+80001928:	00000013          	addi	x0,x0,0
+8000192c:	00000013          	addi	x0,x0,0
+80001930:	00000013          	addi	x0,x0,0
+80001934:	00000013          	addi	x0,x0,0
+80001938:	00000013          	addi	x0,x0,0
+8000193c:	00000013          	addi	x0,x0,0
+80001940:	00034097          	auipc	x1,0x34
+80001944:	c84080e7          	jalr	x1,-892(x1) # 800355c4 <rvmodel_io_write_str>
+80001948:	00003517          	auipc	x10,0x3
+8000194c:	bb852503          	lw	x10,-1096(x10) # 80004500 <begin_failure_scratch>
+80001950:	00050663          	beq	x10,x0,8000195c <print_newline_str+0x1a4>
+80001954:	00300593          	addi	x11,x0,3
+80001958:	04b51063          	bne	x10,x11,80001998 <failedtest_report_not_intreg>
+8000195c:	07800593          	addi	x11,x0,120
+80001960:	00003617          	auipc	x12,0x3
+80001964:	d0860613          	addi	x12,x12,-760 # 80004668 <ascii_buffer>
+80001968:	00000013          	addi	x0,x0,0
+8000196c:	00000013          	addi	x0,x0,0
+80001970:	00000013          	addi	x0,x0,0
+80001974:	00000013          	addi	x0,x0,0
+80001978:	00000013          	addi	x0,x0,0
+8000197c:	00000013          	addi	x0,x0,0
+80001980:	00b60023          	sb	x11,0(x12)
+80001984:	00160613          	addi	x12,x12,1
+80001988:	00003517          	auipc	x10,0x3
+8000198c:	c7c52503          	lw	x10,-900(x10) # 80004604 <failing_reg>
+80001990:	324010ef          	jal	x1,80002cb4 <failedtest_dec_to_str>
+80001994:	1180006f          	jal	x0,80001aac <failedtest_report_print_regstr>
+
+80001998 <failedtest_report_not_intreg>:
+80001998:	00100593          	addi	x11,x0,1
+8000199c:	04b50863          	beq	x10,x11,800019ec <failedtest_report_fpreg>
+800019a0:	00400593          	addi	x11,x0,4
+800019a4:	08b50a63          	beq	x10,x11,80001a38 <failedtest_report_vecreg>
+800019a8:	00500593          	addi	x11,x0,5
+800019ac:	0cb50663          	beq	x10,x11,80001a78 <failedtest_report_vxsat>
+800019b0:	00000013          	addi	x0,x0,0
+800019b4:	00000013          	addi	x0,x0,0
+800019b8:	00000013          	addi	x0,x0,0
+800019bc:	00000013          	addi	x0,x0,0
+800019c0:	00004517          	auipc	x10,0x4
+800019c4:	e1f50513          	addi	x10,x10,-481 # 800057df <fflagsstr>
+800019c8:	00000013          	addi	x0,x0,0
+800019cc:	00000013          	addi	x0,x0,0
+800019d0:	00000013          	addi	x0,x0,0
+800019d4:	00000013          	addi	x0,x0,0
+800019d8:	00000013          	addi	x0,x0,0
+800019dc:	00000013          	addi	x0,x0,0
+800019e0:	00034097          	auipc	x1,0x34
+800019e4:	be4080e7          	jalr	x1,-1052(x1) # 800355c4 <rvmodel_io_write_str>
+800019e8:	1000006f          	jal	x0,80001ae8 <failedtest_report_after_reg>
+
+800019ec <failedtest_report_fpreg>:
+800019ec:	06600593          	addi	x11,x0,102
+800019f0:	00000013          	addi	x0,x0,0
+800019f4:	00000013          	addi	x0,x0,0
+800019f8:	00000013          	addi	x0,x0,0
+800019fc:	00000013          	addi	x0,x0,0
+80001a00:	00003617          	auipc	x12,0x3
+80001a04:	c6860613          	addi	x12,x12,-920 # 80004668 <ascii_buffer>
+80001a08:	00000013          	addi	x0,x0,0
+80001a0c:	00000013          	addi	x0,x0,0
+80001a10:	00000013          	addi	x0,x0,0
+80001a14:	00000013          	addi	x0,x0,0
+80001a18:	00000013          	addi	x0,x0,0
+80001a1c:	00000013          	addi	x0,x0,0
+80001a20:	00b60023          	sb	x11,0(x12)
+80001a24:	00160613          	addi	x12,x12,1
+80001a28:	00003517          	auipc	x10,0x3
+80001a2c:	bdc52503          	lw	x10,-1060(x10) # 80004604 <failing_reg>
+80001a30:	284010ef          	jal	x1,80002cb4 <failedtest_dec_to_str>
+80001a34:	0780006f          	jal	x0,80001aac <failedtest_report_print_regstr>
+
+80001a38 <failedtest_report_vecreg>:
+80001a38:	07600593          	addi	x11,x0,118
+80001a3c:	00000013          	addi	x0,x0,0
+80001a40:	00003617          	auipc	x12,0x3
+80001a44:	c2860613          	addi	x12,x12,-984 # 80004668 <ascii_buffer>
+80001a48:	00000013          	addi	x0,x0,0
+80001a4c:	00000013          	addi	x0,x0,0
+80001a50:	00000013          	addi	x0,x0,0
+80001a54:	00000013          	addi	x0,x0,0
+80001a58:	00000013          	addi	x0,x0,0
+80001a5c:	00000013          	addi	x0,x0,0
+80001a60:	00b60023          	sb	x11,0(x12)
+80001a64:	00160613          	addi	x12,x12,1
+80001a68:	00003517          	auipc	x10,0x3
+80001a6c:	b9c52503          	lw	x10,-1124(x10) # 80004604 <failing_reg>
+80001a70:	244010ef          	jal	x1,80002cb4 <failedtest_dec_to_str>
+80001a74:	0380006f          	jal	x0,80001aac <failedtest_report_print_regstr>
+
+80001a78 <failedtest_report_vxsat>:
+80001a78:	00000013          	addi	x0,x0,0
+80001a7c:	00000013          	addi	x0,x0,0
+80001a80:	00004517          	auipc	x10,0x4
+80001a84:	c4250513          	addi	x10,x10,-958 # 800056c2 <vxsatstr>
+80001a88:	00000013          	addi	x0,x0,0
+80001a8c:	00000013          	addi	x0,x0,0
+80001a90:	00000013          	addi	x0,x0,0
+80001a94:	00000013          	addi	x0,x0,0
+80001a98:	00000013          	addi	x0,x0,0
+80001a9c:	00000013          	addi	x0,x0,0
+80001aa0:	00034097          	auipc	x1,0x34
+80001aa4:	b24080e7          	jalr	x1,-1244(x1) # 800355c4 <rvmodel_io_write_str>
+80001aa8:	0400006f          	jal	x0,80001ae8 <failedtest_report_after_reg>
+
+80001aac <failedtest_report_print_regstr>:
+80001aac:	00000013          	addi	x0,x0,0
+80001ab0:	00000013          	addi	x0,x0,0
+80001ab4:	00000013          	addi	x0,x0,0
+80001ab8:	00000013          	addi	x0,x0,0
+80001abc:	00000013          	addi	x0,x0,0
+80001ac0:	00003517          	auipc	x10,0x3
+80001ac4:	ba850513          	addi	x10,x10,-1112 # 80004668 <ascii_buffer>
+80001ac8:	00000013          	addi	x0,x0,0
+80001acc:	00000013          	addi	x0,x0,0
+80001ad0:	00000013          	addi	x0,x0,0
+80001ad4:	00000013          	addi	x0,x0,0
+80001ad8:	00000013          	addi	x0,x0,0
+80001adc:	00000013          	addi	x0,x0,0
+80001ae0:	00034097          	auipc	x1,0x34
+80001ae4:	ae4080e7          	jalr	x1,-1308(x1) # 800355c4 <rvmodel_io_write_str>
+
+80001ae8 <failedtest_report_after_reg>:
+80001ae8:	00000013          	addi	x0,x0,0
+80001aec:	00000013          	addi	x0,x0,0
+80001af0:	00000013          	addi	x0,x0,0
+80001af4:	00000013          	addi	x0,x0,0
+80001af8:	00000013          	addi	x0,x0,0
+80001afc:	00000013          	addi	x0,x0,0
+80001b00:	00004517          	auipc	x10,0x4
+80001b04:	bda50513          	addi	x10,x10,-1062 # 800056da <badvalstr>
+80001b08:	00000013          	addi	x0,x0,0
+80001b0c:	00000013          	addi	x0,x0,0
+80001b10:	00000013          	addi	x0,x0,0
+80001b14:	00000013          	addi	x0,x0,0
+80001b18:	00000013          	addi	x0,x0,0
+80001b1c:	00000013          	addi	x0,x0,0
+80001b20:	00034097          	auipc	x1,0x34
+80001b24:	aa4080e7          	jalr	x1,-1372(x1) # 800355c4 <rvmodel_io_write_str>
+80001b28:	00003517          	auipc	x10,0x3
+80001b2c:	9d852503          	lw	x10,-1576(x10) # 80004500 <begin_failure_scratch>
+80001b30:	00100593          	addi	x11,x0,1
+80001b34:	00b51c63          	bne	x10,x11,80001b4c <failedtest_report_badval_not_fp>
+80001b38:	00003517          	auipc	x10,0x3
+80001b3c:	ad852503          	lw	x10,-1320(x10) # 80004610 <failing_value>
+80001b40:	02000593          	addi	x11,x0,32
+80001b44:	0f4010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001b48:	0140006f          	jal	x0,80001b5c <failedtest_report_badval_done>
+
+80001b4c <failedtest_report_badval_not_fp>:
+80001b4c:	00003517          	auipc	x10,0x3
+80001b50:	ac452503          	lw	x10,-1340(x10) # 80004610 <failing_value>
+80001b54:	02000593          	addi	x11,x0,32
+80001b58:	0e0010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+
+80001b5c <failedtest_report_badval_done>:
+80001b5c:	00000013          	addi	x0,x0,0
+80001b60:	00003517          	auipc	x10,0x3
+80001b64:	b0850513          	addi	x10,x10,-1272 # 80004668 <ascii_buffer>
+80001b68:	00000013          	addi	x0,x0,0
+80001b6c:	00000013          	addi	x0,x0,0
+80001b70:	00000013          	addi	x0,x0,0
+80001b74:	00000013          	addi	x0,x0,0
+80001b78:	00000013          	addi	x0,x0,0
+80001b7c:	00000013          	addi	x0,x0,0
+80001b80:	00034097          	auipc	x1,0x34
+80001b84:	a44080e7          	jalr	x1,-1468(x1) # 800355c4 <rvmodel_io_write_str>
+80001b88:	00003517          	auipc	x10,0x3
+80001b8c:	aa052503          	lw	x10,-1376(x10) # 80004628 <failure_diag_type>
+80001b90:	08051e63          	bne	x10,x0,80001c2c <failedtest_report_diag>
+80001b94:	00000013          	addi	x0,x0,0
+80001b98:	00000013          	addi	x0,x0,0
+80001b9c:	00000013          	addi	x0,x0,0
+80001ba0:	00004517          	auipc	x10,0x4
+80001ba4:	b5150513          	addi	x10,x10,-1199 # 800056f1 <expvalstr>
+80001ba8:	00000013          	addi	x0,x0,0
+80001bac:	00000013          	addi	x0,x0,0
+80001bb0:	00000013          	addi	x0,x0,0
+80001bb4:	00000013          	addi	x0,x0,0
+80001bb8:	00000013          	addi	x0,x0,0
+80001bbc:	00000013          	addi	x0,x0,0
+80001bc0:	00034097          	auipc	x1,0x34
+80001bc4:	a04080e7          	jalr	x1,-1532(x1) # 800355c4 <rvmodel_io_write_str>
+80001bc8:	00003517          	auipc	x10,0x3
+80001bcc:	93852503          	lw	x10,-1736(x10) # 80004500 <begin_failure_scratch>
+80001bd0:	00100593          	addi	x11,x0,1
+80001bd4:	00b51c63          	bne	x10,x11,80001bec <failedtest_report_expval_not_fp>
+80001bd8:	00003517          	auipc	x10,0x3
+80001bdc:	a4052503          	lw	x10,-1472(x10) # 80004618 <expected_value>
+80001be0:	02000593          	addi	x11,x0,32
+80001be4:	054010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001be8:	0140006f          	jal	x0,80001bfc <failedtest_report_expval_done>
+
+80001bec <failedtest_report_expval_not_fp>:
+80001bec:	00003517          	auipc	x10,0x3
+80001bf0:	a2c52503          	lw	x10,-1492(x10) # 80004618 <expected_value>
+80001bf4:	02000593          	addi	x11,x0,32
+80001bf8:	040010ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+
+80001bfc <failedtest_report_expval_done>:
+80001bfc:	00000013          	addi	x0,x0,0
+80001c00:	00003517          	auipc	x10,0x3
+80001c04:	a6850513          	addi	x10,x10,-1432 # 80004668 <ascii_buffer>
+80001c08:	00000013          	addi	x0,x0,0
+80001c0c:	00000013          	addi	x0,x0,0
+80001c10:	00000013          	addi	x0,x0,0
+80001c14:	00000013          	addi	x0,x0,0
+80001c18:	00000013          	addi	x0,x0,0
+80001c1c:	00000013          	addi	x0,x0,0
+80001c20:	00034097          	auipc	x1,0x34
+80001c24:	9a4080e7          	jalr	x1,-1628(x1) # 800355c4 <rvmodel_io_write_str>
+80001c28:	5bd0006f          	jal	x0,800029e4 <failedtest_report_end>
+
+80001c2c <failedtest_report_diag>:
+80001c2c:	00100593          	addi	x11,x0,1
+80001c30:	06b51e63          	bne	x10,x11,80001cac <failedtest_report_bad_pointer_diag>
+
+80001c34 <failedtest_report_bad_instr_diag>:
+80001c34:	00000013          	addi	x0,x0,0
+80001c38:	00000013          	addi	x0,x0,0
+80001c3c:	00000013          	addi	x0,x0,0
+80001c40:	00004517          	auipc	x10,0x4
+80001c44:	ac850513          	addi	x10,x10,-1336 # 80005708 <failure_diag_bad_instr_str>
+80001c48:	00000013          	addi	x0,x0,0
+80001c4c:	00000013          	addi	x0,x0,0
+80001c50:	00000013          	addi	x0,x0,0
+80001c54:	00000013          	addi	x0,x0,0
+80001c58:	00000013          	addi	x0,x0,0
+80001c5c:	00000013          	addi	x0,x0,0
+80001c60:	00034097          	auipc	x1,0x34
+80001c64:	964080e7          	jalr	x1,-1692(x1) # 800355c4 <rvmodel_io_write_str>
+80001c68:	00003517          	auipc	x10,0x3
+80001c6c:	9b052503          	lw	x10,-1616(x10) # 80004618 <expected_value>
+80001c70:	02000593          	addi	x11,x0,32
+80001c74:	7c5000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001c78:	00000013          	addi	x0,x0,0
+80001c7c:	00000013          	addi	x0,x0,0
+80001c80:	00003517          	auipc	x10,0x3
+80001c84:	9e850513          	addi	x10,x10,-1560 # 80004668 <ascii_buffer>
+80001c88:	00000013          	addi	x0,x0,0
+80001c8c:	00000013          	addi	x0,x0,0
+80001c90:	00000013          	addi	x0,x0,0
+80001c94:	00000013          	addi	x0,x0,0
+80001c98:	00000013          	addi	x0,x0,0
+80001c9c:	00000013          	addi	x0,x0,0
+80001ca0:	00034097          	auipc	x1,0x34
+80001ca4:	924080e7          	jalr	x1,-1756(x1) # 800355c4 <rvmodel_io_write_str>
+80001ca8:	53d0006f          	jal	x0,800029e4 <failedtest_report_end>
+
+80001cac <failedtest_report_bad_pointer_diag>:
+80001cac:	00000013          	addi	x0,x0,0
+80001cb0:	00000013          	addi	x0,x0,0
+80001cb4:	00000013          	addi	x0,x0,0
+80001cb8:	00000013          	addi	x0,x0,0
+80001cbc:	00000013          	addi	x0,x0,0
+80001cc0:	00004517          	auipc	x10,0x4
+80001cc4:	aa650513          	addi	x10,x10,-1370 # 80005766 <failure_diag_bad_ptr_str>
+80001cc8:	00000013          	addi	x0,x0,0
+80001ccc:	00000013          	addi	x0,x0,0
+80001cd0:	00000013          	addi	x0,x0,0
+80001cd4:	00000013          	addi	x0,x0,0
+80001cd8:	00000013          	addi	x0,x0,0
+80001cdc:	00000013          	addi	x0,x0,0
+80001ce0:	00034097          	auipc	x1,0x34
+80001ce4:	8e4080e7          	jalr	x1,-1820(x1) # 800355c4 <rvmodel_io_write_str>
+80001ce8:	00003517          	auipc	x10,0x3
+80001cec:	93052503          	lw	x10,-1744(x10) # 80004618 <expected_value>
+80001cf0:	02000593          	addi	x11,x0,32
+80001cf4:	745000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001cf8:	00000013          	addi	x0,x0,0
+80001cfc:	00000013          	addi	x0,x0,0
+80001d00:	00003517          	auipc	x10,0x3
+80001d04:	96850513          	addi	x10,x10,-1688 # 80004668 <ascii_buffer>
+80001d08:	00000013          	addi	x0,x0,0
+80001d0c:	00000013          	addi	x0,x0,0
+80001d10:	00000013          	addi	x0,x0,0
+80001d14:	00000013          	addi	x0,x0,0
+80001d18:	00000013          	addi	x0,x0,0
+80001d1c:	00000013          	addi	x0,x0,0
+80001d20:	00034097          	auipc	x1,0x34
+80001d24:	8a4080e7          	jalr	x1,-1884(x1) # 800355c4 <rvmodel_io_write_str>
+80001d28:	4bd0006f          	jal	x0,800029e4 <failedtest_report_end>
+
+80001d2c <failedtest_report_trap_detailed>:
+80001d2c:	00003417          	auipc	x8,0x3
+80001d30:	90442403          	lw	x8,-1788(x8) # 80004630 <trap_diag_subtype>
+80001d34:	00900493          	addi	x9,x0,9
+80001d38:	0a940c63          	beq	x8,x9,80001df0 <trap_report_offset_mismatch>
+80001d3c:	00000013          	addi	x0,x0,0
+80001d40:	00004517          	auipc	x10,0x4
+80001d44:	acb50513          	addi	x10,x10,-1333 # 8000580b <trap_diag_header_str>
+80001d48:	00000013          	addi	x0,x0,0
+80001d4c:	00000013          	addi	x0,x0,0
+80001d50:	00000013          	addi	x0,x0,0
+80001d54:	00000013          	addi	x0,x0,0
+80001d58:	00000013          	addi	x0,x0,0
+80001d5c:	00000013          	addi	x0,x0,0
+80001d60:	00034097          	auipc	x1,0x34
+80001d64:	864080e7          	jalr	x1,-1948(x1) # 800355c4 <rvmodel_io_write_str>
+80001d68:	00000013          	addi	x0,x0,0
+80001d6c:	00000013          	addi	x0,x0,0
+80001d70:	00000013          	addi	x0,x0,0
+80001d74:	00000013          	addi	x0,x0,0
+80001d78:	00000013          	addi	x0,x0,0
+80001d7c:	00000013          	addi	x0,x0,0
+80001d80:	00004517          	auipc	x10,0x4
+80001d84:	ab750513          	addi	x10,x10,-1353 # 80005837 <trap_diag_origstr_label>
+80001d88:	00000013          	addi	x0,x0,0
+80001d8c:	00000013          	addi	x0,x0,0
+80001d90:	00000013          	addi	x0,x0,0
+80001d94:	00000013          	addi	x0,x0,0
+80001d98:	00000013          	addi	x0,x0,0
+80001d9c:	00000013          	addi	x0,x0,0
+80001da0:	00034097          	auipc	x1,0x34
+80001da4:	824080e7          	jalr	x1,-2012(x1) # 800355c4 <rvmodel_io_write_str>
+80001da8:	00003817          	auipc	x16,0x3
+80001dac:	89080813          	addi	x16,x16,-1904 # 80004638 <trap_diag_fail_str_ptr>
+80001db0:	00082503          	lw	x10,0(x16)
+80001db4:	00034097          	auipc	x1,0x34
+80001db8:	810080e7          	jalr	x1,-2032(x1) # 800355c4 <rvmodel_io_write_str>
+80001dbc:	00000013          	addi	x0,x0,0
+80001dc0:	00003517          	auipc	x10,0x3
+80001dc4:	ebc50513          	addi	x10,x10,-324 # 80004c7c <newlinestr>
+80001dc8:	00000013          	addi	x0,x0,0
+80001dcc:	00000013          	addi	x0,x0,0
+80001dd0:	00000013          	addi	x0,x0,0
+80001dd4:	00000013          	addi	x0,x0,0
+80001dd8:	00000013          	addi	x0,x0,0
+80001ddc:	00000013          	addi	x0,x0,0
+80001de0:	00033097          	auipc	x1,0x33
+80001de4:	7e4080e7          	jalr	x1,2020(x1) # 800355c4 <rvmodel_io_write_str>
+80001de8:	280404e3          	beq	x8,x0,80002870 <trap_report_generic>
+80001dec:	3400006f          	jal	x0,8000212c <trap_report_field_mismatch>
+
+80001df0 <trap_report_offset_mismatch>:
+80001df0:	00000013          	addi	x0,x0,0
+80001df4:	00000013          	addi	x0,x0,0
+80001df8:	00000013          	addi	x0,x0,0
+80001dfc:	00000013          	addi	x0,x0,0
+80001e00:	00004517          	auipc	x10,0x4
+80001e04:	a4750513          	addi	x10,x10,-1465 # 80005847 <trap_diag_expected_offset_str>
+80001e08:	00000013          	addi	x0,x0,0
+80001e0c:	00000013          	addi	x0,x0,0
+80001e10:	00000013          	addi	x0,x0,0
+80001e14:	00000013          	addi	x0,x0,0
+80001e18:	00000013          	addi	x0,x0,0
+80001e1c:	00000013          	addi	x0,x0,0
+80001e20:	00033097          	auipc	x1,0x33
+80001e24:	7a4080e7          	jalr	x1,1956(x1) # 800355c4 <rvmodel_io_write_str>
+80001e28:	00002517          	auipc	x10,0x2
+80001e2c:	7f052503          	lw	x10,2032(x10) # 80004618 <expected_value>
+80001e30:	02000593          	addi	x11,x0,32
+80001e34:	605000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001e38:	00000013          	addi	x0,x0,0
+80001e3c:	00000013          	addi	x0,x0,0
+80001e40:	00003517          	auipc	x10,0x3
+80001e44:	82850513          	addi	x10,x10,-2008 # 80004668 <ascii_buffer>
+80001e48:	00000013          	addi	x0,x0,0
+80001e4c:	00000013          	addi	x0,x0,0
+80001e50:	00000013          	addi	x0,x0,0
+80001e54:	00000013          	addi	x0,x0,0
+80001e58:	00000013          	addi	x0,x0,0
+80001e5c:	00000013          	addi	x0,x0,0
+80001e60:	00033097          	auipc	x1,0x33
+80001e64:	764080e7          	jalr	x1,1892(x1) # 800355c4 <rvmodel_io_write_str>
+80001e68:	00000013          	addi	x0,x0,0
+80001e6c:	00000013          	addi	x0,x0,0
+80001e70:	00000013          	addi	x0,x0,0
+80001e74:	00000013          	addi	x0,x0,0
+80001e78:	00000013          	addi	x0,x0,0
+80001e7c:	00000013          	addi	x0,x0,0
+80001e80:	00004517          	auipc	x10,0x4
+80001e84:	9f250513          	addi	x10,x10,-1550 # 80005872 <trap_diag_actual_offset_str>
+80001e88:	00000013          	addi	x0,x0,0
+80001e8c:	00000013          	addi	x0,x0,0
+80001e90:	00000013          	addi	x0,x0,0
+80001e94:	00000013          	addi	x0,x0,0
+80001e98:	00000013          	addi	x0,x0,0
+80001e9c:	00000013          	addi	x0,x0,0
+80001ea0:	00033097          	auipc	x1,0x33
+80001ea4:	724080e7          	jalr	x1,1828(x1) # 800355c4 <rvmodel_io_write_str>
+80001ea8:	00002517          	auipc	x10,0x2
+80001eac:	76852503          	lw	x10,1896(x10) # 80004610 <failing_value>
+80001eb0:	02000593          	addi	x11,x0,32
+80001eb4:	585000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001eb8:	00000013          	addi	x0,x0,0
+80001ebc:	00000013          	addi	x0,x0,0
+80001ec0:	00002517          	auipc	x10,0x2
+80001ec4:	7a850513          	addi	x10,x10,1960 # 80004668 <ascii_buffer>
+80001ec8:	00000013          	addi	x0,x0,0
+80001ecc:	00000013          	addi	x0,x0,0
+80001ed0:	00000013          	addi	x0,x0,0
+80001ed4:	00000013          	addi	x0,x0,0
+80001ed8:	00000013          	addi	x0,x0,0
+80001edc:	00000013          	addi	x0,x0,0
+80001ee0:	00033097          	auipc	x1,0x33
+80001ee4:	6e4080e7          	jalr	x1,1764(x1) # 800355c4 <rvmodel_io_write_str>
+80001ee8:	00002317          	auipc	x6,0x2
+80001eec:	72832303          	lw	x6,1832(x6) # 80004610 <failing_value>
+80001ef0:	00002397          	auipc	x7,0x2
+80001ef4:	7283a383          	lw	x7,1832(x7) # 80004618 <expected_value>
+80001ef8:	10736a63          	bltu	x6,x7,8000200c <trap_report_missing_traps>
+
+80001efc <trap_report_extra_traps>:
+80001efc:	00000013          	addi	x0,x0,0
+80001f00:	00004517          	auipc	x10,0x4
+80001f04:	9a150513          	addi	x10,x10,-1631 # 800058a1 <trap_diag_extra_traps_str>
+80001f08:	00000013          	addi	x0,x0,0
+80001f0c:	00000013          	addi	x0,x0,0
+80001f10:	00000013          	addi	x0,x0,0
+80001f14:	00000013          	addi	x0,x0,0
+80001f18:	00000013          	addi	x0,x0,0
+80001f1c:	00000013          	addi	x0,x0,0
+80001f20:	00033097          	auipc	x1,0x33
+80001f24:	6a4080e7          	jalr	x1,1700(x1) # 800355c4 <rvmodel_io_write_str>
+80001f28:	00000013          	addi	x0,x0,0
+80001f2c:	00000013          	addi	x0,x0,0
+80001f30:	00000013          	addi	x0,x0,0
+80001f34:	00000013          	addi	x0,x0,0
+80001f38:	00000013          	addi	x0,x0,0
+80001f3c:	00000013          	addi	x0,x0,0
+80001f40:	00004517          	auipc	x10,0x4
+80001f44:	9c950513          	addi	x10,x10,-1591 # 80005909 <trap_diag_diff_bytes_str>
+80001f48:	00000013          	addi	x0,x0,0
+80001f4c:	00000013          	addi	x0,x0,0
+80001f50:	00000013          	addi	x0,x0,0
+80001f54:	00000013          	addi	x0,x0,0
+80001f58:	00000013          	addi	x0,x0,0
+80001f5c:	00000013          	addi	x0,x0,0
+80001f60:	00033097          	auipc	x1,0x33
+80001f64:	664080e7          	jalr	x1,1636(x1) # 800355c4 <rvmodel_io_write_str>
+80001f68:	00002317          	auipc	x6,0x2
+80001f6c:	6a832303          	lw	x6,1704(x6) # 80004610 <failing_value>
+80001f70:	00002397          	auipc	x7,0x2
+80001f74:	6a83a383          	lw	x7,1704(x7) # 80004618 <expected_value>
+80001f78:	40730533          	sub	x10,x6,x7
+80001f7c:	02000593          	addi	x11,x0,32
+80001f80:	4b9000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80001f84:	00000013          	addi	x0,x0,0
+80001f88:	00000013          	addi	x0,x0,0
+80001f8c:	00000013          	addi	x0,x0,0
+80001f90:	00000013          	addi	x0,x0,0
+80001f94:	00000013          	addi	x0,x0,0
+80001f98:	00000013          	addi	x0,x0,0
+80001f9c:	00000013          	addi	x0,x0,0
+80001fa0:	00002517          	auipc	x10,0x2
+80001fa4:	6c850513          	addi	x10,x10,1736 # 80004668 <ascii_buffer>
+80001fa8:	00000013          	addi	x0,x0,0
+80001fac:	00000013          	addi	x0,x0,0
+80001fb0:	00000013          	addi	x0,x0,0
+80001fb4:	00000013          	addi	x0,x0,0
+80001fb8:	00000013          	addi	x0,x0,0
+80001fbc:	00000013          	addi	x0,x0,0
+80001fc0:	00033097          	auipc	x1,0x33
+80001fc4:	604080e7          	jalr	x1,1540(x1) # 800355c4 <rvmodel_io_write_str>
+80001fc8:	00000013          	addi	x0,x0,0
+80001fcc:	00000013          	addi	x0,x0,0
+80001fd0:	00000013          	addi	x0,x0,0
+80001fd4:	00000013          	addi	x0,x0,0
+80001fd8:	00000013          	addi	x0,x0,0
+80001fdc:	00000013          	addi	x0,x0,0
+80001fe0:	00004517          	auipc	x10,0x4
+80001fe4:	95050513          	addi	x10,x10,-1712 # 80005930 <trap_diag_extra_next_step_str>
+80001fe8:	00000013          	addi	x0,x0,0
+80001fec:	00000013          	addi	x0,x0,0
+80001ff0:	00000013          	addi	x0,x0,0
+80001ff4:	00000013          	addi	x0,x0,0
+80001ff8:	00000013          	addi	x0,x0,0
+80001ffc:	00000013          	addi	x0,x0,0
+80002000:	00033097          	auipc	x1,0x33
+80002004:	5c4080e7          	jalr	x1,1476(x1) # 800355c4 <rvmodel_io_write_str>
+80002008:	1dd0006f          	jal	x0,800029e4 <failedtest_report_end>
+
+8000200c <trap_report_missing_traps>:
+8000200c:	00000013          	addi	x0,x0,0
+80002010:	00000013          	addi	x0,x0,0
+80002014:	00000013          	addi	x0,x0,0
+80002018:	00000013          	addi	x0,x0,0
+8000201c:	00000013          	addi	x0,x0,0
+80002020:	00004517          	auipc	x10,0x4
+80002024:	8ad50513          	addi	x10,x10,-1875 # 800058cd <trap_diag_missing_traps_str>
+80002028:	00000013          	addi	x0,x0,0
+8000202c:	00000013          	addi	x0,x0,0
+80002030:	00000013          	addi	x0,x0,0
+80002034:	00000013          	addi	x0,x0,0
+80002038:	00000013          	addi	x0,x0,0
+8000203c:	00000013          	addi	x0,x0,0
+80002040:	00033097          	auipc	x1,0x33
+80002044:	584080e7          	jalr	x1,1412(x1) # 800355c4 <rvmodel_io_write_str>
+80002048:	00000013          	addi	x0,x0,0
+8000204c:	00000013          	addi	x0,x0,0
+80002050:	00000013          	addi	x0,x0,0
+80002054:	00000013          	addi	x0,x0,0
+80002058:	00000013          	addi	x0,x0,0
+8000205c:	00000013          	addi	x0,x0,0
+80002060:	00004517          	auipc	x10,0x4
+80002064:	8a950513          	addi	x10,x10,-1879 # 80005909 <trap_diag_diff_bytes_str>
+80002068:	00000013          	addi	x0,x0,0
+8000206c:	00000013          	addi	x0,x0,0
+80002070:	00000013          	addi	x0,x0,0
+80002074:	00000013          	addi	x0,x0,0
+80002078:	00000013          	addi	x0,x0,0
+8000207c:	00000013          	addi	x0,x0,0
+80002080:	00033097          	auipc	x1,0x33
+80002084:	544080e7          	jalr	x1,1348(x1) # 800355c4 <rvmodel_io_write_str>
+80002088:	00002317          	auipc	x6,0x2
+8000208c:	59032303          	lw	x6,1424(x6) # 80004618 <expected_value>
+80002090:	00002397          	auipc	x7,0x2
+80002094:	5803a383          	lw	x7,1408(x7) # 80004610 <failing_value>
+80002098:	40730533          	sub	x10,x6,x7
+8000209c:	02000593          	addi	x11,x0,32
+800020a0:	399000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+800020a4:	00000013          	addi	x0,x0,0
+800020a8:	00000013          	addi	x0,x0,0
+800020ac:	00000013          	addi	x0,x0,0
+800020b0:	00000013          	addi	x0,x0,0
+800020b4:	00000013          	addi	x0,x0,0
+800020b8:	00000013          	addi	x0,x0,0
+800020bc:	00000013          	addi	x0,x0,0
+800020c0:	00002517          	auipc	x10,0x2
+800020c4:	5a850513          	addi	x10,x10,1448 # 80004668 <ascii_buffer>
+800020c8:	00000013          	addi	x0,x0,0
+800020cc:	00000013          	addi	x0,x0,0
+800020d0:	00000013          	addi	x0,x0,0
+800020d4:	00000013          	addi	x0,x0,0
+800020d8:	00000013          	addi	x0,x0,0
+800020dc:	00000013          	addi	x0,x0,0
+800020e0:	00033097          	auipc	x1,0x33
+800020e4:	4e4080e7          	jalr	x1,1252(x1) # 800355c4 <rvmodel_io_write_str>
+800020e8:	00000013          	addi	x0,x0,0
+800020ec:	00000013          	addi	x0,x0,0
+800020f0:	00000013          	addi	x0,x0,0
+800020f4:	00000013          	addi	x0,x0,0
+800020f8:	00000013          	addi	x0,x0,0
+800020fc:	00000013          	addi	x0,x0,0
+80002100:	00004517          	auipc	x10,0x4
+80002104:	91850513          	addi	x10,x10,-1768 # 80005a18 <trap_diag_missing_next_step_str>
+80002108:	00000013          	addi	x0,x0,0
+8000210c:	00000013          	addi	x0,x0,0
+80002110:	00000013          	addi	x0,x0,0
+80002114:	00000013          	addi	x0,x0,0
+80002118:	00000013          	addi	x0,x0,0
+8000211c:	00000013          	addi	x0,x0,0
+80002120:	00033097          	auipc	x1,0x33
+80002124:	4a4080e7          	jalr	x1,1188(x1) # 800355c4 <rvmodel_io_write_str>
+80002128:	0bd0006f          	jal	x0,800029e4 <failedtest_report_end>
+
+8000212c <trap_report_field_mismatch>:
+8000212c:	00000013          	addi	x0,x0,0
+80002130:	00000013          	addi	x0,x0,0
+80002134:	00000013          	addi	x0,x0,0
+80002138:	00000013          	addi	x0,x0,0
+8000213c:	00000013          	addi	x0,x0,0
+80002140:	00004517          	auipc	x10,0x4
+80002144:	9bf50513          	addi	x10,x10,-1601 # 80005aff <trap_diag_handler_mode_str>
+80002148:	00000013          	addi	x0,x0,0
+8000214c:	00000013          	addi	x0,x0,0
+80002150:	00000013          	addi	x0,x0,0
+80002154:	00000013          	addi	x0,x0,0
+80002158:	00000013          	addi	x0,x0,0
+8000215c:	00000013          	addi	x0,x0,0
+80002160:	00033097          	auipc	x1,0x33
+80002164:	464080e7          	jalr	x1,1124(x1) # 800355c4 <rvmodel_io_write_str>
+80002168:	00002517          	auipc	x10,0x2
+8000216c:	4cc52503          	lw	x10,1228(x10) # 80004634 <trap_diag_mode>
+80002170:	04050a63          	beq	x10,x0,800021c4 <trap_mode_m>
+80002174:	00100593          	addi	x11,x0,1
+80002178:	08b50663          	beq	x10,x11,80002204 <trap_mode_s>
+8000217c:	00200593          	addi	x11,x0,2
+80002180:	0cb50263          	beq	x10,x11,80002244 <trap_mode_h>
+80002184:	00300593          	addi	x11,x0,3
+80002188:	0eb50e63          	beq	x10,x11,80002284 <trap_mode_v>
+8000218c:	00000013          	addi	x0,x0,0
+80002190:	00000013          	addi	x0,x0,0
+80002194:	00000013          	addi	x0,x0,0
+80002198:	00000013          	addi	x0,x0,0
+8000219c:	00000013          	addi	x0,x0,0
+800021a0:	00004517          	auipc	x10,0x4
+800021a4:	99b50513          	addi	x10,x10,-1637 # 80005b3b <trap_diag_mode_unknown_str>
+800021a8:	00000013          	addi	x0,x0,0
+800021ac:	00000013          	addi	x0,x0,0
+800021b0:	00000013          	addi	x0,x0,0
+800021b4:	00000013          	addi	x0,x0,0
+800021b8:	00000013          	addi	x0,x0,0
+800021bc:	00000013          	addi	x0,x0,0
+800021c0:	1000006f          	jal	x0,800022c0 <trap_mode_print>
+
+800021c4 <trap_mode_m>:
+800021c4:	00000013          	addi	x0,x0,0
+800021c8:	00000013          	addi	x0,x0,0
+800021cc:	00000013          	addi	x0,x0,0
+800021d0:	00000013          	addi	x0,x0,0
+800021d4:	00000013          	addi	x0,x0,0
+800021d8:	00000013          	addi	x0,x0,0
+800021dc:	00000013          	addi	x0,x0,0
+800021e0:	00004517          	auipc	x10,0x4
+800021e4:	93950513          	addi	x10,x10,-1735 # 80005b19 <trap_diag_mode_m_str>
+800021e8:	00000013          	addi	x0,x0,0
+800021ec:	00000013          	addi	x0,x0,0
+800021f0:	00000013          	addi	x0,x0,0
+800021f4:	00000013          	addi	x0,x0,0
+800021f8:	00000013          	addi	x0,x0,0
+800021fc:	00000013          	addi	x0,x0,0
+80002200:	0c00006f          	jal	x0,800022c0 <trap_mode_print>
+
+80002204 <trap_mode_s>:
+80002204:	00000013          	addi	x0,x0,0
+80002208:	00000013          	addi	x0,x0,0
+8000220c:	00000013          	addi	x0,x0,0
+80002210:	00000013          	addi	x0,x0,0
+80002214:	00000013          	addi	x0,x0,0
+80002218:	00000013          	addi	x0,x0,0
+8000221c:	00000013          	addi	x0,x0,0
+80002220:	00004517          	auipc	x10,0x4
+80002224:	90150513          	addi	x10,x10,-1791 # 80005b21 <trap_diag_mode_s_str>
+80002228:	00000013          	addi	x0,x0,0
+8000222c:	00000013          	addi	x0,x0,0
+80002230:	00000013          	addi	x0,x0,0
+80002234:	00000013          	addi	x0,x0,0
+80002238:	00000013          	addi	x0,x0,0
+8000223c:	00000013          	addi	x0,x0,0
+80002240:	0800006f          	jal	x0,800022c0 <trap_mode_print>
+
+80002244 <trap_mode_h>:
+80002244:	00000013          	addi	x0,x0,0
+80002248:	00000013          	addi	x0,x0,0
+8000224c:	00000013          	addi	x0,x0,0
+80002250:	00000013          	addi	x0,x0,0
+80002254:	00000013          	addi	x0,x0,0
+80002258:	00000013          	addi	x0,x0,0
+8000225c:	00000013          	addi	x0,x0,0
+80002260:	00004517          	auipc	x10,0x4
+80002264:	8c950513          	addi	x10,x10,-1847 # 80005b29 <trap_diag_mode_hs_str>
+80002268:	00000013          	addi	x0,x0,0
+8000226c:	00000013          	addi	x0,x0,0
+80002270:	00000013          	addi	x0,x0,0
+80002274:	00000013          	addi	x0,x0,0
+80002278:	00000013          	addi	x0,x0,0
+8000227c:	00000013          	addi	x0,x0,0
+80002280:	0400006f          	jal	x0,800022c0 <trap_mode_print>
+
+80002284 <trap_mode_v>:
+80002284:	00000013          	addi	x0,x0,0
+80002288:	00000013          	addi	x0,x0,0
+8000228c:	00000013          	addi	x0,x0,0
+80002290:	00000013          	addi	x0,x0,0
+80002294:	00000013          	addi	x0,x0,0
+80002298:	00000013          	addi	x0,x0,0
+8000229c:	00000013          	addi	x0,x0,0
+800022a0:	00004517          	auipc	x10,0x4
+800022a4:	89250513          	addi	x10,x10,-1902 # 80005b32 <trap_diag_mode_vs_str>
+800022a8:	00000013          	addi	x0,x0,0
+800022ac:	00000013          	addi	x0,x0,0
+800022b0:	00000013          	addi	x0,x0,0
+800022b4:	00000013          	addi	x0,x0,0
+800022b8:	00000013          	addi	x0,x0,0
+800022bc:	00000013          	addi	x0,x0,0
+
+800022c0 <trap_mode_print>:
+800022c0:	00033097          	auipc	x1,0x33
+800022c4:	304080e7          	jalr	x1,772(x1) # 800355c4 <rvmodel_io_write_str>
+800022c8:	00000013          	addi	x0,x0,0
+800022cc:	00000013          	addi	x0,x0,0
+800022d0:	00000013          	addi	x0,x0,0
+800022d4:	00000013          	addi	x0,x0,0
+800022d8:	00000013          	addi	x0,x0,0
+800022dc:	00000013          	addi	x0,x0,0
+800022e0:	00004517          	auipc	x10,0x4
+800022e4:	86450513          	addi	x10,x10,-1948 # 80005b44 <trap_diag_field_str>
+800022e8:	00000013          	addi	x0,x0,0
+800022ec:	00000013          	addi	x0,x0,0
+800022f0:	00000013          	addi	x0,x0,0
+800022f4:	00000013          	addi	x0,x0,0
+800022f8:	00000013          	addi	x0,x0,0
+800022fc:	00000013          	addi	x0,x0,0
+80002300:	00033097          	auipc	x1,0x33
+80002304:	2c4080e7          	jalr	x1,708(x1) # 800355c4 <rvmodel_io_write_str>
+80002308:	00002517          	auipc	x10,0x2
+8000230c:	32852503          	lw	x10,808(x10) # 80004630 <trap_diag_subtype>
+80002310:	00100593          	addi	x11,x0,1
+80002314:	06b50863          	beq	x10,x11,80002384 <trap_field_vect>
+80002318:	00200593          	addi	x11,x0,2
+8000231c:	0ab50463          	beq	x10,x11,800023c4 <trap_field_cause>
+80002320:	00300593          	addi	x11,x0,3
+80002324:	0eb50063          	beq	x10,x11,80002404 <trap_field_epc>
+80002328:	00400593          	addi	x11,x0,4
+8000232c:	10b50c63          	beq	x10,x11,80002444 <trap_field_tval>
+80002330:	00500593          	addi	x11,x0,5
+80002334:	14b50863          	beq	x10,x11,80002484 <trap_field_ip>
+80002338:	00600593          	addi	x11,x0,6
+8000233c:	18b50463          	beq	x10,x11,800024c4 <trap_field_tval2>
+80002340:	00700593          	addi	x11,x0,7
+80002344:	1cb50063          	beq	x10,x11,80002504 <trap_field_tinst>
+80002348:	00800593          	addi	x11,x0,8
+8000234c:	1eb50c63          	beq	x10,x11,80002544 <trap_field_intid>
+80002350:	00000013          	addi	x0,x0,0
+80002354:	00000013          	addi	x0,x0,0
+80002358:	00000013          	addi	x0,x0,0
+8000235c:	00000013          	addi	x0,x0,0
+80002360:	00004517          	auipc	x10,0x4
+80002364:	93b50513          	addi	x10,x10,-1733 # 80005c9b <trap_diag_field_unknown_str>
+80002368:	00000013          	addi	x0,x0,0
+8000236c:	00000013          	addi	x0,x0,0
+80002370:	00000013          	addi	x0,x0,0
+80002374:	00000013          	addi	x0,x0,0
+80002378:	00000013          	addi	x0,x0,0
+8000237c:	00000013          	addi	x0,x0,0
+80002380:	2000006f          	jal	x0,80002580 <trap_field_print>
+
+80002384 <trap_field_vect>:
+80002384:	00000013          	addi	x0,x0,0
+80002388:	00000013          	addi	x0,x0,0
+8000238c:	00000013          	addi	x0,x0,0
+80002390:	00000013          	addi	x0,x0,0
+80002394:	00000013          	addi	x0,x0,0
+80002398:	00000013          	addi	x0,x0,0
+8000239c:	00000013          	addi	x0,x0,0
+800023a0:	00003517          	auipc	x10,0x3
+800023a4:	7be50513          	addi	x10,x10,1982 # 80005b5e <trap_diag_field_vect_str>
+800023a8:	00000013          	addi	x0,x0,0
+800023ac:	00000013          	addi	x0,x0,0
+800023b0:	00000013          	addi	x0,x0,0
+800023b4:	00000013          	addi	x0,x0,0
+800023b8:	00000013          	addi	x0,x0,0
+800023bc:	00000013          	addi	x0,x0,0
+800023c0:	1c00006f          	jal	x0,80002580 <trap_field_print>
+
+800023c4 <trap_field_cause>:
+800023c4:	00000013          	addi	x0,x0,0
+800023c8:	00000013          	addi	x0,x0,0
+800023cc:	00000013          	addi	x0,x0,0
+800023d0:	00000013          	addi	x0,x0,0
+800023d4:	00000013          	addi	x0,x0,0
+800023d8:	00000013          	addi	x0,x0,0
+800023dc:	00000013          	addi	x0,x0,0
+800023e0:	00003517          	auipc	x10,0x3
+800023e4:	7af50513          	addi	x10,x10,1967 # 80005b8f <trap_diag_field_cause_str>
+800023e8:	00000013          	addi	x0,x0,0
+800023ec:	00000013          	addi	x0,x0,0
+800023f0:	00000013          	addi	x0,x0,0
+800023f4:	00000013          	addi	x0,x0,0
+800023f8:	00000013          	addi	x0,x0,0
+800023fc:	00000013          	addi	x0,x0,0
+80002400:	1800006f          	jal	x0,80002580 <trap_field_print>
+
+80002404 <trap_field_epc>:
+80002404:	00000013          	addi	x0,x0,0
+80002408:	00000013          	addi	x0,x0,0
+8000240c:	00000013          	addi	x0,x0,0
+80002410:	00000013          	addi	x0,x0,0
+80002414:	00000013          	addi	x0,x0,0
+80002418:	00000013          	addi	x0,x0,0
+8000241c:	00000013          	addi	x0,x0,0
+80002420:	00003517          	auipc	x10,0x3
+80002424:	78f50513          	addi	x10,x10,1935 # 80005baf <trap_diag_field_epc_str>
+80002428:	00000013          	addi	x0,x0,0
+8000242c:	00000013          	addi	x0,x0,0
+80002430:	00000013          	addi	x0,x0,0
+80002434:	00000013          	addi	x0,x0,0
+80002438:	00000013          	addi	x0,x0,0
+8000243c:	00000013          	addi	x0,x0,0
+80002440:	1400006f          	jal	x0,80002580 <trap_field_print>
+
+80002444 <trap_field_tval>:
+80002444:	00000013          	addi	x0,x0,0
+80002448:	00000013          	addi	x0,x0,0
+8000244c:	00000013          	addi	x0,x0,0
+80002450:	00000013          	addi	x0,x0,0
+80002454:	00000013          	addi	x0,x0,0
+80002458:	00000013          	addi	x0,x0,0
+8000245c:	00000013          	addi	x0,x0,0
+80002460:	00003517          	auipc	x10,0x3
+80002464:	76d50513          	addi	x10,x10,1901 # 80005bcd <trap_diag_field_tval_str>
+80002468:	00000013          	addi	x0,x0,0
+8000246c:	00000013          	addi	x0,x0,0
+80002470:	00000013          	addi	x0,x0,0
+80002474:	00000013          	addi	x0,x0,0
+80002478:	00000013          	addi	x0,x0,0
+8000247c:	00000013          	addi	x0,x0,0
+80002480:	1000006f          	jal	x0,80002580 <trap_field_print>
+
+80002484 <trap_field_ip>:
+80002484:	00000013          	addi	x0,x0,0
+80002488:	00000013          	addi	x0,x0,0
+8000248c:	00000013          	addi	x0,x0,0
+80002490:	00000013          	addi	x0,x0,0
+80002494:	00000013          	addi	x0,x0,0
+80002498:	00000013          	addi	x0,x0,0
+8000249c:	00000013          	addi	x0,x0,0
+800024a0:	00003517          	auipc	x10,0x3
+800024a4:	74c50513          	addi	x10,x10,1868 # 80005bec <trap_diag_field_ip_str>
+800024a8:	00000013          	addi	x0,x0,0
+800024ac:	00000013          	addi	x0,x0,0
+800024b0:	00000013          	addi	x0,x0,0
+800024b4:	00000013          	addi	x0,x0,0
+800024b8:	00000013          	addi	x0,x0,0
+800024bc:	00000013          	addi	x0,x0,0
+800024c0:	0c00006f          	jal	x0,80002580 <trap_field_print>
+
+800024c4 <trap_field_tval2>:
+800024c4:	00000013          	addi	x0,x0,0
+800024c8:	00000013          	addi	x0,x0,0
+800024cc:	00000013          	addi	x0,x0,0
+800024d0:	00000013          	addi	x0,x0,0
+800024d4:	00000013          	addi	x0,x0,0
+800024d8:	00000013          	addi	x0,x0,0
+800024dc:	00000013          	addi	x0,x0,0
+800024e0:	00003517          	auipc	x10,0x3
+800024e4:	73450513          	addi	x10,x10,1844 # 80005c14 <trap_diag_field_tval2_str>
+800024e8:	00000013          	addi	x0,x0,0
+800024ec:	00000013          	addi	x0,x0,0
+800024f0:	00000013          	addi	x0,x0,0
+800024f4:	00000013          	addi	x0,x0,0
+800024f8:	00000013          	addi	x0,x0,0
+800024fc:	00000013          	addi	x0,x0,0
+80002500:	0800006f          	jal	x0,80002580 <trap_field_print>
+
+80002504 <trap_field_tinst>:
+80002504:	00000013          	addi	x0,x0,0
+80002508:	00000013          	addi	x0,x0,0
+8000250c:	00000013          	addi	x0,x0,0
+80002510:	00000013          	addi	x0,x0,0
+80002514:	00000013          	addi	x0,x0,0
+80002518:	00000013          	addi	x0,x0,0
+8000251c:	00000013          	addi	x0,x0,0
+80002520:	00003517          	auipc	x10,0x3
+80002524:	72050513          	addi	x10,x10,1824 # 80005c40 <trap_diag_field_tinst_str>
+80002528:	00000013          	addi	x0,x0,0
+8000252c:	00000013          	addi	x0,x0,0
+80002530:	00000013          	addi	x0,x0,0
+80002534:	00000013          	addi	x0,x0,0
+80002538:	00000013          	addi	x0,x0,0
+8000253c:	00000013          	addi	x0,x0,0
+80002540:	0400006f          	jal	x0,80002580 <trap_field_print>
+
+80002544 <trap_field_intid>:
+80002544:	00000013          	addi	x0,x0,0
+80002548:	00000013          	addi	x0,x0,0
+8000254c:	00000013          	addi	x0,x0,0
+80002550:	00000013          	addi	x0,x0,0
+80002554:	00000013          	addi	x0,x0,0
+80002558:	00000013          	addi	x0,x0,0
+8000255c:	00000013          	addi	x0,x0,0
+80002560:	00003517          	auipc	x10,0x3
+80002564:	70c50513          	addi	x10,x10,1804 # 80005c6c <trap_diag_field_intid_str>
+80002568:	00000013          	addi	x0,x0,0
+8000256c:	00000013          	addi	x0,x0,0
+80002570:	00000013          	addi	x0,x0,0
+80002574:	00000013          	addi	x0,x0,0
+80002578:	00000013          	addi	x0,x0,0
+8000257c:	00000013          	addi	x0,x0,0
+
+80002580 <trap_field_print>:
+80002580:	00033097          	auipc	x1,0x33
+80002584:	044080e7          	jalr	x1,68(x1) # 800355c4 <rvmodel_io_write_str>
+80002588:	00000013          	addi	x0,x0,0
+8000258c:	00000013          	addi	x0,x0,0
+80002590:	00000013          	addi	x0,x0,0
+80002594:	00000013          	addi	x0,x0,0
+80002598:	00000013          	addi	x0,x0,0
+8000259c:	00000013          	addi	x0,x0,0
+800025a0:	00003517          	auipc	x10,0x3
+800025a4:	70a50513          	addi	x10,x10,1802 # 80005caa <trap_diag_expected_str>
+800025a8:	00000013          	addi	x0,x0,0
+800025ac:	00000013          	addi	x0,x0,0
+800025b0:	00000013          	addi	x0,x0,0
+800025b4:	00000013          	addi	x0,x0,0
+800025b8:	00000013          	addi	x0,x0,0
+800025bc:	00000013          	addi	x0,x0,0
+800025c0:	00033097          	auipc	x1,0x33
+800025c4:	004080e7          	jalr	x1,4(x1) # 800355c4 <rvmodel_io_write_str>
+800025c8:	00002517          	auipc	x10,0x2
+800025cc:	05052503          	lw	x10,80(x10) # 80004618 <expected_value>
+800025d0:	02000593          	addi	x11,x0,32
+800025d4:	664000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+800025d8:	00000013          	addi	x0,x0,0
+800025dc:	00000013          	addi	x0,x0,0
+800025e0:	00002517          	auipc	x10,0x2
+800025e4:	08850513          	addi	x10,x10,136 # 80004668 <ascii_buffer>
+800025e8:	00000013          	addi	x0,x0,0
+800025ec:	00000013          	addi	x0,x0,0
+800025f0:	00000013          	addi	x0,x0,0
+800025f4:	00000013          	addi	x0,x0,0
+800025f8:	00000013          	addi	x0,x0,0
+800025fc:	00000013          	addi	x0,x0,0
+80002600:	00033097          	auipc	x1,0x33
+80002604:	fc4080e7          	jalr	x1,-60(x1) # 800355c4 <rvmodel_io_write_str>
+80002608:	00000013          	addi	x0,x0,0
+8000260c:	00000013          	addi	x0,x0,0
+80002610:	00000013          	addi	x0,x0,0
+80002614:	00000013          	addi	x0,x0,0
+80002618:	00000013          	addi	x0,x0,0
+8000261c:	00000013          	addi	x0,x0,0
+80002620:	00003517          	auipc	x10,0x3
+80002624:	6a150513          	addi	x10,x10,1697 # 80005cc1 <trap_diag_actual_str>
+80002628:	00000013          	addi	x0,x0,0
+8000262c:	00000013          	addi	x0,x0,0
+80002630:	00000013          	addi	x0,x0,0
+80002634:	00000013          	addi	x0,x0,0
+80002638:	00000013          	addi	x0,x0,0
+8000263c:	00000013          	addi	x0,x0,0
+80002640:	00033097          	auipc	x1,0x33
+80002644:	f84080e7          	jalr	x1,-124(x1) # 800355c4 <rvmodel_io_write_str>
+80002648:	00002517          	auipc	x10,0x2
+8000264c:	fc852503          	lw	x10,-56(x10) # 80004610 <failing_value>
+80002650:	02000593          	addi	x11,x0,32
+80002654:	5e4000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002658:	00000013          	addi	x0,x0,0
+8000265c:	00000013          	addi	x0,x0,0
+80002660:	00002517          	auipc	x10,0x2
+80002664:	00850513          	addi	x10,x10,8 # 80004668 <ascii_buffer>
+80002668:	00000013          	addi	x0,x0,0
+8000266c:	00000013          	addi	x0,x0,0
+80002670:	00000013          	addi	x0,x0,0
+80002674:	00000013          	addi	x0,x0,0
+80002678:	00000013          	addi	x0,x0,0
+8000267c:	00000013          	addi	x0,x0,0
+80002680:	00033097          	auipc	x1,0x33
+80002684:	f44080e7          	jalr	x1,-188(x1) # 800355c4 <rvmodel_io_write_str>
+80002688:	00002517          	auipc	x10,0x2
+8000268c:	fa852503          	lw	x10,-88(x10) # 80004630 <trap_diag_subtype>
+80002690:	00200593          	addi	x11,x0,2
+80002694:	08b51463          	bne	x10,x11,8000271c <trap_field_not_cause>
+80002698:	00000013          	addi	x0,x0,0
+8000269c:	00000013          	addi	x0,x0,0
+800026a0:	00003517          	auipc	x10,0x3
+800026a4:	63850513          	addi	x10,x10,1592 # 80005cd8 <trap_diag_expected_cause_name_str>
+800026a8:	00000013          	addi	x0,x0,0
+800026ac:	00000013          	addi	x0,x0,0
+800026b0:	00000013          	addi	x0,x0,0
+800026b4:	00000013          	addi	x0,x0,0
+800026b8:	00000013          	addi	x0,x0,0
+800026bc:	00000013          	addi	x0,x0,0
+800026c0:	00033097          	auipc	x1,0x33
+800026c4:	f04080e7          	jalr	x1,-252(x1) # 800355c4 <rvmodel_io_write_str>
+800026c8:	00002517          	auipc	x10,0x2
+800026cc:	f5052503          	lw	x10,-176(x10) # 80004618 <expected_value>
+800026d0:	284000ef          	jal	x1,80002954 <trap_cause_to_str>
+800026d4:	00033097          	auipc	x1,0x33
+800026d8:	ef0080e7          	jalr	x1,-272(x1) # 800355c4 <rvmodel_io_write_str>
+800026dc:	00000013          	addi	x0,x0,0
+800026e0:	00003517          	auipc	x10,0x3
+800026e4:	60f50513          	addi	x10,x10,1551 # 80005cef <trap_diag_actual_cause_name_str>
+800026e8:	00000013          	addi	x0,x0,0
+800026ec:	00000013          	addi	x0,x0,0
+800026f0:	00000013          	addi	x0,x0,0
+800026f4:	00000013          	addi	x0,x0,0
+800026f8:	00000013          	addi	x0,x0,0
+800026fc:	00000013          	addi	x0,x0,0
+80002700:	00033097          	auipc	x1,0x33
+80002704:	ec4080e7          	jalr	x1,-316(x1) # 800355c4 <rvmodel_io_write_str>
+80002708:	00002517          	auipc	x10,0x2
+8000270c:	f0852503          	lw	x10,-248(x10) # 80004610 <failing_value>
+80002710:	244000ef          	jal	x1,80002954 <trap_cause_to_str>
+80002714:	00033097          	auipc	x1,0x33
+80002718:	eb0080e7          	jalr	x1,-336(x1) # 800355c4 <rvmodel_io_write_str>
+
+8000271c <trap_field_not_cause>:
+8000271c:	00000097          	auipc	x1,0x0
+80002720:	314080e7          	jalr	x1,788(x1) # 80002a30 <failedtest_print_csr_context>
+80002724:	00002517          	auipc	x10,0x2
+80002728:	f0c52503          	lw	x10,-244(x10) # 80004630 <trap_diag_subtype>
+8000272c:	00100593          	addi	x11,x0,1
+80002730:	02b51e63          	bne	x10,x11,8000276c <trap_field_not_cause+0x50>
+80002734:	00000013          	addi	x0,x0,0
+80002738:	00000013          	addi	x0,x0,0
+8000273c:	00000013          	addi	x0,x0,0
+80002740:	00003517          	auipc	x10,0x3
+80002744:	62550513          	addi	x10,x10,1573 # 80005d65 <trap_diag_hint_vect_str>
+80002748:	00000013          	addi	x0,x0,0
+8000274c:	00000013          	addi	x0,x0,0
+80002750:	00000013          	addi	x0,x0,0
+80002754:	00000013          	addi	x0,x0,0
+80002758:	00000013          	addi	x0,x0,0
+8000275c:	00000013          	addi	x0,x0,0
+80002760:	00033097          	auipc	x1,0x33
+80002764:	e64080e7          	jalr	x1,-412(x1) # 800355c4 <rvmodel_io_write_str>
+80002768:	27c0006f          	jal	x0,800029e4 <failedtest_report_end>
+8000276c:	00200593          	addi	x11,x0,2
+80002770:	02b51e63          	bne	x10,x11,800027ac <trap_field_not_cause+0x90>
+80002774:	00000013          	addi	x0,x0,0
+80002778:	00000013          	addi	x0,x0,0
+8000277c:	00000013          	addi	x0,x0,0
+80002780:	00003517          	auipc	x10,0x3
+80002784:	6bb50513          	addi	x10,x10,1723 # 80005e3b <trap_diag_hint_cause_str>
+80002788:	00000013          	addi	x0,x0,0
+8000278c:	00000013          	addi	x0,x0,0
+80002790:	00000013          	addi	x0,x0,0
+80002794:	00000013          	addi	x0,x0,0
+80002798:	00000013          	addi	x0,x0,0
+8000279c:	00000013          	addi	x0,x0,0
+800027a0:	00033097          	auipc	x1,0x33
+800027a4:	e24080e7          	jalr	x1,-476(x1) # 800355c4 <rvmodel_io_write_str>
+800027a8:	23c0006f          	jal	x0,800029e4 <failedtest_report_end>
+800027ac:	00300593          	addi	x11,x0,3
+800027b0:	02b51e63          	bne	x10,x11,800027ec <trap_field_not_cause+0xd0>
+800027b4:	00000013          	addi	x0,x0,0
+800027b8:	00000013          	addi	x0,x0,0
+800027bc:	00000013          	addi	x0,x0,0
+800027c0:	00003517          	auipc	x10,0x3
+800027c4:	76e50513          	addi	x10,x10,1902 # 80005f2e <trap_diag_hint_epc_str>
+800027c8:	00000013          	addi	x0,x0,0
+800027cc:	00000013          	addi	x0,x0,0
+800027d0:	00000013          	addi	x0,x0,0
+800027d4:	00000013          	addi	x0,x0,0
+800027d8:	00000013          	addi	x0,x0,0
+800027dc:	00000013          	addi	x0,x0,0
+800027e0:	00033097          	auipc	x1,0x33
+800027e4:	de4080e7          	jalr	x1,-540(x1) # 800355c4 <rvmodel_io_write_str>
+800027e8:	1fc0006f          	jal	x0,800029e4 <failedtest_report_end>
+800027ec:	00400593          	addi	x11,x0,4
+800027f0:	02b51e63          	bne	x10,x11,8000282c <trap_field_not_cause+0x110>
+800027f4:	00000013          	addi	x0,x0,0
+800027f8:	00000013          	addi	x0,x0,0
+800027fc:	00000013          	addi	x0,x0,0
+80002800:	00004517          	auipc	x10,0x4
+80002804:	82950513          	addi	x10,x10,-2007 # 80006029 <trap_diag_hint_tval_str>
+80002808:	00000013          	addi	x0,x0,0
+8000280c:	00000013          	addi	x0,x0,0
+80002810:	00000013          	addi	x0,x0,0
+80002814:	00000013          	addi	x0,x0,0
+80002818:	00000013          	addi	x0,x0,0
+8000281c:	00000013          	addi	x0,x0,0
+80002820:	00033097          	auipc	x1,0x33
+80002824:	da4080e7          	jalr	x1,-604(x1) # 800355c4 <rvmodel_io_write_str>
+80002828:	1bc0006f          	jal	x0,800029e4 <failedtest_report_end>
+8000282c:	00500593          	addi	x11,x0,5
+80002830:	02b51e63          	bne	x10,x11,8000286c <trap_field_not_cause+0x150>
+80002834:	00000013          	addi	x0,x0,0
+80002838:	00000013          	addi	x0,x0,0
+8000283c:	00000013          	addi	x0,x0,0
+80002840:	00004517          	auipc	x10,0x4
+80002844:	8d050513          	addi	x10,x10,-1840 # 80006110 <trap_diag_hint_ip_str>
+80002848:	00000013          	addi	x0,x0,0
+8000284c:	00000013          	addi	x0,x0,0
+80002850:	00000013          	addi	x0,x0,0
+80002854:	00000013          	addi	x0,x0,0
+80002858:	00000013          	addi	x0,x0,0
+8000285c:	00000013          	addi	x0,x0,0
+80002860:	00033097          	auipc	x1,0x33
+80002864:	d64080e7          	jalr	x1,-668(x1) # 800355c4 <rvmodel_io_write_str>
+80002868:	17c0006f          	jal	x0,800029e4 <failedtest_report_end>
+8000286c:	1780006f          	jal	x0,800029e4 <failedtest_report_end>
+
+80002870 <trap_report_generic>:
+80002870:	00000013          	addi	x0,x0,0
+80002874:	00000013          	addi	x0,x0,0
+80002878:	00000013          	addi	x0,x0,0
+8000287c:	00000013          	addi	x0,x0,0
+80002880:	00003517          	auipc	x10,0x3
+80002884:	49d50513          	addi	x10,x10,1181 # 80005d1d <trap_diag_generic_str>
+80002888:	00000013          	addi	x0,x0,0
+8000288c:	00000013          	addi	x0,x0,0
+80002890:	00000013          	addi	x0,x0,0
+80002894:	00000013          	addi	x0,x0,0
+80002898:	00000013          	addi	x0,x0,0
+8000289c:	00000013          	addi	x0,x0,0
+800028a0:	00033097          	auipc	x1,0x33
+800028a4:	d24080e7          	jalr	x1,-732(x1) # 800355c4 <rvmodel_io_write_str>
+800028a8:	00002617          	auipc	x12,0x2
+800028ac:	da062603          	lw	x12,-608(x12) # 80004648 <saved_xepc>
+800028b0:	00000013          	addi	x0,x0,0
+800028b4:	00000013          	addi	x0,x0,0
+800028b8:	00000013          	addi	x0,x0,0
+800028bc:	00000013          	addi	x0,x0,0
+800028c0:	00002517          	auipc	x10,0x2
+800028c4:	44650513          	addi	x10,x10,1094 # 80004d06 <xepcinstrstr>
+800028c8:	00000013          	addi	x0,x0,0
+800028cc:	00000013          	addi	x0,x0,0
+800028d0:	00000013          	addi	x0,x0,0
+800028d4:	00000013          	addi	x0,x0,0
+800028d8:	00000013          	addi	x0,x0,0
+800028dc:	00000013          	addi	x0,x0,0
+800028e0:	00033097          	auipc	x1,0x33
+800028e4:	ce4080e7          	jalr	x1,-796(x1) # 800355c4 <rvmodel_io_write_str>
+800028e8:	00065503          	lhu	x10,0(x12)
+800028ec:	01000593          	addi	x11,x0,16
+800028f0:	00357413          	andi	x8,x10,3
+800028f4:	00300493          	addi	x9,x0,3
+800028f8:	00941a63          	bne	x8,x9,8000290c <trap_report_generic+0x9c>
+800028fc:	00265403          	lhu	x8,2(x12)
+80002900:	01041413          	slli	x8,x8,0x10
+80002904:	00856533          	or	x10,x10,x8
+80002908:	02000593          	addi	x11,x0,32
+8000290c:	32c000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002910:	00000013          	addi	x0,x0,0
+80002914:	00000013          	addi	x0,x0,0
+80002918:	00000013          	addi	x0,x0,0
+8000291c:	00000013          	addi	x0,x0,0
+80002920:	00002517          	auipc	x10,0x2
+80002924:	d4850513          	addi	x10,x10,-696 # 80004668 <ascii_buffer>
+80002928:	00000013          	addi	x0,x0,0
+8000292c:	00000013          	addi	x0,x0,0
+80002930:	00000013          	addi	x0,x0,0
+80002934:	00000013          	addi	x0,x0,0
+80002938:	00000013          	addi	x0,x0,0
+8000293c:	00000013          	addi	x0,x0,0
+80002940:	00033097          	auipc	x1,0x33
+80002944:	c84080e7          	jalr	x1,-892(x1) # 800355c4 <rvmodel_io_write_str>
+80002948:	00000097          	auipc	x1,0x0
+8000294c:	0e8080e7          	jalr	x1,232(x1) # 80002a30 <failedtest_print_csr_context>
+80002950:	0940006f          	jal	x0,800029e4 <failedtest_report_end>
+
+80002954 <trap_cause_to_str>:
+80002954:	02054263          	blt	x10,x0,80002978 <trap_cause_interrupt>
+
+80002958 <trap_cause_exception>:
+80002958:	01800593          	addi	x11,x0,24
+8000295c:	04b55463          	bge	x10,x11,800029a4 <trap_cause_unknown>
+80002960:	00002597          	auipc	x11,0x2
+80002964:	d3058593          	addi	x11,x11,-720 # 80004690 <end_failure_scratch>
+80002968:	00251613          	slli	x12,x10,0x2
+8000296c:	00c585b3          	add	x11,x11,x12
+80002970:	0005a503          	lw	x10,0(x11)
+80002974:	00008067          	jalr	x0,0(x1)
+
+80002978 <trap_cause_interrupt>:
+80002978:	00100593          	addi	x11,x0,1
+8000297c:	01f59593          	slli	x11,x11,0x1f
+80002980:	00b54533          	xor	x10,x10,x11
+80002984:	01000593          	addi	x11,x0,16
+80002988:	00b55e63          	bge	x10,x11,800029a4 <trap_cause_unknown>
+8000298c:	00002597          	auipc	x11,0x2
+80002990:	d6458593          	addi	x11,x11,-668 # 800046f0 <trap_int_name_tbl>
+80002994:	00251613          	slli	x12,x10,0x2
+80002998:	00c585b3          	add	x11,x11,x12
+8000299c:	0005a503          	lw	x10,0(x11)
+800029a0:	00008067          	jalr	x0,0(x1)
+
+800029a4 <trap_cause_unknown>:
+800029a4:	00000013          	addi	x0,x0,0
+800029a8:	00000013          	addi	x0,x0,0
+800029ac:	00000013          	addi	x0,x0,0
+800029b0:	00000013          	addi	x0,x0,0
+800029b4:	00000013          	addi	x0,x0,0
+800029b8:	00000013          	addi	x0,x0,0
+800029bc:	00000013          	addi	x0,x0,0
+800029c0:	00002517          	auipc	x10,0x2
+800029c4:	16e50513          	addi	x10,x10,366 # 80004b2e <trap_cause_unknown_str>
+800029c8:	00000013          	addi	x0,x0,0
+800029cc:	00000013          	addi	x0,x0,0
+800029d0:	00000013          	addi	x0,x0,0
+800029d4:	00000013          	addi	x0,x0,0
+800029d8:	00000013          	addi	x0,x0,0
+800029dc:	00000013          	addi	x0,x0,0
+800029e0:	00008067          	jalr	x0,0(x1)
+
+800029e4 <failedtest_report_end>:
+800029e4:	00000013          	addi	x0,x0,0
+800029e8:	00000013          	addi	x0,x0,0
+800029ec:	00000013          	addi	x0,x0,0
+800029f0:	00000013          	addi	x0,x0,0
+800029f4:	00000013          	addi	x0,x0,0
+800029f8:	00000013          	addi	x0,x0,0
+800029fc:	00000013          	addi	x0,x0,0
+80002a00:	00003517          	auipc	x10,0x3
+80002a04:	dbe50513          	addi	x10,x10,-578 # 800057be <endstr>
+80002a08:	00000013          	addi	x0,x0,0
+80002a0c:	00000013          	addi	x0,x0,0
+80002a10:	00000013          	addi	x0,x0,0
+80002a14:	00000013          	addi	x0,x0,0
+80002a18:	00000013          	addi	x0,x0,0
+80002a1c:	00000013          	addi	x0,x0,0
+80002a20:	00033097          	auipc	x1,0x33
+80002a24:	ba4080e7          	jalr	x1,-1116(x1) # 800355c4 <rvmodel_io_write_str>
+
+80002a28 <failedtest_terminate>:
+80002a28:	00033097          	auipc	x1,0x33
+80002a2c:	c0c080e7          	jalr	x1,-1012(x1) # 80035634 <rvmodel_halt_fail>
+
+80002a30 <failedtest_print_csr_context>:
+80002a30:	00002617          	auipc	x12,0x2
+80002a34:	c1060613          	addi	x12,x12,-1008 # 80004640 <csr_context_ret_addr>
+80002a38:	00162023          	sw	x1,0(x12)
+80002a3c:	00000013          	addi	x0,x0,0
+80002a40:	00002517          	auipc	x10,0x2
+80002a44:	2e750513          	addi	x10,x10,743 # 80004d27 <mepcstr>
+80002a48:	00000013          	addi	x0,x0,0
+80002a4c:	00000013          	addi	x0,x0,0
+80002a50:	00000013          	addi	x0,x0,0
+80002a54:	00000013          	addi	x0,x0,0
+80002a58:	00000013          	addi	x0,x0,0
+80002a5c:	00000013          	addi	x0,x0,0
+80002a60:	00033097          	auipc	x1,0x33
+80002a64:	b64080e7          	jalr	x1,-1180(x1) # 800355c4 <rvmodel_io_write_str>
+80002a68:	00002517          	auipc	x10,0x2
+80002a6c:	be052503          	lw	x10,-1056(x10) # 80004648 <saved_xepc>
+80002a70:	02000593          	addi	x11,x0,32
+80002a74:	1c4000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002a78:	00000013          	addi	x0,x0,0
+80002a7c:	00000013          	addi	x0,x0,0
+80002a80:	00002517          	auipc	x10,0x2
+80002a84:	be850513          	addi	x10,x10,-1048 # 80004668 <ascii_buffer>
+80002a88:	00000013          	addi	x0,x0,0
+80002a8c:	00000013          	addi	x0,x0,0
+80002a90:	00000013          	addi	x0,x0,0
+80002a94:	00000013          	addi	x0,x0,0
+80002a98:	00000013          	addi	x0,x0,0
+80002a9c:	00000013          	addi	x0,x0,0
+80002aa0:	00033097          	auipc	x1,0x33
+80002aa4:	b24080e7          	jalr	x1,-1244(x1) # 800355c4 <rvmodel_io_write_str>
+80002aa8:	00000013          	addi	x0,x0,0
+80002aac:	00000013          	addi	x0,x0,0
+80002ab0:	00000013          	addi	x0,x0,0
+80002ab4:	00000013          	addi	x0,x0,0
+80002ab8:	00000013          	addi	x0,x0,0
+80002abc:	00000013          	addi	x0,x0,0
+80002ac0:	00002517          	auipc	x10,0x2
+80002ac4:	27750513          	addi	x10,x10,631 # 80004d37 <mcausestr>
+80002ac8:	00000013          	addi	x0,x0,0
+80002acc:	00000013          	addi	x0,x0,0
+80002ad0:	00000013          	addi	x0,x0,0
+80002ad4:	00000013          	addi	x0,x0,0
+80002ad8:	00000013          	addi	x0,x0,0
+80002adc:	00000013          	addi	x0,x0,0
+80002ae0:	00033097          	auipc	x1,0x33
+80002ae4:	ae4080e7          	jalr	x1,-1308(x1) # 800355c4 <rvmodel_io_write_str>
+80002ae8:	00002517          	auipc	x10,0x2
+80002aec:	b6852503          	lw	x10,-1176(x10) # 80004650 <saved_xcause>
+80002af0:	02000593          	addi	x11,x0,32
+80002af4:	144000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002af8:	00000013          	addi	x0,x0,0
+80002afc:	00000013          	addi	x0,x0,0
+80002b00:	00002517          	auipc	x10,0x2
+80002b04:	b6850513          	addi	x10,x10,-1176 # 80004668 <ascii_buffer>
+80002b08:	00000013          	addi	x0,x0,0
+80002b0c:	00000013          	addi	x0,x0,0
+80002b10:	00000013          	addi	x0,x0,0
+80002b14:	00000013          	addi	x0,x0,0
+80002b18:	00000013          	addi	x0,x0,0
+80002b1c:	00000013          	addi	x0,x0,0
+80002b20:	00033097          	auipc	x1,0x33
+80002b24:	aa4080e7          	jalr	x1,-1372(x1) # 800355c4 <rvmodel_io_write_str>
+80002b28:	00000013          	addi	x0,x0,0
+80002b2c:	00000013          	addi	x0,x0,0
+80002b30:	00000013          	addi	x0,x0,0
+80002b34:	00000013          	addi	x0,x0,0
+80002b38:	00000013          	addi	x0,x0,0
+80002b3c:	00000013          	addi	x0,x0,0
+80002b40:	00002517          	auipc	x10,0x2
+80002b44:	20750513          	addi	x10,x10,519 # 80004d47 <mtvalstr>
+80002b48:	00000013          	addi	x0,x0,0
+80002b4c:	00000013          	addi	x0,x0,0
+80002b50:	00000013          	addi	x0,x0,0
+80002b54:	00000013          	addi	x0,x0,0
+80002b58:	00000013          	addi	x0,x0,0
+80002b5c:	00000013          	addi	x0,x0,0
+80002b60:	00033097          	auipc	x1,0x33
+80002b64:	a64080e7          	jalr	x1,-1436(x1) # 800355c4 <rvmodel_io_write_str>
+80002b68:	00002517          	auipc	x10,0x2
+80002b6c:	af052503          	lw	x10,-1296(x10) # 80004658 <saved_xtval>
+80002b70:	02000593          	addi	x11,x0,32
+80002b74:	0c4000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002b78:	00000013          	addi	x0,x0,0
+80002b7c:	00000013          	addi	x0,x0,0
+80002b80:	00002517          	auipc	x10,0x2
+80002b84:	ae850513          	addi	x10,x10,-1304 # 80004668 <ascii_buffer>
+80002b88:	00000013          	addi	x0,x0,0
+80002b8c:	00000013          	addi	x0,x0,0
+80002b90:	00000013          	addi	x0,x0,0
+80002b94:	00000013          	addi	x0,x0,0
+80002b98:	00000013          	addi	x0,x0,0
+80002b9c:	00000013          	addi	x0,x0,0
+80002ba0:	00033097          	auipc	x1,0x33
+80002ba4:	a24080e7          	jalr	x1,-1500(x1) # 800355c4 <rvmodel_io_write_str>
+80002ba8:	00000013          	addi	x0,x0,0
+80002bac:	00000013          	addi	x0,x0,0
+80002bb0:	00000013          	addi	x0,x0,0
+80002bb4:	00000013          	addi	x0,x0,0
+80002bb8:	00000013          	addi	x0,x0,0
+80002bbc:	00000013          	addi	x0,x0,0
+80002bc0:	00002517          	auipc	x10,0x2
+80002bc4:	19750513          	addi	x10,x10,407 # 80004d57 <mstatusstr>
+80002bc8:	00000013          	addi	x0,x0,0
+80002bcc:	00000013          	addi	x0,x0,0
+80002bd0:	00000013          	addi	x0,x0,0
+80002bd4:	00000013          	addi	x0,x0,0
+80002bd8:	00000013          	addi	x0,x0,0
+80002bdc:	00000013          	addi	x0,x0,0
+80002be0:	00033097          	auipc	x1,0x33
+80002be4:	9e4080e7          	jalr	x1,-1564(x1) # 800355c4 <rvmodel_io_write_str>
+80002be8:	00002517          	auipc	x10,0x2
+80002bec:	a7852503          	lw	x10,-1416(x10) # 80004660 <saved_xstatus>
+80002bf0:	02000593          	addi	x11,x0,32
+80002bf4:	044000ef          	jal	x1,80002c38 <failedtest_hex_to_str>
+80002bf8:	00000013          	addi	x0,x0,0
+80002bfc:	00000013          	addi	x0,x0,0
+80002c00:	00002517          	auipc	x10,0x2
+80002c04:	a6850513          	addi	x10,x10,-1432 # 80004668 <ascii_buffer>
+80002c08:	00000013          	addi	x0,x0,0
+80002c0c:	00000013          	addi	x0,x0,0
+80002c10:	00000013          	addi	x0,x0,0
+80002c14:	00000013          	addi	x0,x0,0
+80002c18:	00000013          	addi	x0,x0,0
+80002c1c:	00000013          	addi	x0,x0,0
+80002c20:	00033097          	auipc	x1,0x33
+80002c24:	9a4080e7          	jalr	x1,-1628(x1) # 800355c4 <rvmodel_io_write_str>
+80002c28:	00002617          	auipc	x12,0x2
+80002c2c:	a1860613          	addi	x12,x12,-1512 # 80004640 <csr_context_ret_addr>
+80002c30:	00062083          	lw	x1,0(x12)
+80002c34:	00008067          	jalr	x0,0(x1)
+
+80002c38 <failedtest_hex_to_str>:
+80002c38:	00000013          	addi	x0,x0,0
+80002c3c:	00000013          	addi	x0,x0,0
+80002c40:	00002617          	auipc	x12,0x2
+80002c44:	a2860613          	addi	x12,x12,-1496 # 80004668 <ascii_buffer>
+80002c48:	00000013          	addi	x0,x0,0
+80002c4c:	00000013          	addi	x0,x0,0
+80002c50:	00000013          	addi	x0,x0,0
+80002c54:	00000013          	addi	x0,x0,0
+80002c58:	00000013          	addi	x0,x0,0
+80002c5c:	00000013          	addi	x0,x0,0
+80002c60:	03000693          	addi	x13,x0,48
+80002c64:	00d60023          	sb	x13,0(x12)
+80002c68:	07800693          	addi	x13,x0,120
+80002c6c:	00d600a3          	sb	x13,1(x12)
+80002c70:	00260613          	addi	x12,x12,2
+80002c74:	00058693          	addi	x13,x11,0
+
+80002c78 <failedtest_hex_to_str_loop>:
+80002c78:	ffc68693          	addi	x13,x13,-4
+80002c7c:	00d55733          	srl	x14,x10,x13
+80002c80:	00f77713          	andi	x14,x14,15
+80002c84:	00a00793          	addi	x15,x0,10
+80002c88:	00f74663          	blt	x14,x15,80002c94 <failedtest_hex_to_str_digit>
+80002c8c:	05770713          	addi	x14,x14,87
+80002c90:	0080006f          	jal	x0,80002c98 <failedtest_hex_to_str_write>
+
+80002c94 <failedtest_hex_to_str_digit>:
+80002c94:	03070713          	addi	x14,x14,48
+
+80002c98 <failedtest_hex_to_str_write>:
+80002c98:	00e60023          	sb	x14,0(x12)
+80002c9c:	00160613          	addi	x12,x12,1
+80002ca0:	fc069ce3          	bne	x13,x0,80002c78 <failedtest_hex_to_str_loop>
+80002ca4:	00a00693          	addi	x13,x0,10
+80002ca8:	00d60023          	sb	x13,0(x12)
+80002cac:	000600a3          	sb	x0,1(x12)
+80002cb0:	00008067          	jalr	x0,0(x1)
+
+80002cb4 <failedtest_dec_to_str>:
+80002cb4:	00a00693          	addi	x13,x0,10
+80002cb8:	02d54663          	blt	x10,x13,80002ce4 <failedtest_dec_to_str+0x30>
+80002cbc:	ff650513          	addi	x10,x10,-10
+80002cc0:	03100713          	addi	x14,x0,49
+80002cc4:	00d54c63          	blt	x10,x13,80002cdc <failedtest_dec_to_str+0x28>
+80002cc8:	ff650513          	addi	x10,x10,-10
+80002ccc:	03200713          	addi	x14,x0,50
+80002cd0:	00d54663          	blt	x10,x13,80002cdc <failedtest_dec_to_str+0x28>
+80002cd4:	ff650513          	addi	x10,x10,-10
+80002cd8:	03300713          	addi	x14,x0,51
+80002cdc:	00e60023          	sb	x14,0(x12)
+80002ce0:	00160613          	addi	x12,x12,1
+80002ce4:	03050513          	addi	x10,x10,48
+80002ce8:	00a60023          	sb	x10,0(x12)
+80002cec:	00a00693          	addi	x13,x0,10
+80002cf0:	00d600a3          	sb	x13,1(x12)
+80002cf4:	00060123          	sb	x0,2(x12)
+80002cf8:	00008067          	jalr	x0,0(x1)
+80002cfc:	00000013          	addi	x0,x0,0
+
+Disassembly of section .text.rvmodel:
+
+80035000 <Mclr_Msw_int>:
+80035000:	02000737          	lui	x14,0x2000
+80035004:	00072023          	sw	x0,0(x14) # 2000000 <STACK_SIZE+0x1fe0000>
+80035008:	fffcc397          	auipc	x7,0xfffcc
+8003500c:	e1c38393          	addi	x7,x7,-484 # 80000e24 <resto_Mrtn>
+80035010:	00038067          	jalr	x0,0(x7)
+
+80035014 <Mclr_Mtmr_int>:
+80035014:	fff00713          	addi	x14,x0,-1
+80035018:	020043b7          	lui	x7,0x2004
+8003501c:	00e3a023          	sw	x14,0(x7) # 2004000 <STACK_SIZE+0x1fe4000>
+80035020:	00e3a223          	sw	x14,4(x7)
+80035024:	fffcc397          	auipc	x7,0xfffcc
+80035028:	e0038393          	addi	x7,x7,-512 # 80000e24 <resto_Mrtn>
+8003502c:	00038067          	jalr	x0,0(x7)
+
+80035030 <Mclr_Mext_int>:
+80035030:	10000737          	lui	x14,0x10000
+80035034:	000700a3          	sb	x0,1(x14) # 10000001 <UART_BASE_ADDR+0x1>
+80035038:	0c200737          	lui	x14,0xc200
+8003503c:	00470713          	addi	x14,x14,4 # c200004 <STACK_SIZE+0xc1e0004>
+80035040:	00072383          	lw	x7,0(x14)
+80035044:	00772023          	sw	x7,0(x14)
+80035048:	0c002737          	lui	x14,0xc002
+8003504c:	00072023          	sw	x0,0(x14) # c002000 <STACK_SIZE+0xbfe2000>
+80035050:	fffcc397          	auipc	x7,0xfffcc
+80035054:	dd438393          	addi	x7,x7,-556 # 80000e24 <resto_Mrtn>
+80035058:	00038067          	jalr	x0,0(x7)
+
+8003505c <Mclr_Ssw_int>:
+8003505c:	00200393          	addi	x7,x0,2
+80035060:	3443b073          	csrrc	x0,mip,x7
+80035064:	0200c737          	lui	x14,0x200c
+80035068:	00072023          	sw	x0,0(x14) # 200c000 <STACK_SIZE+0x1fec000>
+8003506c:	fffcc397          	auipc	x7,0xfffcc
+80035070:	db838393          	addi	x7,x7,-584 # 80000e24 <resto_Mrtn>
+80035074:	00038067          	jalr	x0,0(x7)
+
+80035078 <Mclr_Stmr_int>:
+80035078:	fffcc397          	auipc	x7,0xfffcc
+8003507c:	dac38393          	addi	x7,x7,-596 # 80000e24 <resto_Mrtn>
+80035080:	00038067          	jalr	x0,0(x7)
+
+80035084 <Mclr_Sext_int>:
+80035084:	20000413          	addi	x8,x0,512
+80035088:	34443073          	csrrc	x0,mip,x8
+8003508c:	34402473          	csrrs	x8,mip,x0
+80035090:	00001337          	lui	x6,0x1
+80035094:	80030313          	addi	x6,x6,-2048 # 800 <CSR_XIP+0x4bc>
+80035098:	00647433          	and	x8,x8,x6
+8003509c:	02830463          	beq	x6,x8,800350c4 <Mclr_Sext_int+0x40>
+800350a0:	10000737          	lui	x14,0x10000
+800350a4:	000700a3          	sb	x0,1(x14) # 10000001 <UART_BASE_ADDR+0x1>
+800350a8:	0c201737          	lui	x14,0xc201
+800350ac:	00470713          	addi	x14,x14,4 # c201004 <STACK_SIZE+0xc1e1004>
+800350b0:	00072383          	lw	x7,0(x14)
+800350b4:	00772023          	sw	x7,0(x14)
+800350b8:	0c002737          	lui	x14,0xc002
+800350bc:	08070713          	addi	x14,x14,128 # c002080 <STACK_SIZE+0xbfe2080>
+800350c0:	00072023          	sw	x0,0(x14)
+800350c4:	fffcc397          	auipc	x7,0xfffcc
+800350c8:	d6038393          	addi	x7,x7,-672 # 80000e24 <resto_Mrtn>
+800350cc:	00038067          	jalr	x0,0(x7)
+
+800350d0 <Mclr_Vsw_int>:
+800350d0:	fffcb317          	auipc	x6,0xfffcb
+800350d4:	fa430313          	addi	x6,x6,-92 # 80000074 <cleanup_epilogs>
+800350d8:	00030067          	jalr	x0,0(x6)
+800350dc:	fffcc397          	auipc	x7,0xfffcc
+800350e0:	d4838393          	addi	x7,x7,-696 # 80000e24 <resto_Mrtn>
+800350e4:	00038067          	jalr	x0,0(x7)
+
+800350e8 <Mclr_Vtmr_int>:
+800350e8:	fffcb317          	auipc	x6,0xfffcb
+800350ec:	f8c30313          	addi	x6,x6,-116 # 80000074 <cleanup_epilogs>
+800350f0:	00030067          	jalr	x0,0(x6)
+800350f4:	fffcc397          	auipc	x7,0xfffcc
+800350f8:	d3038393          	addi	x7,x7,-720 # 80000e24 <resto_Mrtn>
+800350fc:	00038067          	jalr	x0,0(x7)
+
+80035100 <Mclr_Vext_int>:
+80035100:	fffcb317          	auipc	x6,0xfffcb
+80035104:	f7430313          	addi	x6,x6,-140 # 80000074 <cleanup_epilogs>
+80035108:	00030067          	jalr	x0,0(x6)
+8003510c:	fffcc397          	auipc	x7,0xfffcc
+80035110:	d1838393          	addi	x7,x7,-744 # 80000e24 <resto_Mrtn>
+80035114:	00038067          	jalr	x0,0(x7)
+
+80035118 <rvmodel_boot>:
+80035118:	10000337          	lui	x6,0x10000
+8003511c:	00330313          	addi	x6,x6,3 # 10000003 <UART_LCR>
+80035120:	00300393          	addi	x7,x0,3
+80035124:	00730023          	sb	x7,0(x6)
+
+80035128 <rvtest_boot_to_mmode>:
+80035128:	30401073          	csrrw	x0,mie,x0
+8003512c:	34401073          	csrrw	x0,mip,x0
+80035130:	34101073          	csrrw	x0,mepc,x0
+80035134:	34301073          	csrrw	x0,mtval,x0
+80035138:	34201073          	csrrw	x0,mcause,x0
+8003513c:	00000013          	addi	x0,x0,0
+80035140:	fffcf317          	auipc	x6,0xfffcf
+80035144:	fd030313          	addi	x6,x6,-48 # 80004110 <Mtramptbl_sv>
+80035148:	00000013          	addi	x0,x0,0
+8003514c:	00000013          	addi	x0,x0,0
+80035150:	00000013          	addi	x0,x0,0
+80035154:	00000013          	addi	x0,x0,0
+80035158:	00000013          	addi	x0,x0,0
+8003515c:	00000013          	addi	x0,x0,0
+
+80035160 <init_Mscratch>:
+80035160:	34031473          	csrrw	x8,mscratch,x6
+80035164:	24832823          	sw	x8,592(x6)
+
+80035168 <init_Mtimecmp>:
+80035168:	fff00393          	addi	x7,x0,-1
+8003516c:	020044b7          	lui	x9,0x2004
+80035170:	0074a023          	sw	x7,0(x9) # 2004000 <STACK_SIZE+0x1fe4000>
+80035174:	0074a223          	sw	x7,4(x9)
+80035178:	00000013          	addi	x0,x0,0
+
+8003517c <init_Medeleg>:
+8003517c:	00000393          	addi	x7,x0,0
+80035180:	22732c23          	sw	x7,568(x6)
+
+80035184 <init_Msatp>:
+80035184:	30502473          	csrrs	x8,mtvec,x0
+80035188:	24832423          	sw	x8,584(x6)
+8003518c:	00347393          	andi	x7,x8,3
+80035190:	ffc3f393          	andi	x7,x7,-4
+80035194:	23032483          	lw	x9,560(x6)
+80035198:	e2848493          	addi	x9,x9,-472
+8003519c:	0074e3b3          	or	x7,x9,x7
+800351a0:	24732023          	sw	x7,576(x6)
+800351a4:	30539073          	csrrw	x0,mtvec,x7
+800351a8:	30502773          	csrrs	x14,mtvec,x0
+800351ac:	0e770c63          	beq	x14,x7,800352a4 <rvtest_Mprolog_done>
+800351b0:	30541073          	csrrw	x0,mtvec,x8
+800351b4:	0a040863          	beq	x8,x0,80035264 <abortMtest>
+800351b8:	24832023          	sw	x8,576(x6)
+
+800351bc <init_Mtramp>:
+800351bc:	ffc47393          	andi	x7,x8,-4
+800351c0:	1d838413          	addi	x8,x7,472
+800351c4:	00030113          	addi	x2,x6,0
+800351c8:	00000013          	addi	x0,x0,0
+800351cc:	00000013          	addi	x0,x0,0
+800351d0:	00000013          	addi	x0,x0,0
+800351d4:	00000013          	addi	x0,x0,0
+800351d8:	00000013          	addi	x0,x0,0
+800351dc:	00000013          	addi	x0,x0,0
+800351e0:	00000717          	auipc	x14,0x0
+800351e4:	04c70713          	addi	x14,x14,76 # 8003522c <overwt_tt_Mloop>
+800351e8:	00000013          	addi	x0,x0,0
+800351ec:	00000013          	addi	x0,x0,0
+800351f0:	00000013          	addi	x0,x0,0
+800351f4:	00000013          	addi	x0,x0,0
+800351f8:	00000013          	addi	x0,x0,0
+800351fc:	00000013          	addi	x0,x0,0
+80035200:	00000797          	auipc	x15,0x0
+80035204:	0a478793          	addi	x15,x15,164 # 800352a4 <rvtest_Mprolog_done>
+80035208:	00000013          	addi	x0,x0,0
+8003520c:	00000013          	addi	x0,x0,0
+80035210:	00000013          	addi	x0,x0,0
+80035214:	00000013          	addi	x0,x0,0
+80035218:	00000013          	addi	x0,x0,0
+8003521c:	00000013          	addi	x0,x0,0
+80035220:	00f3f663          	bgeu	x7,x15,8003522c <overwt_tt_Mloop>
+80035224:	00877463          	bgeu	x14,x8,8003522c <overwt_tt_Mloop>
+80035228:	03c0006f          	jal	x0,80035264 <abortMtest>
+
+8003522c <overwt_tt_Mloop>:
+8003522c:	0003a783          	lw	x15,0(x7)
+80035230:	00f32023          	sw	x15,0(x6)
+80035234:	0004a703          	lw	x14,0(x9)
+80035238:	00e3a023          	sw	x14,0(x7)
+8003523c:	0003a783          	lw	x15,0(x7)
+80035240:	00e79a63          	bne	x15,x14,80035254 <endcopy_Mtramp>
+80035244:	00438393          	addi	x7,x7,4
+80035248:	00430313          	addi	x6,x6,4
+8003524c:	00448493          	addi	x9,x9,4
+80035250:	fc741ee3          	bne	x8,x7,8003522c <overwt_tt_Mloop>
+
+80035254 <endcopy_Mtramp>:
+80035254:	00000013          	addi	x0,x0,0
+80035258:	34002373          	csrrs	x6,mscratch,x0
+8003525c:	22932823          	sw	x9,560(x6)
+80035260:	04740263          	beq	x8,x7,800352a4 <rvtest_Mprolog_done>
+
+80035264 <abortMtest>:
+80035264:	00038413          	addi	x8,x7,0
+80035268:	00000013          	addi	x0,x0,0
+8003526c:	00000013          	addi	x0,x0,0
+80035270:	00000013          	addi	x0,x0,0
+80035274:	00000013          	addi	x0,x0,0
+80035278:	00000013          	addi	x0,x0,0
+8003527c:	00000013          	addi	x0,x0,0
+80035280:	fffcb797          	auipc	x15,0xfffcb
+80035284:	e0478793          	addi	x15,x15,-508 # 80000084 <exit_Mcleanup>
+80035288:	00000013          	addi	x0,x0,0
+8003528c:	00000013          	addi	x0,x0,0
+80035290:	00000013          	addi	x0,x0,0
+80035294:	00000013          	addi	x0,x0,0
+80035298:	00000013          	addi	x0,x0,0
+8003529c:	00000013          	addi	x0,x0,0
+800352a0:	00078067          	jalr	x0,0(x15)
+
+800352a4 <rvtest_Mprolog_done>:
+800352a4:	00000013          	addi	x0,x0,0
+
+800352a8 <rvtest_boot_to_mmode_csr_init>:
+800352a8:	000022b7          	lui	x5,0x2
+800352ac:	80028293          	addi	x5,x5,-2048 # 1800 <CSR_XIP+0x14bc>
+800352b0:	30029073          	csrrw	x0,mstatus,x5
+800352b4:	31001073          	csrrw	x0,0x310,x0
+800352b8:	0f000293          	addi	x5,x0,240
+800352bc:	30a29073          	csrrw	x0,0x30a,x5
+800352c0:	31a01073          	csrrw	x0,0x31a,x0
+800352c4:	32001073          	csrrw	x0,mcountinhibit,x0
+800352c8:	32301073          	csrrw	x0,mhpmevent3,x0
+800352cc:	32401073          	csrrw	x0,mhpmevent4,x0
+800352d0:	32501073          	csrrw	x0,mhpmevent5,x0
+800352d4:	32601073          	csrrw	x0,mhpmevent6,x0
+800352d8:	32701073          	csrrw	x0,mhpmevent7,x0
+800352dc:	32801073          	csrrw	x0,mhpmevent8,x0
+800352e0:	32901073          	csrrw	x0,mhpmevent9,x0
+800352e4:	32a01073          	csrrw	x0,mhpmevent10,x0
+800352e8:	32b01073          	csrrw	x0,mhpmevent11,x0
+800352ec:	32c01073          	csrrw	x0,mhpmevent12,x0
+800352f0:	32d01073          	csrrw	x0,mhpmevent13,x0
+800352f4:	32e01073          	csrrw	x0,mhpmevent14,x0
+800352f8:	32f01073          	csrrw	x0,mhpmevent15,x0
+800352fc:	33001073          	csrrw	x0,mhpmevent16,x0
+80035300:	33101073          	csrrw	x0,mhpmevent17,x0
+80035304:	33201073          	csrrw	x0,mhpmevent18,x0
+80035308:	33301073          	csrrw	x0,mhpmevent19,x0
+8003530c:	33401073          	csrrw	x0,mhpmevent20,x0
+80035310:	33501073          	csrrw	x0,mhpmevent21,x0
+80035314:	33601073          	csrrw	x0,mhpmevent22,x0
+80035318:	33701073          	csrrw	x0,mhpmevent23,x0
+8003531c:	33801073          	csrrw	x0,mhpmevent24,x0
+80035320:	33901073          	csrrw	x0,mhpmevent25,x0
+80035324:	33a01073          	csrrw	x0,mhpmevent26,x0
+80035328:	33b01073          	csrrw	x0,mhpmevent27,x0
+8003532c:	33c01073          	csrrw	x0,mhpmevent28,x0
+80035330:	33d01073          	csrrw	x0,mhpmevent29,x0
+80035334:	33e01073          	csrrw	x0,mhpmevent30,x0
+80035338:	33f01073          	csrrw	x0,mhpmevent31,x0
+8003533c:	fff00293          	addi	x5,x0,-1
+80035340:	30629073          	csrrw	x0,mcounteren,x5
+
+80035344 <rvtest_boot_to_umode>:
+80035344:	00300513          	addi	x10,x0,3
+80035348:	00000073          	ecall
+8003534c:	00000013          	addi	x0,x0,0
+80035350:	00000013          	addi	x0,x0,0
+80035354:	00000013          	addi	x0,x0,0
+80035358:	00000013          	addi	x0,x0,0
+8003535c:	00000013          	addi	x0,x0,0
+80035360:	fffcf317          	auipc	x6,0xfffcf
+80035364:	da830313          	addi	x6,x6,-600 # 80004108 <rvtest_trap_count>
+80035368:	00000013          	addi	x0,x0,0
+8003536c:	00000013          	addi	x0,x0,0
+80035370:	00000013          	addi	x0,x0,0
+80035374:	00000013          	addi	x0,x0,0
+80035378:	00000013          	addi	x0,x0,0
+8003537c:	00000013          	addi	x0,x0,0
+80035380:	00032023          	sw	x0,0(x6)
+
+80035384 <rvtest_init_regs>:
+80035384:	feedc0b7          	lui	x1,0xfeedc
+80035388:	ead08093          	addi	x1,x1,-339 # feedbead <_end+0x7eea5ead>
+8003538c:	01909793          	slli	x15,x1,0x19
+80035390:	0070d113          	srli	x2,x1,0x7
+80035394:	00f16133          	or	x2,x2,x15
+80035398:	01911793          	slli	x15,x2,0x19
+8003539c:	00715193          	srli	x3,x2,0x7
+800353a0:	00f1e1b3          	or	x3,x3,x15
+800353a4:	01919793          	slli	x15,x3,0x19
+800353a8:	0071d213          	srli	x4,x3,0x7
+800353ac:	00f26233          	or	x4,x4,x15
+800353b0:	01921793          	slli	x15,x4,0x19
+800353b4:	00725293          	srli	x5,x4,0x7
+800353b8:	00f2e2b3          	or	x5,x5,x15
+800353bc:	01929793          	slli	x15,x5,0x19
+800353c0:	0072d313          	srli	x6,x5,0x7
+800353c4:	00f36333          	or	x6,x6,x15
+800353c8:	01931793          	slli	x15,x6,0x19
+800353cc:	00735393          	srli	x7,x6,0x7
+800353d0:	00f3e3b3          	or	x7,x7,x15
+800353d4:	01939793          	slli	x15,x7,0x19
+800353d8:	0073d413          	srli	x8,x7,0x7
+800353dc:	00f46433          	or	x8,x8,x15
+800353e0:	01941793          	slli	x15,x8,0x19
+800353e4:	00745493          	srli	x9,x8,0x7
+800353e8:	00f4e4b3          	or	x9,x9,x15
+800353ec:	01949793          	slli	x15,x9,0x19
+800353f0:	0074d513          	srli	x10,x9,0x7
+800353f4:	00f56533          	or	x10,x10,x15
+800353f8:	01951793          	slli	x15,x10,0x19
+800353fc:	00755593          	srli	x11,x10,0x7
+80035400:	00f5e5b3          	or	x11,x11,x15
+80035404:	01959793          	slli	x15,x11,0x19
+80035408:	0075d613          	srli	x12,x11,0x7
+8003540c:	00f66633          	or	x12,x12,x15
+80035410:	01961793          	slli	x15,x12,0x19
+80035414:	00765693          	srli	x13,x12,0x7
+80035418:	00f6e6b3          	or	x13,x13,x15
+8003541c:	01969793          	slli	x15,x13,0x19
+80035420:	0076d713          	srli	x14,x13,0x7
+80035424:	00f76733          	or	x14,x14,x15
+80035428:	fab807b7          	lui	x15,0xfab80
+8003542c:	bb678793          	addi	x15,x15,-1098 # fab7fbb6 <_end+0x7ab49bb6>
+80035430:	7d5c0837          	lui	x16,0x7d5c0
+80035434:	ddb80813          	addi	x16,x16,-549 # 7d5bfddb <absimm+0xdff5ad2>
+80035438:	01981793          	slli	x15,x16,0x19
+8003543c:	00785893          	srli	x17,x16,0x7
+80035440:	00f8e8b3          	or	x17,x17,x15
+80035444:	01989793          	slli	x15,x17,0x19
+80035448:	0078d913          	srli	x18,x17,0x7
+8003544c:	00f96933          	or	x18,x18,x15
+80035450:	01991793          	slli	x15,x18,0x19
+80035454:	00795993          	srli	x19,x18,0x7
+80035458:	00f9e9b3          	or	x19,x19,x15
+8003545c:	01999793          	slli	x15,x19,0x19
+80035460:	0079da13          	srli	x20,x19,0x7
+80035464:	00fa6a33          	or	x20,x20,x15
+80035468:	019a1793          	slli	x15,x20,0x19
+8003546c:	007a5a93          	srli	x21,x20,0x7
+80035470:	00faeab3          	or	x21,x21,x15
+80035474:	019a9793          	slli	x15,x21,0x19
+80035478:	007adb13          	srli	x22,x21,0x7
+8003547c:	00fb6b33          	or	x22,x22,x15
+80035480:	019b1793          	slli	x15,x22,0x19
+80035484:	007b5b93          	srli	x23,x22,0x7
+80035488:	00fbebb3          	or	x23,x23,x15
+8003548c:	019b9793          	slli	x15,x23,0x19
+80035490:	007bdc13          	srli	x24,x23,0x7
+80035494:	00fc6c33          	or	x24,x24,x15
+80035498:	019c1793          	slli	x15,x24,0x19
+8003549c:	007c5c93          	srli	x25,x24,0x7
+800354a0:	00fcecb3          	or	x25,x25,x15
+800354a4:	019c9793          	slli	x15,x25,0x19
+800354a8:	007cdd13          	srli	x26,x25,0x7
+800354ac:	00fd6d33          	or	x26,x26,x15
+800354b0:	019d1793          	slli	x15,x26,0x19
+800354b4:	007d5d93          	srli	x27,x26,0x7
+800354b8:	00fdedb3          	or	x27,x27,x15
+800354bc:	019d9793          	slli	x15,x27,0x19
+800354c0:	007dde13          	srli	x28,x27,0x7
+800354c4:	00fe6e33          	or	x28,x28,x15
+800354c8:	019e1793          	slli	x15,x28,0x19
+800354cc:	007e5e93          	srli	x29,x28,0x7
+800354d0:	00feeeb3          	or	x29,x29,x15
+800354d4:	019e9793          	slli	x15,x29,0x19
+800354d8:	007edf13          	srli	x30,x29,0x7
+800354dc:	00ff6f33          	or	x30,x30,x15
+800354e0:	019f1793          	slli	x15,x30,0x19
+800354e4:	007f5f93          	srli	x31,x30,0x7
+800354e8:	00ffefb3          	or	x31,x31,x15
+800354ec:	00000013          	addi	x0,x0,0
+800354f0:	00000013          	addi	x0,x0,0
+800354f4:	00000013          	addi	x0,x0,0
+800354f8:	00000013          	addi	x0,x0,0
+800354fc:	00000013          	addi	x0,x0,0
+80035500:	fffd1117          	auipc	x2,0xfffd1
+80035504:	d4010113          	addi	x2,x2,-704 # 80006240 <begin_signature>
+80035508:	00000013          	addi	x0,x0,0
+8003550c:	00000013          	addi	x0,x0,0
+80035510:	00000013          	addi	x0,x0,0
+80035514:	00000013          	addi	x0,x0,0
+80035518:	00000013          	addi	x0,x0,0
+8003551c:	00000013          	addi	x0,x0,0
+
+80035520 <canary_check>:
+80035520:	6f5ca337          	lui	x6,0x6f5ca
+80035524:	30930313          	addi	x6,x6,777 # 6f5ca309 <absimm>
+80035528:	00000013          	addi	x0,x0,0
+8003552c:	00000013          	addi	x0,x0,0
+80035530:	00000013          	addi	x0,x0,0
+80035534:	00000013          	addi	x0,x0,0
+80035538:	00000013          	addi	x0,x0,0
+8003553c:	00000013          	addi	x0,x0,0
+80035540:	fffcc197          	auipc	x3,0xfffcc
+80035544:	be818193          	addi	x3,x3,-1048 # 80001128 <failedtest_x5_x4>
+80035548:	00000013          	addi	x0,x0,0
+8003554c:	00000013          	addi	x0,x0,0
+80035550:	00000013          	addi	x0,x0,0
+80035554:	00000013          	addi	x0,x0,0
+80035558:	00000013          	addi	x0,x0,0
+8003555c:	00000013          	addi	x0,x0,0
+80035560:	00012203          	lw	x4,0(x2)
+80035564:	00620863          	beq	x4,x6,80035574 <canary_check+0x54>
+80035568:	000182e7          	jalr	x5,0(x3)
+8003556c:	80035520          	.word	0x80035520
+80035570:	800057e7          	.word	0x800057e7
+80035574:	00410113          	addi	x2,x2,4
+80035578:	00000013          	addi	x0,x0,0
+8003557c:	00000013          	addi	x0,x0,0
+80035580:	fffcf197          	auipc	x3,0xfffcf
+80035584:	e3018193          	addi	x3,x3,-464 # 800043b0 <rvtest_data_begin>
+80035588:	00000013          	addi	x0,x0,0
+8003558c:	00000013          	addi	x0,x0,0
+80035590:	00000013          	addi	x0,x0,0
+80035594:	00000013          	addi	x0,x0,0
+80035598:	00000013          	addi	x0,x0,0
+8003559c:	00000013          	addi	x0,x0,0
+800355a0:	fffcb317          	auipc	x6,0xfffcb
+800355a4:	aa030313          	addi	x6,x6,-1376 # 80000040 <rvtest_code_begin>
+800355a8:	00000013          	addi	x0,x0,0
+800355ac:	00000013          	addi	x0,x0,0
+800355b0:	00000013          	addi	x0,x0,0
+800355b4:	00000013          	addi	x0,x0,0
+800355b8:	00000013          	addi	x0,x0,0
+800355bc:	00000013          	addi	x0,x0,0
+800355c0:	00030067          	jalr	x0,0(x6)
+
+800355c4 <rvmodel_io_write_str>:
+800355c4:	00054303          	lbu	x6,0(x10)
+800355c8:	02030463          	beq	x6,x0,800355f0 <rvmodel_io_write_str+0x2c>
+800355cc:	100003b7          	lui	x7,0x10000
+800355d0:	00538393          	addi	x7,x7,5 # 10000005 <UART_LSR>
+800355d4:	0003c403          	lbu	x8,0(x7)
+800355d8:	02047413          	andi	x8,x8,32
+800355dc:	fe040ce3          	beq	x8,x0,800355d4 <rvmodel_io_write_str+0x10>
+800355e0:	100003b7          	lui	x7,0x10000
+800355e4:	00638023          	sb	x6,0(x7) # 10000000 <UART_BASE_ADDR>
+800355e8:	00150513          	addi	x10,x10,1
+800355ec:	fd9ff06f          	jal	x0,800355c4 <rvmodel_io_write_str>
+800355f0:	00008067          	jalr	x0,0(x1)
+
+800355f4 <rvmodel_io_write_str_c>:
+800355f4:	ff010113          	addi	x2,x2,-16
+800355f8:	00112023          	sw	x1,0(x2)
+800355fc:	00812223          	sw	x8,4(x2)
+80035600:	00000097          	auipc	x1,0x0
+80035604:	fc4080e7          	jalr	x1,-60(x1) # 800355c4 <rvmodel_io_write_str>
+80035608:	00412403          	lw	x8,4(x2)
+8003560c:	00012083          	lw	x1,0(x2)
+80035610:	01010113          	addi	x2,x2,16
+80035614:	00008067          	jalr	x0,0(x1)
+
+80035618 <rvmodel_halt_pass>:
+80035618:	00100093          	addi	x1,x0,1
+8003561c:	fffdf297          	auipc	x5,0xfffdf
+80035620:	6c428293          	addi	x5,x5,1732 # 80014ce0 <end_signature>
+
+80035624 <write_tohost_pass>:
+80035624:	0012a023          	sw	x1,0(x5)
+80035628:	0002a223          	sw	x0,4(x5)
+
+8003562c <self_loop_pass>:
+8003562c:	0000006f          	jal	x0,8003562c <self_loop_pass>
+80035630:	0000006f          	jal	x0,80035630 <self_loop_pass+0x4>
+
+80035634 <rvmodel_halt_fail>:
+80035634:	00300093          	addi	x1,x0,3
+80035638:	fffdf297          	auipc	x5,0xfffdf
+8003563c:	6a828293          	addi	x5,x5,1704 # 80014ce0 <end_signature>
+
+80035640 <write_tohost_fail>:
+80035640:	0012a023          	sw	x1,0(x5)
+80035644:	0002a223          	sw	x0,4(x5)
+
+80035648 <self_loop_fail>:
+80035648:	0000006f          	jal	x0,80035648 <self_loop_fail>
+8003564c:	0000006f          	jal	x0,8003564c <self_loop_fail+0x4>
+
+80035650 <rvtest_set_msw_int>:
+80035650:	00100513          	addi	x10,x0,1
+80035654:	020005b7          	lui	x11,0x2000
+80035658:	00a5a023          	sw	x10,0(x11) # 2000000 <STACK_SIZE+0x1fe0000>
+8003565c:	00008067          	jalr	x0,0(x1)
+
+80035660 <rvtest_clr_msw_int>:
+80035660:	020005b7          	lui	x11,0x2000
+80035664:	0005a023          	sw	x0,0(x11) # 2000000 <STACK_SIZE+0x1fe0000>
+80035668:	00008067          	jalr	x0,0(x1)
+
+8003566c <rvtest_set_mext_int>:
+8003566c:	00700513          	addi	x10,x0,7
+80035670:	0c0005b7          	lui	x11,0xc000
+80035674:	02a5a423          	sw	x10,40(x11) # c000028 <STACK_SIZE+0xbfe0028>
+80035678:	40000513          	addi	x10,x0,1024
+8003567c:	0c0025b7          	lui	x11,0xc002
+80035680:	00a5a023          	sw	x10,0(x11) # c002000 <STACK_SIZE+0xbfe2000>
+80035684:	0c2005b7          	lui	x11,0xc200
+80035688:	0005a023          	sw	x0,0(x11) # c200000 <STACK_SIZE+0xc1e0000>
+8003568c:	00200513          	addi	x10,x0,2
+80035690:	100005b7          	lui	x11,0x10000
+80035694:	00a580a3          	sb	x10,1(x11) # 10000001 <UART_BASE_ADDR+0x1>
+80035698:	00008067          	jalr	x0,0(x1)
+
+8003569c <rvtest_clr_mext_int>:
+8003569c:	100005b7          	lui	x11,0x10000
+800356a0:	000580a3          	sb	x0,1(x11) # 10000001 <UART_BASE_ADDR+0x1>
+800356a4:	0c2005b7          	lui	x11,0xc200
+800356a8:	00458593          	addi	x11,x11,4 # c200004 <STACK_SIZE+0xc1e0004>
+800356ac:	0005a503          	lw	x10,0(x11)
+800356b0:	00a5a023          	sw	x10,0(x11)
+800356b4:	0c0025b7          	lui	x11,0xc002
+800356b8:	0005a023          	sw	x0,0(x11) # c002000 <STACK_SIZE+0xbfe2000>
+800356bc:	00008067          	jalr	x0,0(x1)
+800356c0:	00000013          	addi	x0,x0,0
+800356c4:	00000013          	addi	x0,x0,0
+800356c8:	00000013          	addi	x0,x0,0
+800356cc:	00000013          	addi	x0,x0,0
+800356d0:	00000013          	addi	x0,x0,0
+800356d4:	00000013          	addi	x0,x0,0
+800356d8:	00000013          	addi	x0,x0,0
+800356dc:	00000013          	addi	x0,x0,0

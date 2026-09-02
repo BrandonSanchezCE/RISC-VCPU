@@ -10,17 +10,17 @@ module DATAM(
 
  reg [31:0] Data[0:255];
 
- wire [29:0] WordAddress = Address[31:2];
+ wire [7:0] WordAddress = Address[9:2];
  localparam LedAddress = 32'h00001000;
  localparam SwitchAddress = 32'h00001004;
     always @(posedge Clk) begin
-         if(WordAddress == LedAddress) begin
+         if(Address == LedAddress) begin
             if (WriteEnable[0]) 
                 Leds[7:0] <= WriteData[7:0];
             if (WriteEnable[1])
-                Leds <= WriteData[15:8];
+                Leds[15:8] <= WriteData[15:8];
          end
-            else if (WordAddress < 32'd1024) begin
+            else if (Address < 32'd1024) begin
                 if (WriteEnable[0])
                  Data[WordAddress][7:0]<= WriteData[7:0];
                 if (WriteEnable[1])
@@ -32,9 +32,11 @@ module DATAM(
             end
          end
     always @(*) begin
-        if (Address !== 32'h00001004)
-            ReadData = Data[Address[31:2]];
-        else
+        if (Address == SwitchAddress)
             ReadData= {16'b0, Switches};
+        else if (Address < 32'd1024)
+            ReadData = Data[WordAddress];
+        else 
+            ReadData = 32'b0;
     end
 endmodule
