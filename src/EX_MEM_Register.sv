@@ -1,29 +1,38 @@
-module ExecuteRegister(
-    input Clk,
-    input RegWriteE,
-    input MemWriteE,
-    input [1:0] ResultSrcE,
-    input [4:0] ReadDestinationE,
-    input [31:0] ALUResultE,
-    input [31:0] WriteDataE,
-    input [31:0] PCPlus4E,
-    output reg RegWriteM,
-    output reg MemWriteM,
-    output reg [1:0] ResultSrcM,
-    output reg [4:0] ReadDestinationM,
-    output reg [31:0] ALUResultM,
-    output reg [31:0] WriteDataM,
-    output reg [31:0] PCPlus4M
+`timescale 1ns/1ps
+`include "CPU_Types.sv"
+
+module EX_MEM_Register(
+    input logic Clk,
+    input logic RegWriteE,
+    input logic Reset,
+    input logic MemWriteE,
+    input logic [1:0] ResultSrcE,
+    input logic [4:0] ReadDestinationE,
+    input logic [31:0] ALUResultE,
+    input logic [31:0] WriteDataE,
+    input logic [31:0] PCPlus4E,
+    output EX_MEM EX_MEM_OUT
 );
 
-always @(posedge Clk) begin
-    RegWriteM <= RegWriteE;
-    MemWriteM <= MemWriteE;
-    ResultSrcM <= ResultSrcE;
-    ReadDestinationM <= ReadDestinationE;
-    ALUResultM <= ALUResultE;
-    WriteDataM <= WriteDataE;
-    PCPlus4M <= PCPlus4E;
+always_ff @(posedge Clk) begin
+    if (!Reset) begin
+    EX_MEM_OUT.RegWriteE <= RegWriteE;
+    EX_MEM_OUT.MemWriteE <= MemWriteE;
+    EX_MEM_OUT.ResultSrcE <= ResultSrcE;
+    EX_MEM_OUT.ReadDestinationE <= ReadDestinationE;
+    EX_MEM_OUT.ALUResultE <= ALUResultE;
+    EX_MEM_OUT.WriteDataE <= WriteDataE;
+    EX_MEM_OUT.PCPlus4E <= PCPlus4E;
+    end
+else begin
+    EX_MEM_OUT.RegWriteE <= 0;
+    EX_MEM_OUT.MemWriteE <= 0;
+    EX_MEM_OUT.ResultSrcE <= 0;
+    EX_MEM_OUT.ReadDestinationE <= 0;
+    EX_MEM_OUT.ALUResultE <= 0;
+    EX_MEM_OUT.WriteDataE <= 0;
+    EX_MEM_OUT.PCPlus4E <= 0;
+    end
 end
 
 

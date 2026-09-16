@@ -1,18 +1,10 @@
-typedef struct packed{
-    logic RegWriteM;
-    logic [1:0] ResultSrcM;
-    logic [31:0] ALUResultM;
-    logic [31:0] ReadDataDataMemM;
-    logic [31:0] PCPlus4M;
-    logic [4:0] ReadDestinationM;
-
-} MEM_WB;
-
-
+`timescale 1ns/1ps
+`include "CPU_Types.sv"
 
 module MEM_WB_Register(
     input logic Clk,
     input logic RegWriteM,
+    input logic Reset,
     input logic [1:0] ResultSrcM,
     input logic [31:0] ALUResultM,
     input logic [31:0] ReadDataDataMemM,
@@ -22,6 +14,7 @@ module MEM_WB_Register(
 );
 
 always_ff @(posedge Clk) begin
+if (!Reset) begin 
     MEM_WB_OUT.RegWriteM <= RegWriteM;
     MEM_WB_OUT.ResultSrcM <= ResultSrcM;
     MEM_WB_OUT.ALUResultM <= ALUResultM;
@@ -29,5 +22,13 @@ always_ff @(posedge Clk) begin
     MEM_WB_OUT.PCPlus4M <= PCPlus4M;
     MEM_WB_OUT.ReadDestinationM <= ReadDestinationM;
 end
-
+else begin
+    MEM_WB_OUT.RegWriteM <= 0;
+    MEM_WB_OUT.ResultSrcM <= 0;
+    MEM_WB_OUT.ALUResultM <= 0;
+    MEM_WB_OUT.ReadDataDataMemM <= 0;
+    MEM_WB_OUT.PCPlus4M <= 0;
+    MEM_WB_OUT.ReadDestinationM <= 0;    
+end
+end
 endmodule
