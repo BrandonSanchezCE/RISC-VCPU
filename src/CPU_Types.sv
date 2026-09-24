@@ -4,6 +4,7 @@
 typedef struct packed {
     logic RegWriteE;
     logic MemWriteE;
+    logic [2:0] Funct3E;
     logic [1:0] ResultSrcE;
     logic [4:0] ReadDestinationE;
     logic [31:0] ALUResultE;
@@ -28,13 +29,13 @@ typedef struct packed{
 } IF_ID;
 
 typedef struct packed {
+    logic [2:0] Funct3D;
     logic RegWriteD;
     logic MemWriteD;
-    logic JumpD;
     logic BranchD;
-    logic JumpRD;
+    logic [2:0] PCSrcD;
     logic AluSrcD;
-    logic [2:0] AluControlD;
+    logic [3:0] AluControlD;
     logic [1:0] ResultSrcD;
     logic [31:0]ReadData1D;
     logic [31:0]ReadData2D;
@@ -42,7 +43,7 @@ typedef struct packed {
     logic [31:0]PcD;
     logic [31:0] PCPlus4D;
     logic [4:0] ReadDestinationD;
-    
+    logic AUIPCD;
 } ID_EX;
 
 `endif

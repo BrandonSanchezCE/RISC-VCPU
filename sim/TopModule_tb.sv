@@ -93,7 +93,7 @@ end
 else begin
     $display("PASS: Register 17 saved old address + 4");
 end
-
+$finish;
 end
 
 

@@ -1,5 +1,5 @@
 module TopModule(
-    input CLK100MHZ,
+    input Clk,
     input Reset
     //input [15:0] sw,
    // output [15:0] LED
@@ -30,7 +30,7 @@ DataPath instance1(
     .Op(Op),
     .Funct3(Funct3),
     .Funct7b5(Funct7b5),
-    .Clk(CLK100MHZ),
+    .Clk(Clk),
     .Halt(Halt),
     //.sw(sw),
     //.LED(LED),

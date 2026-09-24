@@ -5,11 +5,11 @@ module INSTRM(
 
 );
 
-reg [31:0] Instruction [0:327679];
+reg [31:0] Instruction [0:1023];
 
 always @(*) begin
     if (Address < 32'h00140000 )
-        ReadData = Instruction[Address[20:2]];
+        ReadData = Instruction[Address[11:2]];
     else    
         ReadData = 32'h00000013;
    end
