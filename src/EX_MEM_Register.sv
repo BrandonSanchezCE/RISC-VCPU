@@ -12,6 +12,8 @@ module EX_MEM_Register(
     input logic [31:0] ALUResultE,
     input logic [31:0] WriteDataE,
     input logic [31:0] PCPlus4E,
+    input logic FlushE,
+    input logic StallE,
     output EX_MEM EX_MEM_OUT
 );
 
@@ -25,6 +27,8 @@ always_ff @(posedge Clk) begin
     EX_MEM_OUT.WriteDataE <= WriteDataE;
     EX_MEM_OUT.PCPlus4E <= PCPlus4E;
     EX_MEM_OUT.Funct3E <= Funct3E;
+    EX_MEM_OUT.FlushE <= FlushE;
+    EX_MEM_OUT.StallE <= StallE;
     end
 else begin
     EX_MEM_OUT.RegWriteE <= 0;

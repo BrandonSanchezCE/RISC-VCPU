@@ -14,7 +14,7 @@ module ControlUnit(
     output Halt
 );
 wire [1:0] ALUOp;
-wire branch, jump, jumpR, branchCondition;
+wire branch, jump, jumpR, BranchCondition;
 
 mainDecoder instance1(
     .Op(Op),

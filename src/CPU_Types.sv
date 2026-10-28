@@ -10,6 +10,8 @@ typedef struct packed {
     logic [31:0] ALUResultE;
     logic [31:0] WriteDataE;
     logic [31:0] PCPlus4E;
+    logic StallE;
+    logic FlushE;
 } EX_MEM;
 
 typedef struct packed{
@@ -33,7 +35,7 @@ typedef struct packed {
     logic RegWriteD;
     logic MemWriteD;
     logic BranchD;
-    logic [2:0] PCSrcD;
+    logic [1:0] PCSrcD;
     logic AluSrcD;
     logic [3:0] AluControlD;
     logic [1:0] ResultSrcD;
@@ -43,6 +45,10 @@ typedef struct packed {
     logic [31:0]PcD;
     logic [31:0] PCPlus4D;
     logic [4:0] ReadDestinationD;
+    logic StallD;
+    logic FlushD;
+    logic [4:0] Rs1D;
+    logic [4:0] Rs2D;
     logic AUIPCD;
 } ID_EX;
 

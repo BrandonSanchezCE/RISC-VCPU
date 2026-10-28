@@ -11,7 +11,7 @@ module RegFile(
 );
 
 reg [31:0] Register[0:31];
-    always @(posedge Clk) begin
+    always @(negedge Clk) begin
         if (WriteEnable3 & (Address3 != 0))
             Register[Address3] <= WriteData3;
     end

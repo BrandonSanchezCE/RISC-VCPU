@@ -17,7 +17,7 @@ module DataPath(
     output logic Funct7b5,
     output logic [31:0] ReadData1,
     output logic [31:0] ReadData2,
-    output logic [1:0] PCSrc
+    input logic [1:0] PCSrc
 );
 wire [31:0] PC, ReadData, ImmExt, ALUResult, ReadDataDataMem
 , PCPlus4, PCTarget, ProcessedLoadData, StoredData;
@@ -26,6 +26,9 @@ reg [31:0] WriteData3;
 wire [3:0] WriteEnable;
 reg [31:0] SrcB, SrcA;
 logic AUIPC;
+logic [1:0] ForwardAE, ForwardBE;
+logic [31:0] ForwardedA, ForwardedB;
+logic StallF, StallD, FlushE, FlushD;
 
 IF_ID IF_ID_OUT;
 ID_EX ID_EX_OUT;
@@ -37,7 +40,8 @@ PC instance1(
     .Reset(Reset),
     .Clk(Clk),
     .Halt(Halt),
-    .PC(PC)
+    .PC(PC),
+    .StallF(StallF)
 );
 INSTRM instance2(
     .Address(PC),
@@ -50,6 +54,8 @@ IF_ID_Register Fetch(
     .PcF(PC),
     .InstrF(ReadData),
     .PCPlus4F(PCPlus4),
+    .StallD(StallD),
+    .FlushD(FlushD),
     .IF_ID_OUT(IF_ID_OUT)
 );
 
@@ -74,7 +80,10 @@ ID_EX_Register Decode(
     .Clk(Clk),
     .Reset(Reset),
     .AUIPCD(AUIPC),
+    .FlushD(FlushE),
     .Funct3D(IF_ID_OUT.InstrF[14:12]),
+    .Rs1D(IF_ID_OUT.InstrF[19:15]),
+    .Rs2D(IF_ID_OUT.InstrF[24:20]),
     .RegWriteD(RegWrite),
     .MemWriteD(MemWrite),
     .PCSrcD(PCSrc),
@@ -89,12 +98,26 @@ ID_EX_Register Decode(
     .ReadDestinationD(IF_ID_OUT.InstrF[11:7]),
     .ID_EX_OUT(ID_EX_OUT)
 );
+always_comb begin
+    case (ForwardAE)
+    2'b00: ForwardedA = ID_EX_OUT.ReadData1D;
+    2'b01: ForwardedA = WriteData3;
+    2'b10: ForwardedA = EX_MEM_OUT.ALUResultE;
+    default: ForwardedA = ID_EX_OUT.ReadData1D;
+    endcase
 
+    case (ForwardBE)
+        2'b00: ForwardedB = ID_EX_OUT.ReadData2D;
+        2'b01: ForwardedB = WriteData3;
+        2'b10: ForwardedB = EX_MEM_OUT.ALUResultE;
+        default: ForwardedB = ID_EX_OUT.ReadData2D;
+    endcase
+end
 always @(*) begin
     if (ID_EX_OUT.AluSrcD)
         SrcB = ID_EX_OUT.ImmExtD;
     else 
-        SrcB = ID_EX_OUT.ReadData2D;
+        SrcB = ForwardedB;
 end
 
 always @(*) begin
@@ -102,7 +125,7 @@ always @(*) begin
         SrcA = ID_EX_OUT.PcD;
     end
     else begin
-        SrcA = ID_EX_OUT.ReadData1D;
+        SrcA = ForwardedA;
     end
 end
 ALU instance5(
@@ -121,9 +144,11 @@ EX_MEM_Register Execute(
     .ResultSrcE(ID_EX_OUT.ResultSrcD),
     .ReadDestinationE(ID_EX_OUT.ReadDestinationD),
     .ALUResultE(ALUResult),
-    .WriteDataE(ID_EX_OUT.ReadData2D),
+    .WriteDataE(ForwardedB),
     .PCPlus4E(ID_EX_OUT.PCPlus4D),
-    .EX_MEM_OUT(EX_MEM_OUT)
+    .EX_MEM_OUT(EX_MEM_OUT),
+    .FlushE(FlushE),
+    .StallE(1'b0)
 );
 
 Store FindBytes(
@@ -175,6 +200,27 @@ PCTarget instance8(
     .PCTarget(PCTarget)
 );
 
+HazardUnit HazardControl(
+    .Rs1D(IF_ID_OUT.InstrF[19:15]),
+    .Rs2D(IF_ID_OUT.InstrF[24:20]),
+    .Rs1E(ID_EX_OUT.Rs1D),
+    .Rs2E(ID_EX_OUT.Rs2D),
+    .ReadDestinationE(ID_EX_OUT.ReadDestinationD),
+    .ReadDestinationM(EX_MEM_OUT.ReadDestinationE),
+    .ReadDestinationW(MEM_WB_OUT.ReadDestinationM),
+    .RegWriteE(ID_EX_OUT.RegWriteD),
+    .RegWriteM(EX_MEM_OUT.RegWriteE),
+    .RegWriteW(MEM_WB_OUT.RegWriteM),
+    .PCSrcE(|ID_EX_OUT.PCSrcD),
+    .ResultSrcE(ID_EX_OUT.ResultSrcD),
+    .ForwardAE(ForwardAE),
+    .ForwardBE(ForwardBE),
+    .StallF(StallF),
+    .StallD(StallD),
+    .FlushE(FlushE),
+    .FlushD(FlushD)  
+);
+
 always @(*) begin
     if(ID_EX_OUT.PCSrcD[1])
         PCNext = ALUResult & ~32'h1;
@@ -189,7 +235,7 @@ always @(*) begin
         2'b00 : WriteData3 = MEM_WB_OUT.ALUResultM;
         2'b01 : WriteData3 = MEM_WB_OUT.ReadDataDataMemM;
         2'b10 : WriteData3 = MEM_WB_OUT.PCPlus4M;
-        2'b11 : WriteData3 = EX_MEM_OUT.ALUResultE; //AUIPC
+        2'b11 : WriteData3 = MEM_WB_OUT.ALUResultM;
         default : WriteData3 = 0;
     endcase
 

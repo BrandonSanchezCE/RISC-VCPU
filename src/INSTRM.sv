@@ -17,7 +17,7 @@ always @(*) begin
    /* initial begin
         $readmemh("test_list.hex", Instruction);
    end */
-/*
+
 initial begin
         Instruction[0]  = 32'h40000093; // addi x1, x0, 1024
         Instruction[1]  = 32'h001080B3; // add  x1, x1, x1
@@ -37,5 +37,5 @@ initial begin
         Instruction[15] = 32'h0070A023; // sw   x7, 0(x1)     (Turn LEDs on)
         Instruction[16] = 32'hFE0002E3; // beq  x0, x0, -28   (Loop back to PC = 9)
     end
-*/
+
 endmodule

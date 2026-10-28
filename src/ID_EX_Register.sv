@@ -19,12 +19,16 @@ module ID_EX_Register(
     input logic [31:0]PcD,
     input logic [31:0] PCPlus4D,
     input logic [4:0] ReadDestinationD,
+    input logic [4:0] Rs1D,
+    input logic [4:0] Rs2D,
+    input logic FlushD,
+    input logic StallD,
     output ID_EX ID_EX_OUT
 
 );
 
 always_ff @(posedge Clk) begin
-    if (!Reset) begin
+    if (!Reset && !FlushD) begin
         ID_EX_OUT.ReadData1D <= ReadData1D;
         ID_EX_OUT.ReadData2D <= ReadData2D;
         ID_EX_OUT.ImmExtD<= ImmExtD;
@@ -39,6 +43,11 @@ always_ff @(posedge Clk) begin
         ID_EX_OUT.AluControlD <= AluControlD;
         ID_EX_OUT.Funct3D <= Funct3D;
         ID_EX_OUT.PCSrcD <= PCSrcD;
+        ID_EX_OUT.Rs1D <= Rs1D;
+        ID_EX_OUT.Rs2D <= Rs2D;
+        ID_EX_OUT.StallD <= StallD;
+        ID_EX_OUT.FlushD <= FlushD;
+        ID_EX_OUT.AUIPCD <= AUIPCD;
     end 
     else begin
         ID_EX_OUT.ReadData1D <= 0;
@@ -55,6 +64,9 @@ always_ff @(posedge Clk) begin
         ID_EX_OUT.AluControlD <= 0;
         ID_EX_OUT.Funct3D <= 0;
         ID_EX_OUT.PCSrcD <= 0;
+        ID_EX_OUT.AUIPCD <= 0;
+        ID_EX_OUT.Rs1D <= 0;
+        ID_EX_OUT.Rs2D <= 0;
     end
 end
 endmodule 
