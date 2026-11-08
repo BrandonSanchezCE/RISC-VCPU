@@ -126,6 +126,7 @@ module EX_MEM_Register_tb;
         $display ("=============================");
         $display("ALL TESTS Finished");
         $display ("=============================");
+        $finish;
 
 
         

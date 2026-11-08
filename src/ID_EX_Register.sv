@@ -9,7 +9,8 @@ module ID_EX_Register(
     input logic RegWriteD,
     input logic MemWriteD,
     input logic BranchD,
-    input [1:0] PCSrcD,
+    input logic JumpD,
+    input logic JumpRD,
     input logic AluSrcD,
     input logic [3:0] AluControlD,
     input logic [1:0] ResultSrcD,
@@ -42,7 +43,8 @@ always_ff @(posedge Clk) begin
         ID_EX_OUT.BranchD <= BranchD;
         ID_EX_OUT.AluControlD <= AluControlD;
         ID_EX_OUT.Funct3D <= Funct3D;
-        ID_EX_OUT.PCSrcD <= PCSrcD;
+        ID_EX_OUT.JumpD <= JumpD;
+        ID_EX_OUT.JumpRD <= JumpRD;
         ID_EX_OUT.Rs1D <= Rs1D;
         ID_EX_OUT.Rs2D <= Rs2D;
         ID_EX_OUT.StallD <= StallD;
@@ -63,7 +65,8 @@ always_ff @(posedge Clk) begin
         ID_EX_OUT.BranchD <= 0;
         ID_EX_OUT.AluControlD <= 0;
         ID_EX_OUT.Funct3D <= 0;
-        ID_EX_OUT.PCSrcD <= 0;
+        ID_EX_OUT.JumpD <= 0;
+        ID_EX_OUT.JumpRD <= 0;
         ID_EX_OUT.AUIPCD <= 0;
         ID_EX_OUT.Rs1D <= 0;
         ID_EX_OUT.Rs2D <= 0;

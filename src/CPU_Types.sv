@@ -35,7 +35,8 @@ typedef struct packed {
     logic RegWriteD;
     logic MemWriteD;
     logic BranchD;
-    logic [1:0] PCSrcD;
+    logic JumpD;
+    logic JumpRD;
     logic AluSrcD;
     logic [3:0] AluControlD;
     logic [1:0] ResultSrcD;

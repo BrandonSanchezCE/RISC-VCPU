@@ -5,8 +5,8 @@ module TopModule(
    // output [15:0] LED
 );
 
-wire ALUSrc, MemWrite, Zero, Funct7b5, RegWrite, SlowClock, Halt;
-wire[1:0] ResultSrc, PCSrc;
+wire ALUSrc, Branch, MemWrite, Zero, Funct7b5, RegWrite, SlowClock, Halt, Jump, JumpR;
+wire[1:0] ResultSrc;
 wire[2:0] Funct3, ImmSrc;
 wire [3:0] ALUControl;
 wire [6:0] Op;
@@ -24,7 +24,9 @@ DataPath instance1(
     .ResultSrc(ResultSrc),
     .ImmSrc(ImmSrc),
     .ALUControl(ALUControl),
-    .PCSrc(PCSrc),
+    .Branch(Branch),
+    .Jump(Jump),
+    .JumpR(JumpR),
     .Reset(Reset),
     .RegWrite(RegWrite),
     .Op(Op),
@@ -39,8 +41,6 @@ DataPath instance1(
 );
 
 ControlUnit instance2(
-    .ReadData1(ReadData1),
-    .ReadData2(ReadData2),
     .Op(Op),
     .Funct3(Funct3),
     .Funct7b5(Funct7b5),
@@ -48,8 +48,10 @@ ControlUnit instance2(
     .ALUSrc(ALUSrc),
     .MemWrite(MemWrite),
     .ImmSrc(ImmSrc),
+    .Branch(Branch),
     .ALUControl(ALUControl),
-    .PCSrc(PCSrc),
+    .Jump(Jump),
+    .JumpR(JumpR),
     .ResultSrc(ResultSrc),
     .Halt(Halt)
 );

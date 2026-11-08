@@ -13,6 +13,14 @@ module DATAM(
  wire [7:0] WordAddress = Address[9:2];
  localparam LedAddress = 32'h00001000;
  localparam SwitchAddress = 32'h00001004;
+
+ integer i;
+ initial begin
+    for (i = 0; i  < 256; i = i + 1) begin
+        Data[i] = 32'd0;
+    end
+    Leds = 16'd0;
+end
     always @(posedge Clk) begin
          if(Address == LedAddress) begin
             if (WriteEnable[0]) 

@@ -11,13 +11,15 @@ module DataPath(
     input logic [3:0]ALUControl,
     input logic [1:0] ResultSrc,
     input logic [15:0] sw,
+    input logic Branch,
+    input logic Jump,
+    input logic JumpR,
     output logic [15:0] LED,
     output logic [6:0] Op,
     output logic [2:0]Funct3,
     output logic Funct7b5,
     output logic [31:0] ReadData1,
-    output logic [31:0] ReadData2,
-    input logic [1:0] PCSrc
+    output logic [31:0] ReadData2
 );
 wire [31:0] PC, ReadData, ImmExt, ALUResult, ReadDataDataMem
 , PCPlus4, PCTarget, ProcessedLoadData, StoredData;
@@ -86,7 +88,9 @@ ID_EX_Register Decode(
     .Rs2D(IF_ID_OUT.InstrF[24:20]),
     .RegWriteD(RegWrite),
     .MemWriteD(MemWrite),
-    .PCSrcD(PCSrc),
+    .BranchD(Branch),
+    .JumpD(Jump),
+    .JumpRD(JumpR),
     .AluSrcD(ALUSrc),
     .AluControlD(ALUControl),
     .ResultSrcD(ResultSrc),
@@ -112,6 +116,21 @@ always_comb begin
         2'b10: ForwardedB = EX_MEM_OUT.ALUResultE;
         default: ForwardedB = ID_EX_OUT.ReadData2D;
     endcase
+end
+
+logic BranchCondition;
+logic [1:0] PCSrcE;
+
+BranchingCompare BranchCalc(
+    .ReadData1(ForwardedA),
+    .ReadData2(ForwardedB),
+    .Funct3(ID_EX_OUT.Funct3D),
+    .BranchCondition(BranchCondition)
+);
+
+always_comb begin
+    PCSrcE[0] = ID_EX_OUT.JumpD | (ID_EX_OUT.BranchD & BranchCondition);
+    PCSrcE[1] = ID_EX_OUT.JumpRD;
 end
 always @(*) begin
     if (ID_EX_OUT.AluSrcD)
@@ -211,7 +230,7 @@ HazardUnit HazardControl(
     .RegWriteE(ID_EX_OUT.RegWriteD),
     .RegWriteM(EX_MEM_OUT.RegWriteE),
     .RegWriteW(MEM_WB_OUT.RegWriteM),
-    .PCSrcE(|ID_EX_OUT.PCSrcD),
+    .PCSrcE(|PCSrcE),
     .ResultSrcE(ID_EX_OUT.ResultSrcD),
     .ForwardAE(ForwardAE),
     .ForwardBE(ForwardBE),
@@ -222,9 +241,9 @@ HazardUnit HazardControl(
 );
 
 always @(*) begin
-    if(ID_EX_OUT.PCSrcD[1])
+    if(PCSrcE[1])
         PCNext = ALUResult & ~32'h1;
-    else if (ID_EX_OUT.PCSrcD[0])
+    else if (PCSrcE[0])
         PCNext = PCTarget;
     else 
         PCNext = PCPlus4;
